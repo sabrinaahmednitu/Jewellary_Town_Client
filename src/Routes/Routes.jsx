@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Gift from '../component/Gift/Gift';
+import Gold from '../component/Jewellary/Gold/Gold';
 import Jewellary from '../component/Jewellary/Jewellary';
 import Wedding from '../component/Wedding/Wedding';
 import Main from '../Layout/Main';
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
         path: '/gift',
         element: <Gift></Gift>,
       },
+      {
+        path: '/gold/:goldId',
+        element:<Gold></Gold>
+      }
     ],
   },
 ]);

@@ -7,7 +7,7 @@ const Gold = ({ gold, handleGolds }) => {
     <div>
       <div className="card bg-base-100 h-[100%]">
         <figure>
-          <img src={image} alt="Shoes" />
+          <img className="w-[100%]" src={image} alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{title}</h2>
