@@ -4,7 +4,7 @@ const Navbar = () => {
   const navItem = <>
   <li><Link to="/" >Jewellary</Link></li>
   <li><Link to="/wedding" >Wedding</Link></li>
-  <li><Link to="/gift" >Gift</Link></li>
+  <li><Link to="/category" >Category</Link></li>
   </>
     return (
       <div className="" >
@@ -34,7 +34,7 @@ const Navbar = () => {
                 {navItem}
               </ul>
             </div>
-            <a className="normal-case text-xl">daisyUI</a>
+            <a className="normal-case text-xl">Jewellary Town</a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{navItem}</ul>

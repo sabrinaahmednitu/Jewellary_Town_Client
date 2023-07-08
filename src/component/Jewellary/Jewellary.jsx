@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import Diamonds from './Diamond/Diamonds';
 import Golds from './Gold/Golds';
 import './Jewellary.css';
 import Platinums from './Platinum/Platinums';
+import video from '../../video/Harry Winston Diamond Necklace.mp4';
 
 function Jewellary() {
   const [toggleState, setToggleState] = useState(1);
@@ -14,6 +16,9 @@ function Jewellary() {
   return (
     <>
       <div className="bg-white">
+        <video autoPlay loop className='back-video' playsInline >
+          <source src='{video}' />
+        </video>
         <div className="head-text text-center pt-12 pb-12">
           <h1 className="text-5xl">
             DESIGNED JUST <br />{' '}

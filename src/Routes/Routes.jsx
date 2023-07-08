@@ -1,4 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
+import Categories from '../component/Category/Categories';
 import Gift from '../component/Gift/Gift';
 import Gold from '../component/Jewellary/Gold/Gold';
 import Jewellary from '../component/Jewellary/Jewellary';
@@ -19,13 +20,13 @@ export const router = createBrowserRouter([
         element: <Wedding></Wedding>,
       },
       {
-        path: '/gift',
-        element: <Gift></Gift>,
+        path: '/category',
+        element: <Categories></Categories>,
       },
       {
         path: '/gold/:goldId',
-        element:<Gold></Gold>
-      }
+        element: <Gold></Gold>,
+      },
     ],
   },
 ]);
