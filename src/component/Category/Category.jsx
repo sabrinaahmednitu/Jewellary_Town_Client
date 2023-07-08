@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 
-const Category = ({allProduct}) => {
-  const { image, description, price, title } = allProduct;
+import { Link } from "react-router-dom";
+
+const Category = ({ allProduct}) => {
+  const { image, description, price, title, _id } = allProduct;
   return (
     <div>
       <div className="card bg-base-100 h-[100%]">
@@ -12,8 +14,11 @@ const Category = ({allProduct}) => {
           <h2 className="card-title">{title}</h2>
           <p>{description}</p>
           <p>${price}</p>
+          <p>${_id}</p>
           <div className="card-actions justify-start">
-            <button className="btn btn-primary">Buy Now</button>
+            <Link to={`/detailPage/${allProduct._id}`}>
+              <button className="btn btn-primary"> Buy Now </button>
+            </Link>
           </div>
         </div>
       </div>

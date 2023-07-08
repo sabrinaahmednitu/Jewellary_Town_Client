@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Categories from '../component/Category/Categories';
-import Gift from '../component/Gift/Gift';
+import DetailPage from '../component/DetailsPage/DetailPage';
 import Gold from '../component/Jewellary/Gold/Gold';
 import Jewellary from '../component/Jewellary/Jewellary';
 import Wedding from '../component/Wedding/Wedding';
@@ -24,8 +24,10 @@ export const router = createBrowserRouter([
         element: <Categories></Categories>,
       },
       {
-        path: '/gold/:goldId',
-        element: <Gold></Gold>,
+        path: '/detailPage/:id',
+        element: <DetailPage></DetailPage>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/golds/${params.id}`),
       },
     ],
   },
