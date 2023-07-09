@@ -1,0 +1,22 @@
+.detail-btn{
+    background-color: rgb(255, 0, 85);
+    color: White;
+    border-radius: 35px;
+
+}
+
+@media only screen and (max-width: 900px) {
+    .detail-card{
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    .detail-img{
+       order: 1;
+        margin-top: 15px;
+    }
+    .detail-card{
+    order: 2;
+    }
+    
+}
