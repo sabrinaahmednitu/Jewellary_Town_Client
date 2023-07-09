@@ -4,8 +4,38 @@
     border-radius: 35px;
 
 }
+.priceQuantity{
+     display: flex;
+    align-items: center;
+    gap: 20%;
+}
+.Q-text{
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity{
+    background-color: white;
+    border: 1px solid rgb(199, 196, 196);
+    font-size: 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 30%;
+    
+}
+
+.detail-input input{
+ width: 65%;
+ background-color:white;
+}
 
 @media only screen and (max-width: 900px) {
+    .detail-content{
+        display: block;
+        margin: auto;
+    }
     .detail-card{
         display: block;
         justify-content: center;
@@ -18,5 +48,11 @@
     .detail-card{
     order: 2;
     }
-    
+    .priceQuantity{
+        display: block;
+        margin-bottom: 10px;
+    }
+    .quantity{
+            width: 40%;
+    }
 }
