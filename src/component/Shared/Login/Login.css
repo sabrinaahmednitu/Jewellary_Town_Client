@@ -1,0 +1,7 @@
+.hero{
+    background-image: url('../../../video/sebastian-svenson-d2w-_1LJioQ-unsplash.jpg');
+   height: 100vh;
+   width: 100%;
+   background-size: cover;
+   background-position:center ;
+}

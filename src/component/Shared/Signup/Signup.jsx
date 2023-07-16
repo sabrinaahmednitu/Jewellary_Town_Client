@@ -1,9 +1,9 @@
-import React from 'react';
 
-const Login = () => {
+
+const Signup = () => {
     return (
-      <div>
-        <h1 className="text-center">Login</h1>
+        <div>
+            <h1 className='text-center' >SignUp</h1>
         <div className="hero min-h-screen bg-base-200">
           <div className="hero-content flex-col lg:flex-row-reverse">
             <div className="text-center lg:text-left">
@@ -52,4 +52,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Signup;
