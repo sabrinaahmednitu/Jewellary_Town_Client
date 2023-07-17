@@ -8,6 +8,7 @@ import DetailPage from '../component/DetailsPage/DetailPage';
 import Jewellary from '../component/Jewellary/Jewellary';
 import Login from '../component/Shared/Login/Login';
 import Signup from '../component/Shared/Signup/Signup';
+
 import Wedding from '../component/Wedding/Wedding';
 import Main from '../Layout/Main';
 

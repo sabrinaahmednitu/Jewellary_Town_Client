@@ -1,23 +1,28 @@
 import { useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import SocialLogin from '../Login/SocialLogin/SocialLogin';
 const Signup = () => {
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
   const nameRef = useRef('');
   const emailRef = useRef('');
   const passRef = useRef('');
+  const navigate = useNavigate();
 
   const handleSignupForm = (event) => {
     event.preventDefault();
     const name = nameRef.current.value;
     const email = emailRef.current.value;
     const password = passRef.current.value;
-    console.log(name, email, password);
+    createUserWithEmailAndPassword(name, email, password);
+    navigate('/')
   };
 
-  const navigate = useNavigate();
   const navigateLogin = () => {
-    navigate('/login')
-  }
+    navigate('/login');
+  };
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -79,6 +84,7 @@ const Signup = () => {
                 Please Login
               </Link>
             </p>
+            <SocialLogin></SocialLogin>
           </div>
         </form>
       </div>

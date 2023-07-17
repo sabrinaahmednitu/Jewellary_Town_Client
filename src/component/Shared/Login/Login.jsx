@@ -1,12 +1,13 @@
 import { useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
+import SocialLogin from './SocialLogin/SocialLogin';
 const Login = () => {
   const emailref = useRef('');
   const passRef = useRef('');
 
   const navigate = useNavigate();
-  const navigateLogin = (event) => {
+  const navigateLogin =() => {
     navigate('/signup');
   };
 
@@ -69,6 +70,7 @@ const Login = () => {
                 Please Signup
               </Link>
             </p>
+            <SocialLogin></SocialLogin>
           </div>
         </form>
       </div>
