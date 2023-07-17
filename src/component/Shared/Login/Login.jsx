@@ -1,53 +1,76 @@
-import img1 from '../../../video/sebastian-svenson-d2w-_1LJioQ-unsplash.jpg'
-import './Login.css'
+import { useRef } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import './Login.css';
 const Login = () => {
+  const emailref = useRef('');
+  const passRef = useRef('');
+
+  const navigate = useNavigate();
+  const navigateLogin = (event) => {
+    navigate('/signup');
+  };
+
+  const handleLoginForm = (event) => {
+    event.preventDefault();
+    const email = emailref.current.value;
+    const password = passRef.current.value;
+    console.log(email, password);
+  };
+
   return (
-    <div className="hero min-h-screen bg-white">
-      {/* <div className="hero-content flex-col lg:flex-row-reverse"> */}
-      <div className="hero-content flex-col ">
-       
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-white">
+    <div className="hero min-h-screen bg-base-200">
+      <div className="hero-content flex-col lg:flex-row-reverse">
+        <div className="text-center lg:text-left">
+          <h1 className="text-5xl font-bold text-white ">Login now !</h1>
+          <p className="py-6 text-2xl text-white ">
+            Login is the process of gaining access to a secure system or account
+            by providing valid credentials, such as a username and password.
+          </p>
+        </div>
+
+        <form
+          onSubmit={handleLoginForm}
+          className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-white"
+        >
           <div className="card-body">
             <div className="form-control">
-              <label className="label">
-                <span className="label-text text-black font-bold">Email</span>
-              </label>
               <input
-                type="text"
-                placeholder="email"
-                className="input input-bordered bg-white"
+                ref={emailref}
+                type="email"
+                placeholder="Type Email"
+                className="input input-bordered bg-transparent text-black"
               />
             </div>
             <div className="form-control">
-              <label className="label">
-                <span className="label-text text-black font-bold">
-                  Password
-                </span>
-              </label>
               <input
-                type="text"
-                placeholder="password"
-                className="input input-bordered bg-white"
+                ref={passRef}
+                type="password"
+                placeholder="Type Password"
+                className="input input-bordered bg-transparent mt-2 text-black"
               />
-              <label className="label mt-5">
-                <a
-                  href="#"
-                  className="label-text-alt link text-black font-bold"
-                >
-                  Forgot password?
-                </a>
-              </label>
-            </div>
-            <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
-            </div>
-          </div>
-        </div>
-         <div className="text-center ">
-          <h1 className="text-5xl font-bold text-white">Login now!</h1>
 
-          {/* <img className="py-6" src={img1} alt="" /> */}
-        </div>
+              <a
+                href="#"
+                className=" link link-hover mt-2 text-black font-bold"
+              >
+                Forgot password?
+              </a>
+            </div>
+            <div className="form-control mt-2">
+              <button className="btn text-white bg-black-200">Login</button>
+            </div>
+            <p className="text-black">
+              Dont have an account
+              <Link
+                className="text-green-600 font-bold"
+                to="/signup"
+                onClick={navigateLogin}
+              >
+                Please Signup
+              </Link>
+            </p>
+          </div>
+        </form>
       </div>
     </div>
   );
