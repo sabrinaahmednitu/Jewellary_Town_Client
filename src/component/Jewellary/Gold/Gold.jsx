@@ -5,7 +5,7 @@ const Gold = ({ gold, handleGolds }) => {
 
   return (
     <div>
-      <div className="card bg-base-100 h-[100%]">
+      <div className="card h-[100%]">
         <figure>
           <img className="w-[100%]" src={image} alt="Shoes" />
         </figure>

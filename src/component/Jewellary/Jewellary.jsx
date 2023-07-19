@@ -15,10 +15,9 @@ function Jewellary() {
 
   return (
     <>
+      {/* video section */}
+
       <div className="bg-white">
-        {/* <video autoPlay loop className='back-video' playsInline >
-          <source src={video}  />
-        </video> */}
         <video className="w-[100%] h-[50%]" controls>
           <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
@@ -30,6 +29,8 @@ function Jewellary() {
           </h1>
         </div>
       </div>
+
+      {/* tabs section */}
 
       <div className="mt-12 mb-12 container mx-auto">
         <div className="bloc-tabs">
@@ -53,13 +54,12 @@ function Jewellary() {
           </button>
         </div>
 
-        <div className="content-tabs ">
+        <div className="content-tabs">
           <div
             className={
               toggleState === 1 ? 'content  active-content' : 'content'
             }
           >
-            <h2>Content 1</h2>
             <hr />
             <Golds></Golds>
           </div>
@@ -69,8 +69,6 @@ function Jewellary() {
               toggleState === 2 ? 'content  active-content' : 'content'
             }
           >
-            <h2>Content 2</h2>
-            <hr />
             <Diamonds></Diamonds>
           </div>
 
@@ -79,8 +77,6 @@ function Jewellary() {
               toggleState === 3 ? 'content  active-content' : 'content'
             }
           >
-            <h2>Content 3</h2>
-            <hr />
             <Platinums></Platinums>
           </div>
         </div>
