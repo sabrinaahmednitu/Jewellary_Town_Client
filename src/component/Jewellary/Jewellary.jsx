@@ -16,8 +16,12 @@ function Jewellary() {
   return (
     <>
       <div className="bg-white">
-        <video autoPlay loop className='back-video' playsInline >
-          <source src='{video}' />
+        {/* <video autoPlay loop className='back-video' playsInline >
+          <source src={video}  />
+        </video> */}
+        <video className="w-[100%] h-[50%]" controls>
+          <source src={video} type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
         <div className="head-text text-center pt-12 pb-12">
           <h1 className="text-5xl">
@@ -54,7 +58,6 @@ function Jewellary() {
             className={
               toggleState === 1 ? 'content  active-content' : 'content'
             }
-            
           >
             <h2>Content 1</h2>
             <hr />
@@ -87,4 +90,3 @@ function Jewellary() {
 }
 
 export default Jewellary;
-
