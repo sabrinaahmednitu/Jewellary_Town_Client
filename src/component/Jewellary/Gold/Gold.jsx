@@ -4,10 +4,8 @@ const Gold = ({ gold, handleGolds }) => {
   const { title, image, description, price, _id } = gold;
 
   return (
-    <div  >
-      <div
-        className="card h-[100%] bg-base-100 "
-      >
+    <div>
+      <div className="card h-[100%] ">
         <figure>
           <img className="w-[100%]" src={image} alt="Shoes" />
         </figure>
@@ -20,7 +18,8 @@ const Gold = ({ gold, handleGolds }) => {
               onClick={() => handleGolds(_id)}
               className="btn text-white font-bold d-block mx-auto w-[50%]"
               style={{
-                backgroundColor: 'rgb(243, 62, 101)',
+                border:'1px solid rgb(255, 0, 85)',
+                backgroundColor: 'rgb(255, 0, 85)',
               }}
             >
               Buy Now

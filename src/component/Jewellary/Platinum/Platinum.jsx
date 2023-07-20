@@ -3,7 +3,7 @@ const Platinum = ({ platinum }) => {
   const { image, title, description, price, _id } = platinum;
   return (
     <div>
-      <div className="card bg-base-100 h-[100%]">
+      <div className="card container  h-[100%]">
         <figure>
           <img className="w-[100%]" src={image} alt="Shoes" />
         </figure>
@@ -14,7 +14,7 @@ const Platinum = ({ platinum }) => {
           <div
             className="btn text-white font-bold d-block mx-auto w-[50%]"
             style={{
-              backgroundColor: 'rgb(243, 62, 101)',
+              backgroundColor: 'rgb(255, 0, 85)',
             }}
           >
             <button>Buy Now</button>
