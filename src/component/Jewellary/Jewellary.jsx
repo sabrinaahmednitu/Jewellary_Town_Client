@@ -32,7 +32,7 @@ function Jewellary() {
 
       {/* tabs section */}
 
-      <div className="mt-12 mb-12 container mx-auto">
+      <div className="mt-12 mb-12  mx-auto">
         <div className="bloc-tabs">
           <button
             className={toggleState === 1 ? 'tabs active-tabs' : 'tabs'}

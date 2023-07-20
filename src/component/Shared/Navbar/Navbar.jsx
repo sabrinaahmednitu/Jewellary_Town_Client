@@ -18,8 +18,8 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="">
-      <div className="navbar bg-base-500 text-white font-bold ">
+    <div className="bg-base-100">
+      <div className="navbar bg-base-100 text-white font-bold ">
         <div className="navbar-start container mx-12">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -52,7 +52,9 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end mx-12 ">
-          <Link to="/login" className='px-5' >Login</Link>
+          <Link to="/login" className="px-5">
+            Login
+          </Link>
 
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">

@@ -11,7 +11,12 @@ const Platinum = ({ platinum }) => {
           <h2 className="card-title">{title}</h2>
           <p>{description}</p>
           <p>${price}</p>
-          <div className="card-actions justify-start">
+          <div
+            className="btn text-white font-bold d-block mx-auto w-[50%]"
+            style={{
+              backgroundColor: 'rgb(243, 62, 101)',
+            }}
+          >
             <button>Buy Now</button>
           </div>
         </div>
