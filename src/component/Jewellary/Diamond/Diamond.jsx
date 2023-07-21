@@ -4,19 +4,34 @@ const Diamond = ({ diamond }) => {
   const { image, description, price, title } = diamond;
   return (
     <div>
-      <div className="card container h-[100%]">
+      <div
+        className="card h-[100%]"
+        style={{
+          border: '2px solid rgb(255, 0, 85)',
+          color: 'black',
+        }}
+      >
         <figure>
           <img className="w-[100%]" src={image} alt="Shoes" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">{title}</h2>
+          <h2 className="card-title font-bold">{title}</h2>
+          <p
+            className="font-bold text-2xl "
+            style={{
+              color: 'rgb(255, 0, 85)',
+            }}
+          >
+            ${price}
+          </p>
           <p>{description}</p>
-          <p>${price}</p>
+
           <div className="card-actions justify-start">
             <button
               className="btn text-white font-bold d-block mx-auto w-[50%]"
               style={{
                 backgroundColor: 'rgb(255, 0, 85)',
+                border: 'none',
               }}
             >
               Buy Now

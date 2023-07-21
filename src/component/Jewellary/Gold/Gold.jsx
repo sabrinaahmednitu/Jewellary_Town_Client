@@ -33,6 +33,7 @@ const Gold = ({ gold, handleGolds }) => {
               className="btn text-white font-bold d-block mx-auto w-[50%]"
               style={{
                 backgroundColor: 'rgb(255, 0, 85)',
+              
               }}
             >
               Buy Now
