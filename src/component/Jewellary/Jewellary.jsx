@@ -32,8 +32,8 @@ function Jewellary() {
 
       {/* tabs section */}
 
-      <div className="mt-12 mb-12  mx-auto">
-        <div className="bloc-tabs">
+      <div className="mt-12 mb-12 container mx-auto">
+        <div className="bloc-tabs text-2xl">
           <button
             className={toggleState === 1 ? 'tabs active-tabs' : 'tabs'}
             onClick={() => toggleTab(1)}
@@ -60,7 +60,7 @@ function Jewellary() {
               toggleState === 1 ? 'content  active-content' : 'content'
             }
           >
-            <hr />
+            
             <Golds></Golds>
           </div>
 
@@ -69,6 +69,7 @@ function Jewellary() {
               toggleState === 2 ? 'content  active-content' : 'content'
             }
           >
+           
             <Diamonds></Diamonds>
           </div>
 
@@ -77,6 +78,7 @@ function Jewellary() {
               toggleState === 3 ? 'content  active-content' : 'content'
             }
           >
+           
             <Platinums></Platinums>
           </div>
         </div>
