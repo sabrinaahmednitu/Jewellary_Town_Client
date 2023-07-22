@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendEmailVerification, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
+import { createUserWithEmailAndPassword,onAuthStateChanged, sendEmailVerification, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
 import React, {  createContext, useEffect, useState } from 'react';
 import auth from '../firebase.init';
 
@@ -9,11 +9,11 @@ export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  const createUser = (email, password) => {
+  const signUp = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  const signIn = (email, password) => {
+  const logIn = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
@@ -44,8 +44,8 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   const authInfo = {
-    createUser,
-    signIn,
+    signUp,
+    logIn,
     user,
     logOut,
     verifyEmail,

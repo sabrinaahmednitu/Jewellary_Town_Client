@@ -1,28 +1,6 @@
-import { useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import auth from '../../../firebase.init';
-import SocialLogin from '../Login/SocialLogin/SocialLogin';
+import { Link } from 'react-router-dom';
+
 const Signup = () => {
-  const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
-  const nameRef = useRef('');
-  const emailRef = useRef('');
-  const passRef = useRef('');
-  const navigate = useNavigate();
-
-  const handleSignupForm = (event) => {
-    event.preventDefault();
-    const name = nameRef.current.value;
-    const email = emailRef.current.value;
-    const password = passRef.current.value;
-    createUserWithEmailAndPassword(name, email, password);
-    navigate('/')
-  };
-
-  const navigateLogin = () => {
-    navigate('/login');
-  };
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -35,14 +13,10 @@ const Signup = () => {
           </p>
         </div>
 
-        <form
-          onSubmit={handleSignupForm}
-          className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-white"
-        >
+        <form className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-white">
           <div className="card-body">
             <div className="form-control">
               <input
-                ref={nameRef}
                 type="text"
                 placeholder="Type Name"
                 className="input input-bordered bg-transparent text-black"
@@ -50,7 +24,6 @@ const Signup = () => {
             </div>
             <div className="form-control">
               <input
-                ref={emailRef}
                 type="email"
                 placeholder="Type Email"
                 className="input input-bordered bg-transparent mt-2 text-black"
@@ -58,7 +31,6 @@ const Signup = () => {
             </div>
             <div className="form-control">
               <input
-                ref={passRef}
                 type="password"
                 placeholder="Type Password"
                 className="input input-bordered bg-transparent mt-2 text-black"
@@ -71,20 +43,39 @@ const Signup = () => {
                 Forgot password?
               </a>
             </div>
+
             <div className="form-control mt-2">
               <button className="btn text-white bg-black-200">SignUp</button>
             </div>
             <p className="text-black">
               Dont have an account
-              <Link
-                onClick={navigateLogin}
-                className="text-green-600 font-bold"
-                to="/login"
-              >
+              <Link className="text-green-600 font-bold" to="/login">
                 Please Login
               </Link>
             </p>
-            <SocialLogin></SocialLogin>
+            <div className="">
+              <div className="flex align-items-center w-[75%] mx-auto mt-2 mb-5">
+                <div
+                  style={{ height: '1px' }}
+                  className="bg-black w-[50%] mt-3"
+                ></div>
+                <p className="px-2 text-black font-bold">OR</p>
+                <div
+                  style={{ height: '1px' }}
+                  className="bg-black w-[50%] mt-3"
+                ></div>
+              </div>
+              <div className="form-control mt-2">
+                <button className="btn text-white bg-black-200">
+                  Continue with google
+                </button>
+              </div>
+              <div className="form-control mt-2">
+                <button className="btn text-white bg-black-200">
+                  Continue with github
+                </button>
+              </div>
+            </div>
           </div>
         </form>
       </div>

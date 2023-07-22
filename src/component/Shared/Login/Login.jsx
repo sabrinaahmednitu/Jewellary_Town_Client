@@ -1,8 +1,12 @@
 import { useRef } from 'react';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 import './Login.css';
 import SocialLogin from './SocialLogin/SocialLogin';
 const Login = () => {
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
   const emailref = useRef('');
   const passRef = useRef('');
 
@@ -15,7 +19,8 @@ const Login = () => {
     event.preventDefault();
     const email = emailref.current.value;
     const password = passRef.current.value;
-    console.log(email, password);
+    signInWithEmailAndPassword(email, password);
+    //  navigate('/');
   };
 
   return (
