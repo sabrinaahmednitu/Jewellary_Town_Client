@@ -16,6 +16,7 @@ const Signup = () => {
     useContext(AuthContext);
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
+  
   const HandleRegister = (data) => {
     console.log(data);
     signUp(data.email, data.password)

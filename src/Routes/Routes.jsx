@@ -6,6 +6,7 @@ import MyOrder from '../component/Dashboard/MyOrder/MyOrder';
 import Review from '../component/Dashboard/Review/Review';
 import DetailPage from '../component/DetailsPage/DetailPage';
 import Jewellary from '../component/Jewellary/Jewellary';
+import Pearl from '../component/Pearl/Pearl';
 import Login from '../component/Shared/Login/Login';
 import Signup from '../component/Shared/Signup/Signup';
 
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
       {
         path: '/category',
         element: <Categories></Categories>,
+      },
+      {
+        path: '/pearl',
+        element: <Pearl></Pearl>,
       },
       {
         path: '/login',

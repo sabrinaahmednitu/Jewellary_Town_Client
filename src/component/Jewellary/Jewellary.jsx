@@ -20,7 +20,7 @@ function Jewellary() {
 
       <div className="bg-white ">
         <div className="video-wrapper">
-          <video  controls>
+          <video controls>
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -83,6 +83,8 @@ function Jewellary() {
           </div>
         </div>
       </div>
+
+      
     </>
   );
 }
