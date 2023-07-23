@@ -4,7 +4,8 @@ import Diamonds from './Diamond/Diamonds';
 import Golds from './Gold/Golds';
 import './Jewellary.css';
 import Platinums from './Platinum/Platinums';
-import video from '../../video/Harry Winston Diamond Necklace.mp4';
+import video from '../../video/pexels-cottonbro-9428860 (1080p).mp4';
+import ReactPlayer from 'react-player';
 
 function Jewellary() {
   const [toggleState, setToggleState] = useState(1);
@@ -17,11 +18,13 @@ function Jewellary() {
     <>
       {/* video section */}
 
-      <div className="bg-white">
-        <video className="w-[100%] h-[50%]" controls>
-          <source src={video} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <div className="bg-white ">
+        <div className="video-wrapper">
+          <video  controls>
+            <source src={video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
         <div className="head-text text-center pt-12 pb-12">
           <h1 className="text-5xl">
             DESIGNED JUST <br />{' '}
@@ -60,7 +63,6 @@ function Jewellary() {
               toggleState === 1 ? 'content  active-content' : 'content'
             }
           >
-            
             <Golds></Golds>
           </div>
 
@@ -69,7 +71,6 @@ function Jewellary() {
               toggleState === 2 ? 'content  active-content' : 'content'
             }
           >
-           
             <Diamonds></Diamonds>
           </div>
 
@@ -78,7 +79,6 @@ function Jewellary() {
               toggleState === 3 ? 'content  active-content' : 'content'
             }
           >
-           
             <Platinums></Platinums>
           </div>
         </div>
