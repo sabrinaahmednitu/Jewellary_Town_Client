@@ -119,8 +119,8 @@ const Login = () => {
             </button>
           </div>
         </form>
-        <p className="text-black">
-          Dont have an account
+        <p className="text-black mt-3">
+          Do not have an account
           <Link
             className="text-green-600 font-bold"
             to="/signup"

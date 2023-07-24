@@ -139,7 +139,7 @@ const Signup = () => {
             </button>
           </div>
         </form>
-        <p className="text-black">
+        <p className="text-black mt-2">
           Already have an account
           <Link
             className="text-green-600 font-bold"
