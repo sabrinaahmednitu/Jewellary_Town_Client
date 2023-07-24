@@ -1,11 +1,18 @@
+import { updateProfile } from 'firebase/auth';
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Hooks/AuthProvider';
+import SocialLogin from '../Login/SocialLogin/SocialLogin';
 
 const Signup = () => {
-  const { register, formState: { errors },handleSubmit,} = useForm();
-  const { signUp } = useContext(AuthContext);
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm();
+  const { signUp, verifyEmail } = useContext(AuthContext);
   const navigate = useNavigate();
   
   const navigateLogin = () => {
@@ -19,36 +26,34 @@ const Signup = () => {
         const user = result.user;
         console.log(user);
         alert(' Thank you !!!', 'Your account has been created');
-        navigate('/');
+        reset();
+        verifyEmail();
+       
+        updateProfile({ displayName: data.name});
+         navigate('/');
       })
       .catch((error) => console.log(error));
   };
 
   return (
-    <div className="login-main pt-[10%]">
-      <div className=" bg-white w-[30%] mx-auto text-center p-5 rounded">
+    <div className="login-main pt-[10%] ">
+      <div className=" bg-white mx-auto text-center p-5 rounded  w-[50%] max-w-md mx-auto">
         <h1 className="text-center text-4xl text-black font-bold mb-3">
           Signup
         </h1>
-        <form
-          onSubmit={handleSubmit(signupOnSubmit)}
-          className="w-[50%] mx-auto"
-        >
+        <form onSubmit={handleSubmit(signupOnSubmit)}>
           {/* Name */}
           <div>
-            <label className="label">
-              <span className="label-text">Name</span>
-            </label>
             <input
               type="text"
-              placeholder="name"
+              placeholder="Enter Name"
               {...register('name', {
                 required: {
                   value: true,
                   message: 'name is required',
                 },
               })}
-              className="input input-bordered w-full max-w-xs"
+              className="input input-bordered w-[75%] max-w-md"
             />
 
             <label className="label">
@@ -64,12 +69,9 @@ const Signup = () => {
 
           {/* Email */}
           <div>
-            <label className="label">
-              <span className="label-text">Email</span>
-            </label>
             <input
               type="email"
-              placeholder="email"
+              placeholder="Email"
               {...register('email', {
                 required: {
                   value: true,
@@ -80,7 +82,7 @@ const Signup = () => {
                   message: 'provide a valid email',
                 },
               })}
-              className="input input-bordered w-full max-w-xs"
+              className="input input-bordered w-[75%] max-w-md"
             />
 
             <label className="label">
@@ -95,14 +97,10 @@ const Signup = () => {
           {/* Email */}
 
           {/* Password */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Password</span>
-            </label>
-
+          <div>
             <input
               type="password"
-              placeholder="password"
+              placeholder="Password"
               {...register('password', {
                 minLength: {
                   value: 6,
@@ -110,10 +108,10 @@ const Signup = () => {
                 },
                 pattern: {
                   value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/,
-                  message: 'provide a valid ppassword',
+                  message: 'provide a valid password',
                 },
               })}
-              className="input input-bordered w-full max-w-xs"
+              className="input input-bordered w-[75%] max-w-md"
             />
 
             <label className="label">
@@ -127,16 +125,16 @@ const Signup = () => {
 
             {/* Forgot password */}
             <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
-                Forgot password?
-              </a>
+              <span className="label-text">
+                Forget Password ?<button className="btn btn-link">Reset</button>
+              </span>
             </label>
             {/* Forgot password */}
           </div>
           {/* Password */}
 
-          <div className="form-control mt-6">
-            <button type="submit" className="btn btn-primary max-w-xs">
+          <div className="mt-6 ">
+            <button type="submit" className="btn btn-primary  w-[75%] max-w-md">
               sign Up
             </button>
           </div>
@@ -151,7 +149,7 @@ const Signup = () => {
             Please Login
           </Link>
         </p>
-        <div className="divider">OR</div>
+        <SocialLogin></SocialLogin>
       </div>
     </div>
   );

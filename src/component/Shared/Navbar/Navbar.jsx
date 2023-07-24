@@ -1,6 +1,16 @@
-import { Link } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
+import { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
+import { AuthContext } from '../../../Hooks/AuthProvider';
 
 const Navbar = () => {
+  const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const logout = () => {
+    signOut(auth);
+    navigate('/login');
+  }
   const navItem = (
     <>
       <li>
@@ -52,10 +62,18 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end mx-12 ">
-          <Link to="/login" className="px-5">
-            Login
-          </Link>
-
+          {user ? (
+            <button
+              onClick={logout}
+              className=" btn btn-primary font-bold mr-5 "
+            >
+              SignOut
+            </button>
+          ) : (
+            <Link to="/login" className="px-5">
+              Login
+            </Link>
+          )}
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">

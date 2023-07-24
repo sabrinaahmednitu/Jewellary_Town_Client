@@ -2,12 +2,14 @@
 /* eslint-disable react/prop-types */
 import { createUserWithEmailAndPassword,onAuthStateChanged, sendEmailVerification, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
 import React, {  createContext, useEffect, useState } from 'react';
+import Loading from '../component/Shared/Loading/Loading';
 import auth from '../firebase.init';
 
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const signUp = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -39,14 +41,17 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log('current User showed');
       setUser(currentUser);
+       setLoading(false);
     });
     return () => unsubscribe();
   }, []);
+   
 
   const authInfo = {
     signUp,
     logIn,
     user,
+    loading,
     logOut,
     verifyEmail,
     googleLoginInProvider,

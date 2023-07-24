@@ -133,8 +133,6 @@ const Signup = () => {
                 )}
               </div>
 
-              {/* register filed and google and github button */}
-
               <input
                 className="btn btn-accent w-full"
                 value="Register"
@@ -148,6 +146,8 @@ const Signup = () => {
                 Please Login
               </Link>
             </p>
+            
+            {/* register filed and google and github button */}
             <div className="divider">OR</div>
 
             <button

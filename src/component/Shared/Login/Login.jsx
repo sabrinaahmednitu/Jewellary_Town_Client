@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Hooks/AuthProvider';
 import './Login.css';
+import SocialLogin from './SocialLogin/SocialLogin';
 
 
 const Login = () => {
@@ -33,11 +34,11 @@ const Login = () => {
 
   return (
     <div className="login-main pt-[10%]">
-      <div className=" bg-white w-[30%] mx-auto text-center p-5 rounded">
+      <div className=" bg-white w-[50%] mx-auto text-center p-5 rounded">
         <h1 className="text-center text-4xl text-black font-bold mb-3">Login</h1>
         <form
           onSubmit={handleSubmit(loginOnSubmit)}
-          className="w-[50%] mx-auto"
+          className="w-[75%] mx-auto"
         >
           {/* Email */}
           <div>
@@ -128,7 +129,7 @@ const Login = () => {
             Please Signup
           </Link>
         </p>
-        <div className="divider">OR</div>
+        <SocialLogin></SocialLogin>
       </div>
     </div>
 

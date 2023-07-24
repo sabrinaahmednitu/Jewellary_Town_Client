@@ -8,6 +8,7 @@ import DetailPage from '../component/DetailsPage/DetailPage';
 import Jewellary from '../component/Jewellary/Jewellary';
 import Pearl from '../component/Pearl/Pearl';
 import Login from '../component/Shared/Login/Login';
+import RequireAuth from '../component/Shared/Login/RequireAuth';
 import Signup from '../component/Shared/Signup/Signup';
 
 import Wedding from '../component/Wedding/Wedding';
@@ -32,7 +33,11 @@ export const router = createBrowserRouter([
       },
       {
         path: '/pearl',
-        element: <Pearl></Pearl>,
+        element: (
+          <RequireAuth>
+            <Pearl></Pearl>
+          </RequireAuth>
+        ),
       },
       {
         path: '/login',
