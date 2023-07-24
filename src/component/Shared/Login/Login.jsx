@@ -32,9 +32,9 @@ const Login = () => {
   };
 
   return (
-    <div className="login-main pt-[20%]">
-      <div className=" bg-white w-[30%] mx-auto">
-        <h1 className='text-center' >Login</h1>
+    <div className="login-main pt-[10%]">
+      <div className=" bg-white w-[30%] mx-auto text-center p-5 rounded">
+        <h1 className="text-center text-4xl text-black font-bold mb-3">Login</h1>
         <form
           onSubmit={handleSubmit(loginOnSubmit)}
           className="w-[50%] mx-auto"

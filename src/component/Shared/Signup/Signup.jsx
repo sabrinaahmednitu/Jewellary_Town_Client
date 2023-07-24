@@ -25,20 +25,50 @@ const Signup = () => {
   };
 
   return (
-    <div className="login-main pt-[20%]">
-      <div className=" bg-white w-[30%] mx-auto">
-        <h1 className="text-center">Signup</h1>
+    <div className="login-main pt-[10%]">
+      <div className=" bg-white w-[30%] mx-auto text-center p-5 rounded">
+        <h1 className="text-center text-4xl text-black font-bold mb-3">
+          Signup
+        </h1>
         <form
           onSubmit={handleSubmit(signupOnSubmit)}
           className="w-[50%] mx-auto"
         >
+          {/* Name */}
+          <div>
+            <label className="label">
+              <span className="label-text">Name</span>
+            </label>
+            <input
+              type="text"
+              placeholder="name"
+              {...register('name', {
+                required: {
+                  value: true,
+                  message: 'name is required',
+                },
+              })}
+              className="input input-bordered w-full max-w-xs"
+            />
+
+            <label className="label">
+              {errors.name?.type === 'required' && (
+                <p className="text-red-600 my-2">{errors.name?.message}</p>
+              )}
+              {errors.name?.type === 'pattern' && (
+                <p className="text-red-600 my-2">{errors.name?.message}</p>
+              )}
+            </label>
+          </div>
+          {/* Name */}
+
           {/* Email */}
           <div>
             <label className="label">
               <span className="label-text">Email</span>
             </label>
             <input
-              type="text"
+              type="email"
               placeholder="email"
               {...register('email', {
                 required: {
