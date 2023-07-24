@@ -1,172 +1,129 @@
-import { Link } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
-import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import { useContext } from 'react';
+import { useForm } from 'react-hook-form';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Hooks/AuthProvider';
 
-
 const Signup = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm();
-  const { signUp, googleLoginInProvider, githubSignUp, verifyEmail } =
-    useContext(AuthContext);
-  const googleProvider = new GoogleAuthProvider();
-  const githubProvider = new GithubAuthProvider();
+  const { register, formState: { errors },handleSubmit,} = useForm();
+  const { signUp } = useContext(AuthContext);
+  const navigate = useNavigate();
   
-  const HandleRegister = (data) => {
+  const navigateLogin = () => {
+    navigate('/login');
+   }
+
+  const signupOnSubmit = (data) => {
     console.log(data);
     signUp(data.email, data.password)
       .then((result) => {
         const user = result.user;
         console.log(user);
         alert(' Thank you !!!', 'Your account has been created');
-        reset();
-        verifyEmail();
+        navigate('/');
       })
       .catch((error) => console.log(error));
-  };
-
-  const handleGoogleSignIn = () => {
-    googleLoginInProvider(googleProvider)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-
-        alert(' Thank you !!!', 'Your account has been created');
-        verifyEmail();
-      })
-      .catch((error) => console.log(error));
-  };
-
-  const handleGitHub = () => {
-    githubSignUp(githubProvider)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-        verifyEmail();
-      })
-
-      .catch((err) => console.log(err));
   };
 
   return (
-    <section className="mx-5">
-      <div className="mt-16 h-[600 px] grid  sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-2 justify-center items-center">
-        <div className=" mx-auto"></div>
-        <div>
-          <div className="w-96 p-7 mx-auto">
-            <h2 className="text-xl text-center font-bold">Register</h2>
-            <form onSubmit={handleSubmit(HandleRegister)}>
-              {/* name filed  */}
-              <div className="form-control w-full max-w-xs">
-                <label className="label">
-                  <span className="label-text">Name</span>
-                </label>
-                <input
-                  type="text"
-                  {...register('name', { required: 'Name is required' })}
-                  className="input input-bordered w-full max-w-xs"
-                />
-                {errors.name && (
-                  <p className="text-red-600 my-2">{errors.name?.message}</p>
-                )}
-              </div>
+    <div className="login-main pt-[20%]">
+      <div className=" bg-white w-[30%] mx-auto">
+        <h1 className="text-center">Signup</h1>
+        <form
+          onSubmit={handleSubmit(signupOnSubmit)}
+          className="w-[50%] mx-auto"
+        >
+          {/* Email */}
+          <div>
+            <label className="label">
+              <span className="label-text">Email</span>
+            </label>
+            <input
+              type="text"
+              placeholder="email"
+              {...register('email', {
+                required: {
+                  value: true,
+                  message: 'Email is required',
+                },
+                pattern: {
+                  value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                  message: 'provide a valid email',
+                },
+              })}
+              className="input input-bordered w-full max-w-xs"
+            />
 
-              {/* email filed */}
+            <label className="label">
+              {errors.email?.type === 'required' && (
+                <p className="text-red-600 my-2">{errors.email?.message}</p>
+              )}
+              {errors.email?.type === 'pattern' && (
+                <p className="text-red-600 my-2">{errors.email?.message}</p>
+              )}
+            </label>
+          </div>
+          {/* Email */}
 
-              <div className="form-control w-full max-w-xs">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>
-                <input
-                  type="email"
-                  {...register('email', {
-                    required: 'Email Address is required',
-                  })}
-                  className="input input-bordered w-full max-w-xs"
-                />
-                {errors.email && (
-                  <p className="text-red-600 my-2">{errors.email?.message}</p>
-                )}
-              </div>
+          {/* Password */}
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Password</span>
+            </label>
 
-              {/* Password filed */}
+            <input
+              type="password"
+              placeholder="password"
+              {...register('password', {
+                minLength: {
+                  value: 6,
+                  message: 'password must be 6 characters or longer', // JS only: <p>error message</p> TS only support string
+                },
+                pattern: {
+                  value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/,
+                  message: 'provide a valid ppassword',
+                },
+              })}
+              className="input input-bordered w-full max-w-xs"
+            />
 
-              <div className="form-control w-full max-w-xs">
-                <label className="label">
-                  <span className="label-text">Password</span>
-                </label>
-                <input
-                  type="password"
-                  {...register('password', {
-                    required: 'Password is required ',
-                    minLength: {
-                      value: 6,
-                      message: 'Password must be 6 characters or long',
-                    },
-                    pattern: {
-                      value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/,
-                      message:
-                        'Password must have uppercase number and special character number',
-                    },
-                  })}
-                  className="input input-bordered w-full max-w-xs"
-                />
+            <label className="label">
+              {errors.password?.type === 'minLength' && (
+                <p className="text-red-600 my-2">{errors.password?.message}</p>
+              )}
+              {errors.password?.type === 'pattern' && (
+                <p className="text-red-600 my-2">{errors.password?.message}</p>
+              )}
+            </label>
 
-                <label className="label">
-                  <span className="label-text">
-                    Forget Password{' '}
-                    <button className="btn btn-link">Reset</button>
-                  </span>
-                </label>
-                {errors.password && (
-                  <p className="text-red-600 my-2">
-                    {errors.password?.message}
-                  </p>
-                )}
-              </div>
+            {/* Forgot password */}
+            <label className="label">
+              <a href="#" className="label-text-alt link link-hover">
+                Forgot password?
+              </a>
+            </label>
+            {/* Forgot password */}
+          </div>
+          {/* Password */}
 
-              {/* register filed and google and github button */}
-
-              <input
-                className="btn btn-accent w-full"
-                value="Register"
-                type="submit"
-              />
-            </form>
-            <p>
-              Already hve an account ?{' '}
-              <Link className="text-secondary" to="/login">
-                Please Login
-              </Link>
-            </p>
-            <div className="divider">OR</div>
-
-            <button
-              onClick={handleGoogleSignIn}
-              className="btn btn-outline btn-second w-full"
-            >
-              {' '}
-              <img className="mx-3" style={{ width: '40px' }} alt="" /> CONTINUE
-              WITH GOOGLE
-            </button>
-            <br />
-            <br />
-            <button
-              onClick={handleGitHub}
-              className="btn btn-outline btn-second w-full"
-            >
-              <img className="mx-3" style={{ width: '40px' }} alt="" />
-              CONTINUE WITH GITHUB
+          <div className="form-control mt-6">
+            <button type="submit" className="btn btn-primary max-w-xs">
+              sign Up
             </button>
           </div>
-        </div>
+        </form>
+        <p className="text-black">
+          Already have an account
+          <Link
+            className="text-green-600 font-bold"
+            to="/login"
+            onClick={navigateLogin}
+          >
+            Please Login
+          </Link>
+        </p>
+        <div className="divider">OR</div>
       </div>
-    </section>
+    </div>
   );
 };
 

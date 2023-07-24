@@ -1,5 +1,5 @@
 .login-main{
-    background-image: url('../../../video/sebastian-svenson-d2w-_1LJioQ-unsplash.jpg');
+    background-image: url('../../../video/background.jpg');
    height: 100vh;
    width: 100%;
    background-size: cover;
@@ -7,7 +7,7 @@
     background-attachment: fixed;
     z-index: -1;
 }
-.login-main::after{
+/* .login-main::after{
   content: "";
   position: absolute;
   height: 100vh;
@@ -15,7 +15,7 @@
   background-color: rgb(17, 16, 16);
   opacity: 0.5;
   z-index: 1;
-}
+} */
 .hero-content{
     z-index: 10;
 }

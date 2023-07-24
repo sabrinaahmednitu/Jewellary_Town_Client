@@ -18,7 +18,7 @@ function Jewellary() {
     <>
       {/* video section */}
 
-      <div className="bg-white ">
+      <div className="bg-white">
         <div className="video-wrapper">
           <video controls>
             <source src={video} type="video/mp4" />
@@ -35,8 +35,8 @@ function Jewellary() {
 
       {/* tabs section */}
 
-      <div className="mt-12 mb-12 container mx-auto">
-        <div className="bloc-tabs text-2xl">
+      <div className="mt-12 mb-12 container mx-auto ">
+        <div className="bloc-tabs text-2xl ">
           <button
             className={toggleState === 1 ? 'tabs active-tabs' : 'tabs'}
             onClick={() => toggleTab(1)}
@@ -57,7 +57,7 @@ function Jewellary() {
           </button>
         </div>
 
-        <div className="content-tabs">
+        <div className="content-tabs ">
           <div
             className={
               toggleState === 1 ? 'content  active-content' : 'content'
@@ -83,8 +83,6 @@ function Jewellary() {
           </div>
         </div>
       </div>
-
-      
     </>
   );
 }

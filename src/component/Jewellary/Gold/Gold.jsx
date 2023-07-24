@@ -10,6 +10,7 @@ const Gold = ({ gold, handleGolds }) => {
         style={{
           border: '2px solid rgb(255, 0, 85)',
           color: 'black',
+          backgroundColor:'white'
         }}
       >
         <figure>
