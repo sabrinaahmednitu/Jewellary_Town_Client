@@ -11,16 +11,25 @@ const DetailPage = () => {
   console.log('user', user);
   
 
+  
   const handleBooking = (event) => {
     event.preventDefault();
-    const addItems = {
-      jewellaryId: _id,
+    const booking = {
       displayName: user?.displayName,
-      email:user?.email,
+      email: user?.email,
       jewellaryName: allGoldsData.title,
       price: allGoldsData.price,
-      
-    }
+      phone: event.target.phone.value,
+    };
+    fetch('http://localhost:5000/booking', {
+      method: "POST",
+      headers: {
+        'content-type':'application/json'
+      },
+      body:JSON.stringify(booking)
+    })
+      .then(res => res.json())
+    .then(data=>console.log(data))
        }
 
 
@@ -43,6 +52,7 @@ const DetailPage = () => {
 
           <input
             type="text"
+            name="phone"
             placeholder="Type PhoneNumber"
             className="input w-full "
           />
