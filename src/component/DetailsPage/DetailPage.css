@@ -1,7 +1,17 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
 .detail-btn{
     background-color: rgb(255, 0, 85);
     color: White;
     border-radius: 35px;
+    display: block;
+    margin: auto;
+    width: 50%;
 
 }
 .priceQuantity{
@@ -27,8 +37,9 @@
 }
 
 .detail-input input{
- width: 65%;
+ width: 75%;
  background-color:white;
+ margin: auto;
 }
 
 @media only screen and (max-width: 900px) {

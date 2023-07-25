@@ -1,7 +1,8 @@
+/* eslint-disable no-undef */
 import { updateProfile } from 'firebase/auth';
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Hooks/AuthProvider';
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
 
@@ -14,6 +15,8 @@ const Signup = () => {
   } = useForm();
   const { signUp, verifyEmail } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
   
   const navigateLogin = () => {
     navigate('/login');
@@ -30,13 +33,13 @@ const Signup = () => {
         verifyEmail();
        
         updateProfile({ displayName: data.name});
-         navigate('/');
+         navigate(from ,{replace:true});
       })
       .catch((error) => console.log(error));
   };
 
   return (
-    <div className=" hero login-main pt-[10%] ">
+    <div className=" hero login-main ">
       <div className="hero-content flex-col lg:flex-row-reverse ">
         {/* text-left */}
         <div className="text-center lg:text-left">
