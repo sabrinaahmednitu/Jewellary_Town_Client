@@ -6,7 +6,7 @@ const Gold = ({ gold, handleGolds }) => {
   return (
     <div>
       <div
-        className="card h-[100%] "
+        className="card h-[60vh] "
         style={{
           border: '2px solid rgb(255, 0, 85)',
           color: 'black',

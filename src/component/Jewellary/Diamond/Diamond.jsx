@@ -5,7 +5,7 @@ const Diamond = ({ diamond }) => {
   return (
     <div>
       <div
-        className="card h-[100%]"
+        className="card h-[60vh] "
         style={{
           border: '2px solid rgb(255, 0, 85)',
           color: 'black',
@@ -14,7 +14,7 @@ const Diamond = ({ diamond }) => {
         <figure>
           <img className="w-[100%]" src={image} alt="Shoes" />
         </figure>
-        <div className="card-body">
+        <div className="card-body text-white">
           <h2 className="card-title font-bold">{title}</h2>
           <p
             className="font-bold text-2xl "
