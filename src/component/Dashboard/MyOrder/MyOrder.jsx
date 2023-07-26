@@ -1,41 +1,18 @@
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../../Hooks/AuthProvider";
+
 const MyOrder = () => {
-  return (
-    <div>
-      <div className="overflow-x-auto">
-        <table className="table">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Name</th>
-              <th>Email</th>
-
-              <th>Role</th>
-              <th>Last Login</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>1</th>
-              <td>Cy Ganderton</td>
-              <td>Quality Control Specialist</td>
-
-              <td>Member / admin</td>
-              <td>12/16/2020</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <th></th>
-              <th>Name</th>
-              <th>Job</th>
-
-              <th>Role</th>
-              <th>Last Login</th>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
-    </div>
+  const [orders, setOrders] = useState([]);
+    const { user } = useContext(AuthContext);
+  useEffect(() => {
+    fetch(`http://localhost:5000/booking?email=${user.email}`)
+      .then((res) => res.json())
+      .then((data) => setOrders(data));
+  })
+  return ( 
+  <div>
+      <h2>orders :{ orders.length}</h2>
+   </div>
   );
 };
 
