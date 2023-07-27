@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import Loading from "../../Shared/Loading/Loading";
 import Gold from "./Gold";
 
 const Golds = () => {
@@ -13,9 +14,9 @@ const Golds = () => {
   },[])
 
 
-  // if (golds.length == 0) {
-  //   return <Loading></Loading>
-  // }
+  if (jewellary.length == 0) {
+    return <Loading></Loading>;
+  }
 
     const handleGolds = _id => {
         console.log('this is id',_id);
