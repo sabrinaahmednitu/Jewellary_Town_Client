@@ -1,16 +1,29 @@
 import './Pearl.css';
 import p1 from '../../video/p.pendent4.avif';
+import { useEffect, useState } from 'react';
+import PearlCards from './PearlCards';
 // import p1 from '../../video/pexels-cottonbro-9428860 (1080p).mp4';
 
 const Pearl = () => {
+  const [jewellary, setJewellary] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:5000/golds')
+      .then((res) => res.json())
+      .then((data) => setJewellary(data[0].pearl));
+  }, []);
+
+  const handleGolds = (_id) => {
+    console.log('this is id', _id);
+  };
   return (
     <>
       <h1 className="text-black font-bold text-3xl text-center"></h1>
 
       <div className="pearl-header bg-base-300">
         <div className="hero">
-                  <div className="hero-content flex-col lg:flex-row-reverse">
-                      <img className='w-[100%]' src={p1} alt="" />
+          <div className="hero-content flex-col lg:flex-row-reverse">
+            <img className="w-[100%]" src={p1} alt="" />
             {/* <video className="w-[50%] h-auto" controls src={p1}></video> */}
             <div className="">
               <h1
@@ -40,6 +53,19 @@ const Pearl = () => {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="container mx-auto mt-12 mb-12">
+        <h1 className="text-center text-3xl text-white mb-8">Exclusive <span className='text-5xl' style={{color: 'rgb(255, 0, 85)'}}>Pearl</span> Collection</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
+          {jewellary?.map((gold) => (
+            <PearlCards
+              key={gold._id}
+              gold={gold}
+              handleGolds={handleGolds}
+            ></PearlCards>
+          ))}
         </div>
       </div>
     </>
