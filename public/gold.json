@@ -1,5 +1,5 @@
 {
-  "gold":[
+  "gold": [
     {
       "title": "Bridal Neclace",
       "image": "https://i.ibb.co/pKjqZfc/JG-1910-00286.jpg",
@@ -60,9 +60,8 @@
       "description": "We are providing latest gorgeous and simple necklace gold design for all types of jewellery loves of Bangladesh in our store.",
       "price": 34.99
     }
-   
   ],
-  "diamond":[
+  "diamond": [
     {
       "title": "Bridal Diamond Neclace",
       "image": "https://i.ibb.co/VHpYGYD/istockphoto-1126858679-170667a.webp",
@@ -141,9 +140,8 @@
       "description": "We are providing latest gorgeous and simple Platinum ear ring design for all types of jewellery loves of Bangladesh in our store.",
       "price": 2342.99
     }
-    
   ],
-  "platinum":[
+  "platinum": [
     {
       "title": "Platinum Ring",
       "image": "https://i.ibb.co/NtG1wmY/pexels-photo-8891959.jpg",
@@ -185,6 +183,51 @@
       "image": "https://i.ibb.co/4MwWsXn/category-neckwear-mob-jpeg.webp",
       "description": "We are providing latest gorgeous and simple Platinum pendent set design for all types of jewellery loves of Bangladesh in our store.",
       "price": 1347.99
+    }
+  ],
+  "pearl": [
+    {
+      "title": "Pearl Wedding set",
+      "image": "https://i.ibb.co/mzgvZwD/p-wedding.jpg",
+      "description": "We are providing latest gorgeous and simple pearl necklace design for all types of jewellery loves of Bangladesh in our store.",
+      "price": 1209
+    },
+    {
+      "title": "Royel Bridal Pearl set",
+      "image": "https://i.ibb.co/f83W7s2/pearl-bridal-set2.webp",
+      "description": "We are providing latest gorgeous and simple pearl necklace design for all types of jewellery loves of Bangladesh in our store.",
+      "price": 2924
+    },
+    {
+      "title": " Pearl Necklace",
+      "image": "https://i.ibb.co/s2Tjhz5/pexels-alexey-demidov-10950893.jpg",
+      "description": "We are providing latest gorgeous and simple pearl necklace design for all types of jewellery loves of Bangladesh in our store.",
+      "price": 2199
+    },
+    {
+      "title": " Pearl Wedding set",
+      "image": "https://i.ibb.co/QnhmNw7/pearl-wedding3.webp",
+      "description": "We are providing latest gorgeous and simple necklace Platinum design for all types of jewellery loves of Bangladesh in our store.",
+      "price": 4939
+    },
+
+    {
+      "title": "Pearl braclet",
+      "image": "https://i.ibb.co/zmX5496/pexels-seda-15236437.jpg",
+      "description": "We are providing latest gorgeous and simple and classy Platinum set design for all types of jewellery loves of Bangladesh in our store.",
+      "price": 2999
+    },
+    {
+      "title": "Pearl necklace ",
+      "image": "https://i.ibb.co/4RW2VMc/pexels-cottonbro-studio-9421389.jpg",
+      "description": "We are providing latest gorgeous and simple pearl necklace design for all types of jewellery loves of Bangladesh in our store.",
+      "price": 1047.99
+    },
+    {
+      "title": " Pearl Necklace",
+      "image": "https://i.ibb.co/Vqvc1vG/pexels-maria-11678215.jpg",
+      "description": "We are providing latest gorgeous and simple Pearl Necklace design for all types of jewellery loves of Bangladesh in our store.",
+      "price": 1529
     }
   ]
 }
