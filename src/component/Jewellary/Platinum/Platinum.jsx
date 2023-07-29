@@ -4,14 +4,18 @@ const Platinum = ({ platinum }) => {
   return (
     <div>
       <div
-        className="card h-[60vh]"
+        className="card "
         style={{
           border: '2px solid rgb(255, 0, 85)',
           color: 'black',
         }}
       >
         <figure>
-          <img className="w-[100%]" src={image} alt="Shoes" />
+          <img
+            className="lg:w-[360px] lg:h-[350px] sm:w-[100%]"
+            src={image}
+            alt="Shoes"
+          />
         </figure>
         <div className="card-body text-white">
           <h2 className="card-title font-bold">{title}</h2>

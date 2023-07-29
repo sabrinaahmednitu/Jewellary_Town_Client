@@ -17,12 +17,10 @@ const MyOrder = () => {
         <table className="table">
           {/* head */}
           <thead>
-            <tr>
+            <tr className="bg-base-200 text-white">
               <th>Index</th>
               <th>Email</th>
               <th>jewellary Name</th>
-              <th>price</th>
-              <th>phone</th>
             </tr>
           </thead>
           <tbody>
@@ -36,15 +34,13 @@ const MyOrder = () => {
               </tr>
             ))}
           </tbody>
-
+          <tfoot>
             <tr>
               <th>Index</th>
               <th>Email</th>
               <th>jewellary Name</th>
-              <th>price</th>
-              <th>phone</th>
             </tr>
-         
+          </tfoot>
         </table>
       </div>
     </div>

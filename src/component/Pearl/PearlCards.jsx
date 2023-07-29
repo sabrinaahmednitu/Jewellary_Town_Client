@@ -6,7 +6,7 @@ const PearlCards = ({ gold, handleGolds }) => {
   return (
     <div>
       <div
-        className="card h-[60vh] "
+        className="card"
         style={{
           border: '2px solid rgb(255, 0, 85)',
           color: 'black',
@@ -14,7 +14,11 @@ const PearlCards = ({ gold, handleGolds }) => {
         }}
       >
         <figure>
-          <img className="w-[100%]" src={image} alt="Shoes" />
+          <img
+            className="lg:w-[370px] lg:h-[350px] md:w-[100%] md:h-[100%] sm:w-[100%] sm:h-[100%]"
+            src={image}
+            alt="Shoes"
+          />
         </figure>
         <div className="card-body">
           <h2 className="card-title font-bold">{title}</h2>

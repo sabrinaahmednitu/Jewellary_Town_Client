@@ -10,17 +10,10 @@ const Dashboard = () => {
         <h2 className="text-3xl"> Dashboard</h2>
         {/* Page content here */}
         <Outlet></Outlet>
-
-        {/* <label
-          htmlFor="dashboard-sidebar"
-          className="btn btn-primary drawer-button lg:hidden"
-        >
-          Open drawer
-        </label> */}
       </div>
       <div className="drawer-side">
         <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
-        <ul className="menu p-4 w-80 h-full bg-white  text-base text-black font-bold">
+        <ul className="menu p-4 w-48 bg-white text-base text-black font-bold">
           {/* Sidebar content here */}
 
           <li>

@@ -1,20 +1,13 @@
 
-import { useEffect, useState } from "react";
+import AllJewellaryItems from "../../../Hooks/AllJewellaryItems";
 import Loading from "../../Shared/Loading/Loading";
 import Gold from "./Gold";
 
 const Golds = () => {
-  // const [golds] = AllJewellaryItems();
-  const [jewellary, setJewellary] = useState([]);
- 
-  useEffect(() => {
-    fetch('http://localhost:5000/golds')
-      .then((res) => res.json())
-      .then((data) => setJewellary(data[0].gold));
-  },[])
+  const [golds] = AllJewellaryItems();
+  
 
-
-  if (jewellary.length == 0) {
+  if (golds.length == 0) {
     return <Loading></Loading>;
   }
 
@@ -24,9 +17,9 @@ const Golds = () => {
     return (
       <div className="container mx-auto">
 
-        <h1>{jewellary.length}</h1>
+        <h1>{golds.length}</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
-          {jewellary?.map((gold) => (
+          {golds.slice(0,10).map((gold) => (
             <Gold key={gold._id} gold={gold} handleGolds={handleGolds}></Gold>
           ))}
         </div>

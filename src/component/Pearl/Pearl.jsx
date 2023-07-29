@@ -1,18 +1,13 @@
 import './Pearl.css';
 import p1 from '../../video/p.pendent4.avif';
-import { useEffect, useState } from 'react';
 import PearlCards from './PearlCards';
+import AllJewellaryItems from '../../Hooks/AllJewellaryItems';
 // import p1 from '../../video/pexels-cottonbro-9428860 (1080p).mp4';
 
 const Pearl = () => {
-  const [jewellary, setJewellary] = useState([]);
+ const [golds] = AllJewellaryItems();
 
-  useEffect(() => {
-    fetch('http://localhost:5000/golds')
-      .then((res) => res.json())
-      .then((data) => setJewellary(data[0].pearl));
-  }, []);
-
+  
   const handleGolds = (_id) => {
     console.log('this is id', _id);
   };
@@ -57,9 +52,15 @@ const Pearl = () => {
       </div>
 
       <div className="container mx-auto mt-12 mb-12">
-        <h1 className="text-center text-3xl text-white mb-8">Exclusive <span className='text-5xl' style={{color: 'rgb(255, 0, 85)'}}>Pearl</span> Collection</h1>
+        <h1 className="text-center text-3xl text-white mb-8">
+          Exclusive{' '}
+          <span className="text-5xl" style={{ color: 'rgb(255, 0, 85)' }}>
+            Pearl
+          </span>{' '}
+          Collection
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
-          {jewellary?.map((gold) => (
+          {golds.slice(30,40).map((gold) => (
             <PearlCards
               key={gold._id}
               gold={gold}

@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-const Category = ({ allProduct}) => {
+const Category = ({ allProduct }) => {
   const { image, description, price, title, _id } = allProduct;
   return (
     <div>
@@ -39,8 +39,7 @@ const Category = ({ allProduct}) => {
                   backgroundColor: 'rgb(255, 0, 85)',
                 }}
               >
-                {' '}
-                Buy Now{' '}
+                Buy Now
               </button>
             </Link>
           </div>
