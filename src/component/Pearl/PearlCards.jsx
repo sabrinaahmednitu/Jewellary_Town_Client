@@ -15,7 +15,7 @@ const PearlCards = ({ gold, handleGolds }) => {
       >
         <figure>
           <img
-            className="lg:w-[370px] lg:h-[350px] md:w-[100%] md:h-[100%] sm:w-[100%] sm:h-[100%]"
+            className="lg:w-[370px] lg:h-[350px] md:w-[370px] md:h-[340px] sm:w-[100%]"
             src={image}
             alt="Shoes"
           />

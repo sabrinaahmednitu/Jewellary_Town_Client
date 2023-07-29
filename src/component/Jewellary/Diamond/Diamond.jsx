@@ -13,7 +13,7 @@ const Diamond = ({ diamond }) => {
       >
         <figure>
           <img
-            className="lg:w-[360px] lg:h-[350px] sm:w-[100%]"
+            className="lg:w-[360px] lg:h-[350px] md:w-[360px] md:h-[350px] sm:w-[100%]"
             src={image}
             alt="Shoes"
           />
