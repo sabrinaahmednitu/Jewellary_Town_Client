@@ -34,7 +34,7 @@ const Category = ({ allProduct }) => {
           <div className="card-actions justify-start">
             <Link to={`/detailPage/${allProduct._id}`}>
               <button
-                className="btn text-white  "
+                className="btn text-white d-block mx-auto w-[50%]"
                 style={{
                   backgroundColor: 'rgb(255, 0, 85)',
                 }}

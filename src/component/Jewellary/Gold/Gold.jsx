@@ -38,7 +38,7 @@ const Gold = ({ gold, handleGolds }) => {
             <Link to={`/detailPage/${gold._id}`}>
               <button
                 onClick={() => handleGolds(_id)}
-                className="btn text-white font-bold d-block mx-auto "
+                className="btn text-white font-bold d-block mx-auto w-[50%]"
                 style={{
                   backgroundColor: 'rgb(255, 0, 85)',
                 }}
