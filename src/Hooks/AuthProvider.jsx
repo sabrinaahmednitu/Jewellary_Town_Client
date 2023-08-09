@@ -2,7 +2,6 @@
 /* eslint-disable react/prop-types */
 import { createUserWithEmailAndPassword,onAuthStateChanged, sendEmailVerification, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
 import React, {  createContext, useEffect, useState } from 'react';
-import Loading from '../component/Shared/Loading/Loading';
 import auth from '../firebase.init';
 
 export const AuthContext = createContext();
@@ -53,7 +52,7 @@ const AuthProvider = ({ children }) => {
     user,
     loading,
     logOut,
-    verifyEmail,
+    verifyEmail, 
     googleLoginInProvider,
     githubSignUp,
   };

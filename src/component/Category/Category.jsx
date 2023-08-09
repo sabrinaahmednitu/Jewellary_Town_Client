@@ -7,7 +7,7 @@ const Category = ({ allProduct }) => {
   return (
     <div>
       <div
-        className="card h-[65vh] "
+        className="card"
         style={{
           border: '2px solid rgb(255, 0, 85)',
 
@@ -15,7 +15,11 @@ const Category = ({ allProduct }) => {
         }}
       >
         <figure>
-          <img className="w-[100%]" src={image} alt="Shoes" />
+          <img
+            className="lg:w-[370px] lg:h-[350px] md:w-[370px] md:h-[350px] sm:w-[100%]"
+            src={image}
+            alt="Shoes"
+          />
         </figure>
         <div className="card-body">
           <p
@@ -31,18 +35,20 @@ const Category = ({ allProduct }) => {
           <p>{description}</p>
 
           <p>${_id}</p>
-          <div className="card-actions justify-start">
-            <Link to={`/detailPage/${allProduct._id}`}>
-              <button
-                className="btn text-white d-block mx-auto w-[50%]"
-                style={{
-                  backgroundColor: 'rgb(255, 0, 85)',
-                }}
-              >
-                Buy Now
-              </button>
-            </Link>
-          </div>
+
+          <Link
+            to={`/detailPage/${allProduct._id}`}
+            className=" text-white d-block mx-auto "
+          >
+            <button
+              className="btn text-white"
+              style={{
+                backgroundColor: 'rgb(255, 0, 85)',
+              }}
+            >
+              Buy Now
+            </button>
+          </Link>
         </div>
       </div>
     </div>

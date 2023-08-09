@@ -18,18 +18,17 @@ function Jewellary() {
     <>
       {/* video section */}
 
-      <div className="bg-white">
-        <div className="video-wrapper">
-          <video controls>
+      <div className="bg-white homeMain ">
+        <div className="main-content d-flex w-50 mx-auto">
+          <video className="mainVideo" controls>
             <source src={video} type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
-        </div>
-        <div className="head-text text-center pt-12 pb-12">
-          <h1 className="text-5xl">
-            DESIGNED JUST <br />{' '}
-            <span className="text-7xl font-bold text-black ">FOR YOU</span>
-          </h1>
+          <div>
+            <h1 className="text-5xl">
+              DESIGNED JUST <br />{' '}
+              <span className="text-7xl font-bold text-black ">FOR YOU</span>
+            </h1>
+          </div>
         </div>
       </div>
 

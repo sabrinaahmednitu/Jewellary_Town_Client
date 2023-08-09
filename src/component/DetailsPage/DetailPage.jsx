@@ -15,6 +15,7 @@ const DetailPage = () => {
   const handleBooking = (event) => {
     event.preventDefault();
     const booking = {
+      id:user?._id,
       displayName: user?.displayName,
       email: user?.email,
       jewellaryName: allGoldsData.title,

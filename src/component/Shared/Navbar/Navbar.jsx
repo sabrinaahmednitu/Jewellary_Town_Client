@@ -27,12 +27,20 @@ const Navbar = () => {
           <Link to="/dashboard">Dashboard</Link>
         </li>
       )}
+      <li>
+        <Link to="/about">About Us</Link>
+      </li>
+      <li>
+        <Link to="/contact">Contact Us</Link>
+      </li>
       {user ? (
-        <button onClick={logout} className=" btn btn-success font-bold">
+        <button onClick={logout} className=" btn btn-success font-bold ">
           SignOut
         </button>
       ) : (
-        <Link to="/login">Login</Link>
+        <Link to="/login" className="flex justify-center align-items-center">
+          <button className="btn-info pl-[10px] pr-[10px] rounded ">Login</button>
+        </Link>
       )}
     </>
   );
