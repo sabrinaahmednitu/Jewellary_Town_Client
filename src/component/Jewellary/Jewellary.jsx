@@ -20,15 +20,15 @@ function Jewellary() {
 
       <div className="bg-white homeMain ">
         <div className="main-content d-flex w-50 mx-auto">
-          <video className="mainVideo" controls>
-            <source src={video} type="video/mp4" />
-          </video>
-          <div>
-            <h1 className="text-5xl">
+          <div className="video-overlay">
+            <h1 className="text-5xl z-5">
               DESIGNED JUST <br />{' '}
               <span className="text-7xl font-bold text-black ">FOR YOU</span>
             </h1>
           </div>
+          <video autoPlay loop className="mainVideo">
+            <source src={video} type="video/mp4" />
+          </video>
         </div>
       </div>
 
