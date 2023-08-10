@@ -114,7 +114,9 @@ button {
   color: rgb(24, 22, 23);
   z-index: 1;
 }
-
+.foryou{
+  color: rgb(255, 0, 85);
+}
 .video-overlay h1 {
   /* font-size: 2rem; */
   text-align: center;

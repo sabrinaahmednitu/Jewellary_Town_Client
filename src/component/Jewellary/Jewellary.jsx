@@ -23,7 +23,11 @@ function Jewellary() {
           <div className="video-overlay">
             <h1 className="text-5xl z-5">
               DESIGNED JUST <br />{' '}
-              <span className="text-7xl font-bold text-black ">FOR YOU</span>
+              <span className="text-7xl font-bold foryou ">FOR YOU</span> <br />
+              The Special One{' '}
+              <p>
+                <Emoji emoji="heart" size={16} /> This is a heart emoji.
+              </p>
             </h1>
           </div>
           <video autoPlay loop className="mainVideo">
