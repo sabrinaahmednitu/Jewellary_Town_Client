@@ -121,3 +121,15 @@ button {
   /* font-size: 2rem; */
   text-align: center;
 }
+
+/* bride section */
+.brideMain{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brideImage{
+display: flex;
+justify-content: center;
+align-items: center;
+}
