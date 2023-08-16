@@ -10,7 +10,7 @@ import ReactPlayer from 'react-player';
 import bride1 from '../../video/bride1.jpeg';
 import bride2 from '../../video/bride2.jpg';
 import bride3 from '../../video/bride3.jpg';
-import range1 from '../../video/G.earring.png';
+import range1 from '../../video/G.earring2.avif';
 
 function Jewellary() {
   const [toggleState, setToggleState] = useState(1);

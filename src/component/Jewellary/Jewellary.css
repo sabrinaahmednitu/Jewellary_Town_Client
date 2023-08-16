@@ -158,8 +158,8 @@ display: block;
   align-items: center;
 }
 .rangeCard{
-  background-color: rgb(238, 199, 212);
-  color: black;
+  background-color: rgb(240, 133, 133);
+  color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
