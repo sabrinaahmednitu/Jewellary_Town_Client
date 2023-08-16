@@ -18,10 +18,18 @@ const Pearl = () => {
   };
   return (
     <>
-      <div className="pearl-header bg-base-300">
+      <div className="pearl-header bg-white">
+        {/* bg-base-300 */}
         <div className="hero">
-          <div className="hero-content flex-col lg:flex-row-reverse">
-            <img className="w-[50%]" src={p1} alt="" />
+          <div className="hero-content flex-col lg:flex-row-reverse text-black">
+            <img
+              className="w-[50%]"
+              // style={{
+              //   border: '2px solid rgb(255, 0, 85)',
+              // }}
+              src={p1}
+              alt=""
+            />
             {/* <video className="w-[50%] h-auto" controls src={p1}></video> */}
             <div className="">
               <h1
@@ -55,10 +63,9 @@ const Pearl = () => {
       </div>
 
       {/* card section */}
-      <div className="container mx-auto mt-12 mb-12">
-        <h1 className="text-center text-3xl text-white mb-8">
-          Exclusive{' '}
-          <span className="text-5xl" style={{ color: 'rgb(255, 0, 85)' }}>
+      <div className="container mx-auto mt-12 mb-12 bg-white">
+        <h1 className="text-center text-3xl mb-8">
+          Beautiful <span className="text-5xl" style={{ color: 'rgb(255, 0, 85)' }}>
             Pearl
           </span>{' '}
           Collection
@@ -100,7 +107,8 @@ const Pearl = () => {
           <button
             className="btn w-[20%] block m-auto"
             style={{
-              backgroundColor: 'rgb(255, 0, 85)',color:'white'
+              backgroundColor: 'rgb(255, 0, 85)',
+              color: 'white',
             }}
           >
             Buy Now

@@ -7,9 +7,10 @@ import './Jewellary.css';
 import Platinums from './Platinum/Platinums';
 import video from '../../video/pexels-cottonbro-9428860 (1080p).mp4';
 import ReactPlayer from 'react-player';
-import bride1 from '../../video/bride1.jpeg'
-import bride2 from '../../video/bride2.jpg'
-import bride3 from '../../video/bride3.jpg'
+import bride1 from '../../video/bride1.jpeg';
+import bride2 from '../../video/bride2.jpg';
+import bride3 from '../../video/bride3.jpg';
+import range1 from '../../video/G.earring.png';
 
 function Jewellary() {
   const [toggleState, setToggleState] = useState(1);
@@ -125,6 +126,76 @@ function Jewellary() {
         </div>
       </div>
       {/* bride section */}
+
+      {/* shop by range */}
+      <div className="ShopByRange">
+        <div className="ShopByRangeMain container mx-auto mt-12 mb-12">
+          <div className="rangeText text-center">
+            <h1 className="text-3xl mb-2">Shop by Range</h1>
+            <p>
+              Discover our exclusive jewellery in versatile designs that fits
+              every budget with poise and glamour.
+            </p>
+          </div>
+          <div className="rangeCards mt-12 mb-12">
+            <div className="rangeCard ">
+              <div className="Rtext">
+                <h1 className="text-xl">Shop Under</h1>
+                <h1 className="text-3xl">$ 10,000</h1>
+              </div>
+              <div className="Rimg">
+                <img src={range1} alt="" />
+              </div>
+            </div>
+            <div className="rangeCard">
+              <div className="Rtext">
+                <h1 className="text-xl">Shop Under</h1>
+                <h1 className="text-3xl">$ 20,000</h1>
+              </div>
+              <div className="Rimg">
+                <img src={range1} alt="" />
+              </div>
+            </div>
+            <div className="rangeCard">
+              <div className="Rtext">
+                <h1 className="text-xl">Shop Under</h1>
+                <h1 className="text-3xl">$ 30,000</h1>
+              </div>
+              <div className="Rimg">
+                <img src={range1} alt="" />
+              </div>
+            </div>
+            <div className="rangeCard">
+              <div className="Rtext">
+                <h1 className="text-xl">Shop Under</h1>
+                <h1 className="text-3xl">$ 40,000</h1>
+              </div>
+              <div className="Rimg">
+                <img src={range1} alt="" />
+              </div>
+            </div>
+            <div className="rangeCard">
+              <div className="Rtext">
+                <h1 className="text-xl">Shop Under</h1>
+                <h1 className="text-3xl">$ 50,000</h1>
+              </div>
+              <div className="Rimg">
+                <img src={range1} alt="" />
+              </div>
+            </div>
+            <div className="rangeCard">
+              <div className="Rtext">
+                <h1 className="text-xl">Shop Under</h1>
+                <h1 className="text-3xl">$ 90,000</h1>
+              </div>
+              <div className="Rimg">
+                <img src={range1} alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* shop by range */}
     </>
   );
 }

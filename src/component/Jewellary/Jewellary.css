@@ -146,3 +146,37 @@ align-items: center;
 display: block;
 }
 }
+
+
+/* rangeCard */
+.rangeCards{
+  display: flex;
+ flex-wrap: wrap;
+ flex-basis: 35%;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.rangeCard{
+  background-color: rgb(238, 199, 212);
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  padding: 30px;
+  width: 400px;
+}
+.rangeCard img{
+  width: 145px;
+}
+
+/* .rangeCards{
+  display: flex;
+ flex-wrap: wrap;
+ flex-basis: 35%;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+} */
+/* rangeCard */
