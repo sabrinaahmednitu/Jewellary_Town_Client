@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import Diamonds from './Diamond/Diamonds';
@@ -88,37 +89,39 @@ function Jewellary() {
       </div>
 
       {/* bride section */}
-      <div className="bg-white brideMain">
-        <div className="brideImage">
-          <img
-            src={bride1}
-            className="lg:w-[260px] lg:h-[250px] md:w-[260px] md:h-[250px] sm:w-[100%] object-cover"
-            alt=""
-          />
-          <img
-            src={bride2}
-            className="lg:w-[260px] lg:h-[250px] md:w-[260px] md:h-[250px] sm:w-[100%] object-cover"
-            alt=""
-          />
-          <img
-            src={bride3}
-            className="lg:w-[260px] lg:h-[250px] md:w-[260px] md:h-[250px] sm:w-[100%] object-cover"
-            alt=""
-          />
-        </div>
-        <div className="brideText">
-          <h3>
-            Every journey has a beginning, P.C. Chandra Jewellers began in 1939
-            and grew to be India's one of the largest jewellery house with a
-            legacy of over eight decades.
-          </h3>
-          <div>
-            The founder, Shri. Purna Chandra Chandra’s vision and passion for
-            creating bold and legendary jewellery designs, has been able to
-            carve a way for the company to establish trust amongst its customers
-            for generations now.
+      <div className="bg-white">
+        <div className=" brideMain pt-12 pb-12 container mx-auto">
+          <div className="brideImage">
+            <img
+              src={bride1}
+              className="lg:w-[260px] lg:h-[350px] md:w-[260px] md:h-[250px] sm:w-[100%] object-cover"
+              alt=""
+            />
+            {/* <img
+              src={bride2}
+              className="lg:w-[260px] lg:h-[350px] md:w-[260px] md:h-[250px] sm:w-[100%] object-cover"
+              alt=""
+            /> */}
+            <img
+              src={bride3}
+              className="lg:w-[260px] lg:h-[350px] md:w-[260px] md:h-[250px] sm:w-[100%] object-cover"
+              alt=""
+            />
           </div>
-          <button className='btn btn-secondary' ></button>
+          <div className="brideText">
+            <h3 className="text-2xl">
+              Every journey has a beginning, P.C. Chandra Jewellers began in
+              1939 and grew to be India's one of the largest jewellery house
+              with a legacy of over eight decades.
+            </h3>
+            <div className="text-xl mt-3">
+              The founder, Shri. Purna Chandra Chandra’s vision and passion for
+              creating bold and legendary jewellery designs, has been able to
+              carve a way for the company to establish trust amongst its
+              customers for generations now.
+            </div>
+            <button className="btn btn-danger mt-3">Details</button>
+          </div>
         </div>
       </div>
       {/* bride section */}

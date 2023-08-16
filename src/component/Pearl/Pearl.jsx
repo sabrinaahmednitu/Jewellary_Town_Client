@@ -3,6 +3,11 @@ import p1 from '../../video/p.pendent4.avif';
 import PearlCards from './PearlCards';
 import AllJewellaryItems from '../../Hooks/AllJewellaryItems';
 // import p1 from '../../video/pexels-cottonbro-9428860 (1080p).mp4';
+import new1 from '../../video/p.pendent.png';
+import new2 from '../../video/p.party.jpg';
+import new3 from '../../video/p.single.png';
+import new4 from '../../video/p.simple3.jpg';
+
 
 const Pearl = () => {
  const [golds] = AllJewellaryItems();
@@ -13,12 +18,10 @@ const Pearl = () => {
   };
   return (
     <>
-      <h1 className="text-black font-bold text-3xl text-center"></h1>
-
       <div className="pearl-header bg-base-300">
         <div className="hero">
           <div className="hero-content flex-col lg:flex-row-reverse">
-            <img className="w-[100%]" src={p1} alt="" />
+            <img className="w-[50%]" src={p1} alt="" />
             {/* <video className="w-[50%] h-auto" controls src={p1}></video> */}
             <div className="">
               <h1
@@ -51,6 +54,7 @@ const Pearl = () => {
         </div>
       </div>
 
+      {/* card section */}
       <div className="container mx-auto mt-12 mb-12">
         <h1 className="text-center text-3xl text-white mb-8">
           Exclusive{' '}
@@ -60,13 +64,47 @@ const Pearl = () => {
           Collection
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
-          {golds.slice(30,40).map((gold) => (
+          {golds.slice(30, 40).map((gold) => (
             <PearlCards
               key={gold._id}
               gold={gold}
               handleGolds={handleGolds}
             ></PearlCards>
           ))}
+        </div>
+      </div>
+      {/* blog section */}
+      <div className="bg-white">
+        <div className="Pearl-new pt-10 pb-10 container mx-auto">
+          <div className="text-center text-black">
+            <h1 className="text-5xl ">
+              <span
+                style={{
+                  color: 'rgb(255, 0, 85)',
+                }}
+              >
+                Exclusive
+              </span>{' '}
+              Pearl Collection
+            </h1>
+            <p>
+              We are always try to make someting unique and different for you{' '}
+            </p>
+          </div>
+          <div className="Pnew-img mt-5 mb-5">
+            <img src={new1} alt="" />
+            <img src={new2} alt="" />
+            <img src={new3} alt="" />
+            <img src={new4} alt="" />
+          </div>
+          <button
+            className="btn w-[20%] block m-auto"
+            style={{
+              backgroundColor: 'rgb(255, 0, 85)',color:'white'
+            }}
+          >
+            Buy Now
+          </button>
         </div>
       </div>
     </>

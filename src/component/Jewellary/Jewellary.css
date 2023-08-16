@@ -124,12 +124,25 @@ button {
 
 /* bride section */
 .brideMain{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-content: center;
+align-items: center;
+gap: 20px;
+ 
 }
 .brideImage{
 display: flex;
 justify-content: center;
 align-items: center;
+}
+
+@media only screen and (max-width: 576px) {
+  .brideMain{
+  grid-template-columns: repeat(1,1fr);
+  padding:10px;
+}
+.brideImage{
+display: block;
+}
 }
