@@ -45,55 +45,10 @@ function Jewellary() {
 
       {/* tabs section */}
 
-      <div className="mt-12 mb-12 container mx-auto ">
-        <div className="bloc-tabs text-2xl ">
-          <button
-            className={toggleState === 1 ? 'tabs active-tabs' : 'tabs'}
-            onClick={() => toggleTab(1)}
-          >
-            Gold
-          </button>
-          <button
-            className={toggleState === 2 ? 'tabs active-tabs' : 'tabs'}
-            onClick={() => toggleTab(2)}
-          >
-            Diamond
-          </button>
-          <button
-            className={toggleState === 3 ? 'tabs active-tabs' : 'tabs'}
-            onClick={() => toggleTab(3)}
-          >
-            Platinum
-          </button>
-        </div>
+      
 
-        <div className="content-tabs ">
-          <div
-            className={
-              toggleState === 1 ? 'content  active-content' : 'content'
-            }
-          >
-            <Golds></Golds>
-          </div>
 
-          <div
-            className={
-              toggleState === 2 ? 'content  active-content' : 'content'
-            }
-          >
-            <Diamonds></Diamonds>
-          </div>
-
-          <div
-            className={
-              toggleState === 3 ? 'content  active-content' : 'content'
-            }
-          >
-            <Platinums></Platinums>
-          </div>
-        </div>
-      </div>
-
+      {/* tabs section */}
       {/* bride section */}
       <div className="bg-white">
         <div className=" brideMain pt-12 pb-12 container mx-auto">
