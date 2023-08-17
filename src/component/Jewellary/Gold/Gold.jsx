@@ -10,7 +10,6 @@ const Gold = ({ gold, handleGolds }) => {
       <div
         className="card "
         style={{
-        
           color: 'black',
           backgroundColor: 'white',
         }}
@@ -32,21 +31,20 @@ const Gold = ({ gold, handleGolds }) => {
           >
             ${price}
           </p>
-          <p>{description}</p>
+          <p>{description.slice(0,44)}...</p>
 
-          <div className="card-actions justify-start">
-            <Link to={`/detailPage/${gold._id}`}>
-              <button
-                onClick={() => handleGolds(_id)}
-                className="btn text-white font-bold d-block mx-auto w-[50%]"
-                style={{
-                  backgroundColor: 'rgb(255, 0, 85)',
-                }}
-              >
-                Buy Now
-              </button>
+        
+            <Link
+              to={`/detailPage/${gold._id}`}
+              onClick={() => handleGolds(_id)}
+              className="btn text-white"
+              style={{
+                 backgroundColor: 'rgb(255, 0, 85)',
+                border:'0'
+              }} >
+               Buy Now
             </Link>
-          </div>
+          
         </div>
       </div>
     </div>

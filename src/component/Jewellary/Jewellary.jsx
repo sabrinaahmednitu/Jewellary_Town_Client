@@ -11,11 +11,14 @@ import bride1 from '../../video/bride1.jpeg';
 import bride2 from '../../video/bride2.jpg';
 import bride3 from '../../video/bride3.jpg';
 import range1 from '../../video/G.earring2.avif';
-import icon1 from '../../video/icon1.png'; 
-import icon2 from '../../video/icon2.png'; 
-import icon3 from '../../video/icon3.png'; 
-import icon4 from '../../video/icon4.png'; 
-import icon5 from '../../video/icon5.png'; 
+import icon1 from '../../video/icon1.png';
+import icon2 from '../../video/icon2.png';
+import icon3 from '../../video/icon3.png';
+import icon4 from '../../video/icon4.png';
+import icon5 from '../../video/icon5.png';
+import { Tab, Tabs } from 'react-tabs';
+import Gold from './Gold/Gold';
+import Diamond from './Diamond/Diamond';
 
 function Jewellary() {
   const [toggleState, setToggleState] = useState(1);
@@ -45,10 +48,52 @@ function Jewellary() {
 
       {/* tabs section */}
 
-      
-
+      <div className="Container mt-12 mb-5">
+        <h1 className="text-3xl text-center text-black font-bold">
+          <span
+            className="text-4xl"
+            style={{
+              color: 'rgb(255, 0, 85)',
+            }}
+          >
+            {' '}
+            Gold
+          </span>{' '}
+          Collection
+        </h1>
+        <Golds></Golds>
+      </div>
+      <div className="Container mt-12 mb-5">
+        <h1 className="text-3xl text-center text-black font-bold mb-5">
+          <span
+            className="text-4xl"
+            style={{
+              color: 'rgb(255, 0, 85)',
+            }}
+          >
+            Diamond{' '}
+          </span>{' '}
+          Collection
+        </h1>
+        <Diamonds></Diamonds>
+      </div>
+      <div className="Container mt-12 mb-5">
+        <h1 className="text-3xl text-center text-black font-bold mb-5">
+          <span
+            className="text-4xl"
+            style={{
+              color: 'rgb(255, 0, 85)',
+            }}
+          >
+            Platinum{' '}
+          </span>{' '}
+          Collection
+        </h1>
+        <Platinums></Platinums>
+      </div>
 
       {/* tabs section */}
+
       {/* bride section */}
       <div className="bg-white">
         <div className=" brideMain pt-12 pb-12 container mx-auto">
@@ -165,23 +210,33 @@ function Jewellary() {
           <div className="certificates-cards mt-12 pb-12">
             <div className="certificates-card">
               <img src={icon1} alt="" />
-              <p>Handcrafted <br /> Jewellery</p>
+              <p>
+                Handcrafted <br /> Jewellery
+              </p>
             </div>
             <div className="certificates-card">
               <img src={icon2} alt="" />
-              <p>100% Certified <br /> Jewellery</p>
+              <p>
+                100% Certified <br /> Jewellery
+              </p>
             </div>
             <div className="certificates-card">
               <img src={icon3} alt="" />
-              <p>Lifetime Exchange <br /> and Buyback</p>
+              <p>
+                Lifetime Exchange <br /> and Buyback
+              </p>
             </div>
             <div className="certificates-card">
               <img src={icon4} alt="" />
-              <p>Trust of P.C. Chandra <br /> Jewellers</p>
+              <p>
+                Trust of P.C. Chandra <br /> Jewellers
+              </p>
             </div>
             <div className="certificates-card">
               <img src={icon5} alt="" />
-              <p>Over 2 Million <br /> Happy Customers</p>
+              <p>
+                Over 2 Million <br /> Happy Customers
+              </p>
             </div>
           </div>
         </div>

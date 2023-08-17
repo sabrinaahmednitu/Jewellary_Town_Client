@@ -6,7 +6,7 @@ const Platinum = ({ platinum }) => {
       <div
         className="card "
         style={{
-          border: '2px solid rgb(255, 0, 85)',
+          // border: '2px solid rgb(255, 0, 85)',
           color: 'black',
         }}
       >
@@ -17,7 +17,7 @@ const Platinum = ({ platinum }) => {
             alt="Shoes"
           />
         </figure>
-        <div className="card-body text-white">
+        <div className="card-body">
           <h2 className="card-title font-bold">{title}</h2>
           <p
             className="font-bold text-2xl "
@@ -27,10 +27,10 @@ const Platinum = ({ platinum }) => {
           >
             ${price}
           </p>
-          <p>{description}</p>
+          <p>{description.slice(0, 44)}...</p>
 
           <div
-            className="btn text-white font-bold d-block mx-auto w-[50%]"
+            className="btn text-white"
             style={{
               backgroundColor: 'rgb(255, 0, 85)',
               border: 'none',

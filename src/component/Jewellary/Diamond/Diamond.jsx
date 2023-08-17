@@ -7,7 +7,7 @@ const Diamond = ({ diamond }) => {
       <div
         className="card"
         style={{
-          border: '2px solid rgb(255, 0, 85)',
+          // border: '2px solid rgb(255, 0, 85)',
           color: 'black',
         }}
       >
@@ -18,7 +18,7 @@ const Diamond = ({ diamond }) => {
             alt="Shoes"
           />
         </figure>
-        <div className="card-body text-white">
+        <div className="card-body">
           <h2 className="card-title font-bold">{title}</h2>
           <p
             className="font-bold text-2xl "
@@ -28,19 +28,19 @@ const Diamond = ({ diamond }) => {
           >
             ${price}
           </p>
-          <p>{description}</p>
+          <p>{description.slice(0, 44)}...</p>
 
-          <div className="card-actions justify-start">
-            <button
-              className="btn text-white font-bold d-block mx-auto w-[50%]"
-              style={{
-                backgroundColor: 'rgb(255, 0, 85)',
-                border: 'none',
-              }}
-            >
-              Buy Now
-            </button>
-          </div>
+          {/* <div className="card-actions justify-center"> */}
+          <button
+            className="btn text-white "
+            style={{
+              backgroundColor: 'rgb(255, 0, 85)',
+              border: 'none',
+            }}
+          >
+            Buy Now
+          </button>
+          {/* </div> */}
         </div>
       </div>
     </div>
