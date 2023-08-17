@@ -11,6 +11,11 @@ import bride1 from '../../video/bride1.jpeg';
 import bride2 from '../../video/bride2.jpg';
 import bride3 from '../../video/bride3.jpg';
 import range1 from '../../video/G.earring2.avif';
+import icon1 from '../../video/icon1.png'; 
+import icon2 from '../../video/icon2.png'; 
+import icon3 from '../../video/icon3.png'; 
+import icon4 from '../../video/icon4.png'; 
+import icon5 from '../../video/icon5.png'; 
 
 function Jewellary() {
   const [toggleState, setToggleState] = useState(1);
@@ -198,28 +203,30 @@ function Jewellary() {
       {/* shop by range */}
       {/* shop with confidence */}
       <div className="certificate">
-        <div className="certificate-main ">
-          <h1 className="text-4xl text-center pt-5 text-black ">Shop with Confidence</h1>
+        <div className="certificate-main pt-5 pb-5">
+          <h1 className="text-4xl text-center pt-5 text-black ">
+            Shop with Confidence
+          </h1>
           <div className="certificates-cards mt-12 pb-12">
             <div className="certificates-card">
-              <i className="fa-solid fa-gem"></i>
-              <p>Handcrafted Jewellery</p>
+              <img src={icon1} alt="" />
+              <p>Handcrafted <br /> Jewellery</p>
             </div>
             <div className="certificates-card">
-              <i className="fa-solid fa-certificate"></i>
-              <p>100% Certified Jewellery</p>
+              <img src={icon2} alt="" />
+              <p>100% Certified <br /> Jewellery</p>
             </div>
             <div className="certificates-card">
-              <i className="fa-solid fa-box"></i>
-              <p>Lifetime Exchange and Buyback</p>
+              <img src={icon3} alt="" />
+              <p>Lifetime Exchange <br /> and Buyback</p>
             </div>
             <div className="certificates-card">
-              <i className="fa-regular fa-gem"></i>
-              <p>Trust of P.C. Chandra Jewellers</p>
+              <img src={icon4} alt="" />
+              <p>Trust of P.C. Chandra <br /> Jewellers</p>
             </div>
             <div className="certificates-card">
-              <i className="fa-solid fa-ring"></i>
-              <p>Over 2 Million Happy Customers</p>
+              <img src={icon5} alt="" />
+              <p>Over 2 Million <br /> Happy Customers</p>
             </div>
           </div>
         </div>

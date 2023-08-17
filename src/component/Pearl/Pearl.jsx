@@ -7,9 +7,15 @@ import new1 from '../../video/p.pendent.png';
 import new2 from '../../video/p.party.jpg';
 import new3 from '../../video/p.single.png';
 import new4 from '../../video/p.simple3.jpg';
+import { useEffect, useState } from 'react';
 
 const Pearl = () => {
-  const [golds] = AllJewellaryItems();
+   const [pearls, setPearls] = useState([]);
+   useEffect(() => {
+     fetch('http://localhost:5000/pearls')
+       .then((res) => res.json())
+       .then((data) => setPearls(data));
+   }, []);
 
   const handleGolds = (_id) => {
     console.log('this is id', _id);
@@ -26,7 +32,7 @@ const Pearl = () => {
           Collection
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
-          {golds.slice(30, 40).map((gold) => (
+          {pearls.map((gold) => (
             <PearlCards
               key={gold._id}
               gold={gold}

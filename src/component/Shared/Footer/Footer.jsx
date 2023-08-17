@@ -1,23 +1,29 @@
+import pay1 from '../../../video/paytm.png';
+import pay2 from '../../../video/phonepe.png';
+import pay3 from '../../../video/gpay.png';
+import pay4 from '../../../video/mastercard-full-svgrepo-com-svg.png';
+import pay5 from '../../../video/visa-logo-svgrepo-com-svg.png';
 
 
 const Footer = () => {
     return (
-      <div>
-        <footer className="footer p-10 bg-base-200 text-base-content">
+      <div className='bg-base-300' >
+        <footer className="footer p-10 text-base-content">
           <div>
-            <span className="footer-title">Useful Links</span>
-            <a className="link link-hover">International Shipping</a>
-            <a className="link link-hover">Payment Options</a>
-            <a className="link link-hover">Track your Order</a>
-            <a className="link link-hover">Returns</a>
+            <span className="footer-title">OUR COLLECTIONS</span>
+            <a className="link link-hover">Wedding</a>
+            <a className="link link-hover">Diamond</a>
+            <a className="link link-hover">Kids</a>
+            <a className="link link-hover">Goldlites</a>
             <a className="link link-hover">Find a Store</a>
           </div>
           <div>
-            <span className="footer-title">Useful Links</span>
-            <a className="link link-hover">Blog</a>
-            <a className="link link-hover">Offers & Contest Details</a>
-            <a className="link link-hover">Help & FAQs</a>
-            <a className="link link-hover">About Jewellary Town</a>
+            <span className="footer-title">OUR CATEGORIES</span>
+            <a className="link link-hover">Gold</a>
+            <a className="link link-hover">Diamond</a>
+            <a className="link link-hover">Pearl</a>
+            <a className="link link-hover">GEM Stone</a>
+            <a className="link link-hover">Platinum</a>
           </div>
           <div>
             <span className="footer-title">Contact Us</span>
@@ -25,6 +31,7 @@ const Footer = () => {
             <a className="link link-hover">1436-4646-4235</a>
             <a className="link link-hover">Chat with us</a>
           </div>
+         
           <div>
             <span className="footer-title">JEWELLERY GUIDE</span>
             <a className="link link-hover">Jewellery Education</a>
@@ -35,7 +42,7 @@ const Footer = () => {
             <a className="link link-hover">Jewellery Care</a>
           </div>
         </footer>
-        <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
+        <footer className="footer px-10 py-4 border-t  text-base-content border-base-300">
           <div className="items-center grid-flow-col">
             <svg
               width="24"
@@ -52,6 +59,17 @@ const Footer = () => {
               Jewellary Town Ltd. <br />
               Providing reliable service since 1992
             </p>
+          </div>
+          <div className="items-center grid-flow-col">
+            <p>We accept - </p>
+            <div className="payment flex"
+            >
+              <img src={pay1} alt="" />
+              <img src={pay2} alt="" />
+              <img src={pay3} alt="" />
+              <img src={pay4} alt="" />
+              <img src={pay5} alt="" />
+            </div>
           </div>
           <div className="md:place-self-center md:justify-self-end">
             <div className="grid grid-flow-col gap-4">

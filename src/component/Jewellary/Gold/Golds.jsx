@@ -1,10 +1,15 @@
 
-import AllJewellaryItems from "../../../Hooks/AllJewellaryItems";
+import { useEffect, useState } from "react";
 import Loading from "../../Shared/Loading/Loading";
 import Gold from "./Gold";
 
 const Golds = () => {
-  const [golds] = AllJewellaryItems();
+  const [golds, setGolds] = useState([]);
+  useEffect(() => {
+    fetch('http://localhost:5000/golds')
+      .then((res) => res.json())
+      .then((data) => setGolds(data));
+  }, []);
   
 
   if (golds.length == 0) {
@@ -19,7 +24,7 @@ const Golds = () => {
 
         <h1>{golds.length}</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
-          {golds.slice(0,10).map((gold) => (
+          {golds.map((gold) => (
             <Gold key={gold._id} gold={gold} handleGolds={handleGolds}></Gold>
           ))}
         </div>

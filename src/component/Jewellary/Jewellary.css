@@ -187,20 +187,20 @@ display: block;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 70px;
   color: black;
 
 }
 .certificates-card{
 width: 200px;
-padding: 5px;
 text-align: center;
 }
-.certificates-card i{
-  font-size: 60px;
-  color: rgb(240, 47, 105);
+
+.certificates-card img{
+ display: block;
+ margin: auto;
 }
 .certificates-card p{
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 18px;
 }
