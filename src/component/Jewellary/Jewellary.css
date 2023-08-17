@@ -152,7 +152,6 @@ display: block;
 .rangeCards{
   display: flex;
  flex-wrap: wrap;
- flex-basis: 35%;
   gap: 20px;
   justify-content: center;
   align-items: center;
@@ -180,3 +179,28 @@ display: block;
   align-items: center;
 } */
 /* rangeCard */
+.certificate-main{
+
+}
+.certificates-cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  color: black;
+
+}
+.certificates-card{
+width: 200px;
+padding: 5px;
+text-align: center;
+}
+.certificates-card i{
+  font-size: 60px;
+  color: rgb(240, 47, 105);
+}
+.certificates-card p{
+  margin-top: 20px;
+  font-size: 20px;
+}

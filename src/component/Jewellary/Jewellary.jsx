@@ -196,6 +196,35 @@ function Jewellary() {
         </div>
       </div>
       {/* shop by range */}
+      {/* shop with confidence */}
+      <div className="certificate">
+        <div className="certificate-main ">
+          <h1 className="text-4xl text-center pt-5 text-black ">Shop with Confidence</h1>
+          <div className="certificates-cards mt-12 pb-12">
+            <div className="certificates-card">
+              <i className="fa-solid fa-gem"></i>
+              <p>Handcrafted Jewellery</p>
+            </div>
+            <div className="certificates-card">
+              <i className="fa-solid fa-certificate"></i>
+              <p>100% Certified Jewellery</p>
+            </div>
+            <div className="certificates-card">
+              <i className="fa-solid fa-box"></i>
+              <p>Lifetime Exchange and Buyback</p>
+            </div>
+            <div className="certificates-card">
+              <i className="fa-regular fa-gem"></i>
+              <p>Trust of P.C. Chandra Jewellers</p>
+            </div>
+            <div className="certificates-card">
+              <i className="fa-solid fa-ring"></i>
+              <p>Over 2 Million Happy Customers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* shop with confidence */}
     </>
   );
 }

@@ -8,16 +8,34 @@ import new2 from '../../video/p.party.jpg';
 import new3 from '../../video/p.single.png';
 import new4 from '../../video/p.simple3.jpg';
 
-
 const Pearl = () => {
- const [golds] = AllJewellaryItems();
+  const [golds] = AllJewellaryItems();
 
-  
   const handleGolds = (_id) => {
     console.log('this is id', _id);
   };
   return (
     <>
+      {/* card section */}
+      <div className="container mx-auto mt-12 mb-12 bg-white">
+        <h1 className="text-center text-3xl mb-8">
+          Beautiful{' '}
+          <span className="text-5xl" style={{ color: 'rgb(255, 0, 85)' }}>
+            Pearl
+          </span>{' '}
+          Collection
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
+          {golds.slice(30, 40).map((gold) => (
+            <PearlCards
+              key={gold._id}
+              gold={gold}
+              handleGolds={handleGolds}
+            ></PearlCards>
+          ))}
+        </div>
+      </div>
+
       <div className="pearl-header bg-white">
         {/* bg-base-300 */}
         <div className="hero">
@@ -62,24 +80,6 @@ const Pearl = () => {
         </div>
       </div>
 
-      {/* card section */}
-      <div className="container mx-auto mt-12 mb-12 bg-white">
-        <h1 className="text-center text-3xl mb-8">
-          Beautiful <span className="text-5xl" style={{ color: 'rgb(255, 0, 85)' }}>
-            Pearl
-          </span>{' '}
-          Collection
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
-          {golds.slice(30, 40).map((gold) => (
-            <PearlCards
-              key={gold._id}
-              gold={gold}
-              handleGolds={handleGolds}
-            ></PearlCards>
-          ))}
-        </div>
-      </div>
       {/* blog section */}
       <div className="bg-white">
         <div className="Pearl-new pt-10 pb-10 container mx-auto">

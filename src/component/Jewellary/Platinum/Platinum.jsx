@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 const Platinum = ({ platinum }) => {
-  const { image, title, description, price, _id } = platinum;
+  const { image, title, description, price } = platinum;
   return (
     <div>
       <div
