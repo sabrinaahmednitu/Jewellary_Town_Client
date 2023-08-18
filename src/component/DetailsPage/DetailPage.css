@@ -14,16 +14,13 @@ body{
     width: 50%;
 
 }
-.priceQuantity{
-     display: flex;
-    align-items: center;
-    gap: 20%;
-}
+
 .Q-text{
     gap: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+  
 }
 
 .quantity{
@@ -32,8 +29,8 @@ body{
     font-size: 25px;
     border-radius: 20px;
     cursor: pointer;
-    width: 30%;
-    
+    width: 120px;
+    font-weight: 600; 
 }
 
 .detail-input input{
@@ -58,12 +55,5 @@ body{
     }
     .detail-card{
     order: 2;
-    }
-    .priceQuantity{
-        display: block;
-        margin-bottom: 10px;
-    }
-    .quantity{
-            width: 40%;
     }
 }

@@ -19,6 +19,7 @@ import icon5 from '../../video/icon5.png';
 import { Tab, Tabs } from 'react-tabs';
 import Gold from './Gold/Gold';
 import Diamond from './Diamond/Diamond';
+import ring from '../../video/22KTDIJRA18958_1.png'
 
 function Jewellary() {
   const [toggleState, setToggleState] = useState(1);
@@ -134,22 +135,22 @@ function Jewellary() {
 
       {/* shop by range */}
       <div className="ShopByRange">
-        <div className="ShopByRangeMain container mx-auto mt-12 mb-12">
-          <div className="rangeText text-center">
+        <div className="ShopByRangeMain container mx-auto pt-12 pb-10">
+          <div className="rangeText text-center text-black">
             <h1 className="text-3xl mb-2">Shop by Range</h1>
             <p>
               Discover our exclusive jewellery in versatile designs that fits
               every budget with poise and glamour.
             </p>
           </div>
-          <div className="rangeCards mt-12 mb-12">
+          <div className="rangeCards mt-10 mb-12">
             <div className="rangeCard ">
               <div className="Rtext">
                 <h1 className="text-xl">Shop Under</h1>
                 <h1 className="text-3xl">$ 10,000</h1>
               </div>
               <div className="Rimg">
-                <img src={range1} alt="" />
+                <img src={ring} alt="" />
               </div>
             </div>
             <div className="rangeCard">
@@ -158,7 +159,7 @@ function Jewellary() {
                 <h1 className="text-3xl">$ 20,000</h1>
               </div>
               <div className="Rimg">
-                <img src={range1} alt="" />
+                <img src={ring} alt="" />
               </div>
             </div>
             <div className="rangeCard">
@@ -167,7 +168,7 @@ function Jewellary() {
                 <h1 className="text-3xl">$ 30,000</h1>
               </div>
               <div className="Rimg">
-                <img src={range1} alt="" />
+                <img src={ring} alt="" />
               </div>
             </div>
             <div className="rangeCard">
@@ -176,7 +177,7 @@ function Jewellary() {
                 <h1 className="text-3xl">$ 40,000</h1>
               </div>
               <div className="Rimg">
-                <img src={range1} alt="" />
+                <img src={ring} alt="" />
               </div>
             </div>
             <div className="rangeCard">
@@ -185,7 +186,7 @@ function Jewellary() {
                 <h1 className="text-3xl">$ 50,000</h1>
               </div>
               <div className="Rimg">
-                <img src={range1} alt="" />
+                <img src={ring} alt="" />
               </div>
             </div>
             <div className="rangeCard">
@@ -194,7 +195,7 @@ function Jewellary() {
                 <h1 className="text-3xl">$ 90,000</h1>
               </div>
               <div className="Rimg">
-                <img src={range1} alt="" />
+                <img src={ring} alt="" />
               </div>
             </div>
           </div>

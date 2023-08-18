@@ -8,15 +8,15 @@ const Gold = ({ gold, handleGolds }) => {
   return (
     <div>
       <div
-        className="card "
+        className="card"
         style={{
           color: 'black',
-          backgroundColor: 'white',
+          backgroundColor: '#ced7d8',
         }}
       >
         <figure>
           <img
-            className="lg:w-[360px] lg:h-[350px] md:w-[360px] md:h-[350px] sm:w-[100%]"
+            className="lg:w-[100%] lg:h-[300px] md:w-[100%] md:h-[300px] sm:w-[100%] object-fit"
             src={image}
             alt="Shoes"
           />
@@ -31,20 +31,28 @@ const Gold = ({ gold, handleGolds }) => {
           >
             ${price}
           </p>
-          <p>{description.slice(0,44)}...</p>
+          <div>
+            <i className="fa-regular fa-star"></i>
+            <i className="fa-regular fa-star"></i>
+            <i className="fa-regular fa-star"></i>
+            <i className="fa-regular fa-star"></i>
+            <i className="fa-regular fa-star"></i> (53 people rating us)
+          </div>
+          <p>{description.slice(0, 44)}...</p>
 
-        
-            <Link
-              to={`/detailPage/${gold._id}`}
-              onClick={() => handleGolds(_id)}
-              className="btn text-white"
-              style={{
-                 backgroundColor: 'rgb(255, 0, 85)',
-                border:'0'
-              }} >
-               Buy Now
-            </Link>
-          
+          <Link
+            to={`/detailPage/${gold._id}`}
+            onClick={() => handleGolds(_id)}
+            className="btn text-white"
+            style={{
+              backgroundColor: 'rgb(255, 0, 85)',
+              border: '0',
+              width: '60%',
+              margin:'auto'
+            }}
+          >
+            Details
+          </Link>
         </div>
       </div>
     </div>

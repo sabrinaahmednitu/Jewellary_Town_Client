@@ -13,9 +13,9 @@ const Platinums = () => {
     
   return (
     <div className="container mx-auto">
-      <h1>{platinums.length} platinums collection</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
-        {platinums.slice(0,4).map((platinum) => (
+      {/* <div className="grid grid-cols-[repeat(auto-fit, minmax(200px, 1fr))]"> */}
+        <div className=" platinum-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+        {platinums.slice(0, 4).map((platinum) => (
           <Platinum key={platinum._id} platinum={platinum}></Platinum>
         ))}
       </div>

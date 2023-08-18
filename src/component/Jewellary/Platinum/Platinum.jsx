@@ -7,12 +7,15 @@ const Platinum = ({ platinum }) => {
         className="card "
         style={{
           // border: '2px solid rgb(255, 0, 85)',
+          // boxShadow: '2px 2px 2px 2px rgba(0, 0, 0, 0.2)',
           color: 'black',
+          backgroundColor: '#ced7d8',
         }}
       >
         <figure>
           <img
-            className="lg:w-[360px] lg:h-[350px] md:w-[360px] md:h-[350px] sm:w-[100%]"
+            // className="lg:w-[360px] lg:h-[350px] md:w-[360px] md:h-[350px] sm:w-[100%]"
+            className="lg:w-[100%] lg:h-[300px] md:w-[100%] md:h-[300px] sm:w-[100%] object-fit"
             src={image}
             alt="Shoes"
           />
@@ -34,6 +37,8 @@ const Platinum = ({ platinum }) => {
             style={{
               backgroundColor: 'rgb(255, 0, 85)',
               border: 'none',
+              width: '60%',
+              margin: 'auto',
             }}
           >
             <button>Buy Now</button>
