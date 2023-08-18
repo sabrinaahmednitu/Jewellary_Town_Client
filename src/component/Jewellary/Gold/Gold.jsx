@@ -11,7 +11,7 @@ const Gold = ({ gold, handleGolds }) => {
         className="card"
         style={{
           color: 'black',
-          backgroundColor: '#ced7d8',
+          backgroundColor: 'white',
         }}
       >
         <figure>
@@ -22,7 +22,7 @@ const Gold = ({ gold, handleGolds }) => {
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title font-bold">{title}</h2>
+          <h2 className="card-title">{title}</h2>
           <p
             className="font-bold text-2xl "
             style={{

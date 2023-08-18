@@ -9,7 +9,7 @@ const Platinum = ({ platinum }) => {
           // border: '2px solid rgb(255, 0, 85)',
           // boxShadow: '2px 2px 2px 2px rgba(0, 0, 0, 0.2)',
           color: 'black',
-          backgroundColor: '#ced7d8',
+          backgroundColor: 'white',
         }}
       >
         <figure>
@@ -21,7 +21,7 @@ const Platinum = ({ platinum }) => {
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title font-bold">{title}</h2>
+          <h2 className="card-title ">{title}</h2>
           <p
             className="font-bold text-2xl "
             style={{

@@ -9,7 +9,8 @@ const Diamond = ({ diamond }) => {
         style={{
           // border: '2px solid rgb(255, 0, 85)',
           color: 'black',
-          backgroundColor: '#ced7d8',
+           backgroundColor: 'white',
+          // backgroundColor: '#ced7d8',
         }}
       >
         <figure>
@@ -20,7 +21,7 @@ const Diamond = ({ diamond }) => {
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title font-bold">{title}</h2>
+          <h2 className="card-title ">{title}</h2>
           <p
             className="font-bold text-2xl "
             style={{

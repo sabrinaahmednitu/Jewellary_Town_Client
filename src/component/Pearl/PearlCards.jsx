@@ -8,14 +8,14 @@ const PearlCards = ({ gold, handleGolds }) => {
       <div
         className="card"
         style={{
-          border: '2px solid rgb(255, 0, 85)',
-          color: 'white',
-          backgroundColor: 'black',
+          color: 'black',
+          backgroundColor: 'white',
         }}
       >
         <figure>
           <img
-            className="lg:w-[370px] lg:h-[350px] md:w-[370px] md:h-[340px] sm:w-[100%]"
+            // className="lg:w-[370px] lg:h-[350px] md:w-[370px] md:h-[340px] sm:w-[100%]"
+            className="lg:w-[100%] lg:h-[300px] md:w-[100%] md:h-[300px] sm:w-[100%] object-fit"
             src={image}
             alt="Shoes"
           />
@@ -32,10 +32,10 @@ const PearlCards = ({ gold, handleGolds }) => {
           </p>
           <p>{description}</p>
 
-          <div className="card-actions justify-start">
+          <div className="card-actions ">
             <button
               onClick={() => handleGolds(_id)}
-              className="btn text-white font-bold d-block mx-auto w-[50%]"
+              className="btn text-white font-bold d-block mx-auto w-[60%]"
               style={{
                 backgroundColor: 'rgb(255, 0, 85)',
               }}

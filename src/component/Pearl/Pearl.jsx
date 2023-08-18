@@ -67,22 +67,28 @@ const Pearl = () => {
       </div>
 
       {/* card section */}
-      <div className="container mx-auto mt-12 mb-12 bg-white">
-        <h1 className="text-center text-3xl mb-8">
-          Beautiful{' '}
-          <span className="text-5xl" style={{ color: 'rgb(255, 0, 85)' }}>
-            Pearl
-          </span>{' '}
-          Collection
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
-          {pearls.map((gold) => (
-            <PearlCards
-              key={gold._id}
-              gold={gold}
-              handleGolds={handleGolds}
-            ></PearlCards>
-          ))}
+      <div
+        style={{
+          backgroundColor: 'rgb(211, 212, 211)',
+        }}
+      >
+        <div className="container mx-auto mt-12 mb-12 pt-12 pb-12">
+          <h1 className="text-center text-3xl mb-8 text-black">
+            Beautiful{' '}
+            <span className="text-5xl" style={{ color: 'rgb(255, 0, 85)' }}>
+              Pearl
+            </span>{' '}
+            Collection
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
+            {pearls.map((gold) => (
+              <PearlCards
+                key={gold._id}
+                gold={gold}
+                handleGolds={handleGolds}
+              ></PearlCards>
+            ))}
+          </div>
         </div>
       </div>
 

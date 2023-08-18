@@ -49,8 +49,13 @@ function Jewellary() {
 
       {/* tabs section */}
 
-      <div className="Container mt-12 mb-5">
-        <h1 className="text-3xl text-center text-black font-bold">
+      <div
+        className="Container mt-12 pt-10 pb-12"
+        style={{
+          backgroundColor: 'rgb(211, 212, 211)',
+        }}
+      >
+        <h1 className="text-3xl text-center text-black font-bold mb-5">
           <span
             className="text-4xl"
             style={{
@@ -64,7 +69,13 @@ function Jewellary() {
         </h1>
         <Golds></Golds>
       </div>
-      <div className="Container mt-12 mb-5">
+
+      <div
+        className="Container pt-10 pb-12"
+        style={{
+          backgroundColor: 'rgb(211, 212, 211)',
+        }}
+      >
         <h1 className="text-3xl text-center text-black font-bold mb-5">
           <span
             className="text-4xl"
@@ -78,7 +89,12 @@ function Jewellary() {
         </h1>
         <Diamonds></Diamonds>
       </div>
-      <div className="Container mt-12 mb-5">
+      <div
+        className="Container pt-12 pb-12"
+        style={{
+          backgroundColor: 'rgb(211, 212, 211)',
+        }}
+      >
         <h1 className="text-3xl text-center text-black font-bold mb-5">
           <span
             className="text-4xl"
