@@ -37,8 +37,8 @@ const DetailPage = () => {
 
 
   return (
-    <div className="mt-20 mb-20 text-black bg-black container mx-auto pt-10 pb-10">
-      <div className="detail-content flex justify-center align-items-center">
+    <div className="pt-20 pb-20 text-black bg-black ">
+      <div className="detail-content flex justify-center align-items-center container mx-auto pt-12 pb-10">
         {/* detail 1 */}
         <form
           onSubmit={handleBooking}

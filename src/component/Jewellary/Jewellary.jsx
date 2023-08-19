@@ -225,31 +225,31 @@ function Jewellary() {
             Shop with Confidence
           </h1>
           <div className="certificates-cards mt-12 pb-12">
-            <div className="certificates-card">
+            <div className="certificates-card hover:shadow-xl py-3">
               <img src={icon1} alt="" />
               <p>
                 Handcrafted <br /> Jewellery
               </p>
             </div>
-            <div className="certificates-card">
+            <div className="certificates-card shadow-xl py-3">
               <img src={icon2} alt="" />
               <p>
                 100% Certified <br /> Jewellery
               </p>
             </div>
-            <div className="certificates-card">
+            <div className="certificates-card hover:shadow-xl py-3">
               <img src={icon3} alt="" />
               <p>
                 Lifetime Exchange <br /> and Buyback
               </p>
             </div>
-            <div className="certificates-card">
+            <div className="certificates-card hover:shadow-xl py-3">
               <img src={icon4} alt="" />
               <p>
                 Trust of P.C. Chandra <br /> Jewellers
               </p>
             </div>
-            <div className="certificates-card">
+            <div className="certificates-card hover:shadow-xl py-3">
               <img src={icon5} alt="" />
               <p>
                 Over 2 Million <br /> Happy Customers

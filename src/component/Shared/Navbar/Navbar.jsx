@@ -19,9 +19,6 @@ const Navbar = () => {
       <li>
         <Link to="/pearl">Pearl</Link>
       </li>
-      <li>
-        <Link to="/category">Category</Link>
-      </li>
       {user && (
         <li>
           <Link to="/dashboard">Dashboard</Link>
