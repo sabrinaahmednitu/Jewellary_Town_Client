@@ -124,26 +124,39 @@ button {
 
 /* bride section */
 .brideMain{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
+  display: flex;
   justify-content: center;
-align-items: center;
-gap: 20px;
- 
+   align-items: center;
+  gap: 30px;
+ flex-wrap: wrap;
+ overflow: hidden;
 }
 .brideImage{
+  flex-basis: 45%;
 display: flex;
 justify-content: center;
 align-items: center;
 }
+.brideText{
+  flex-basis: 45%;
+}
 
+@media only screen and (max-width: 768px) {
+  .brideMain{
+    display: block;
+  }
+.brideImage{
+  width: 50%;
+   margin: auto;
+}
+}
 @media only screen and (max-width: 576px) {
   .brideMain{
-  grid-template-columns: repeat(1,1fr);
-  padding:10px;
-}
+    padding: 20px;
+  }
 .brideImage{
-display: block;
+  width: 100%;
+  display: block;
 }
 }
 

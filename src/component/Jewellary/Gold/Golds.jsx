@@ -22,10 +22,10 @@ const Golds = () => {
   }
     return (
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
-            {golds.slice(0,4).map((gold) => (
-              <Gold key={gold._id} gold={gold} handleGolds={handleGolds}></Gold>
-            ))}
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5 ">
+          {golds.slice(0, 4).map((gold) => (
+            <Gold key={gold._id} gold={gold} handleGolds={handleGolds}></Gold>
+          ))}
         </div>
       </div>
     );
