@@ -52,9 +52,9 @@ const About = () => {
             <div className="teamCard">
               <img src={stuff1} alt="" />
               <div className="teamText ">
-                <h1>Nemo Enimson</h1>
-                <p className='mt-3' >Manager</p>
-                <div className="teamSocial mt-4">
+                <h1 >Nemo Enimson</h1>
+                <p >Manager</p>
+                <div className="teamSocial">
                   <i className="fa-brands fa-facebook"></i>
                   <i className="fa-brands fa-square-twitter"></i>
                   <i className="fa-brands fa-google-plus"></i>

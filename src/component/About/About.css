@@ -54,7 +54,7 @@
   transition: 0.5s;
 }
 .teamCard:hover {
-  border: 1px solid rgb(240, 208, 63);
+  border: 1px solid rgb(248, 148, 17);
   transform: translatey(-15px);
 }
 .teamCard img {
@@ -63,13 +63,22 @@
 .teamText{
     text-align: center;
 }
+.teamText h1{
+    margin-top: 8px;
+}
+.teamText p{
+    color: rgb(248, 148, 17);
+    margin-top: 8px;
+}
 .teamSocial{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
-    font-size: 25px;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .teamSocial i:hover{
-  color:rgb(240, 208, 63);
+  color:rgb(248, 148, 17);
 }
