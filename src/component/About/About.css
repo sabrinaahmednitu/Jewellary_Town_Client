@@ -1,0 +1,28 @@
+.weAre-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  max-width: 1280px;
+  margin: auto;
+}
+.we-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.weImg {
+  flex-basis: 40%;
+}
+.weText {
+  flex-basis: 40%;
+}
+
+
+@media screen and (max-width: 768px) {
+.weAre-main {
+display: block;
+padding: 20px;
+}
+}
