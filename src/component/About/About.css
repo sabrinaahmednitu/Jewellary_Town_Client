@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   gap: 50px;
-  max-width: 1280px;
+  max-width: 1480px;
   margin: auto;
 }
 .we-head {
@@ -19,10 +19,57 @@
   flex-basis: 40%;
 }
 
-
 @media screen and (max-width: 768px) {
-.weAre-main {
-display: block;
-padding: 20px;
+  .weAre-main {
+    display: block;
+    padding: 20px;
+  }
 }
+.Teams-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+.ourTeams{
+  max-width: 1080px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.teamCards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.teamCard {
+  flex-basis: 20%;
+  min-width: 200px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(230, 230, 224);
+  transition: 0.5s;
+}
+.teamCard:hover {
+  border: 1px solid rgb(240, 208, 63);
+  transform: translatey(-15px);
+}
+.teamCard img {
+  width: 100%;
+}
+.teamText{
+    text-align: center;
+}
+.teamSocial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 25px;
+}
+.teamSocial i:hover{
+  color:rgb(240, 208, 63);
 }
