@@ -2,7 +2,10 @@ import './About.css';
 import left from '../../video/heading_left.png';
 import right from '../../video/heading_right.png';
 import building from '../../video/building.jpg';
-import stuff1 from '../../video/staff-03-1-250x250_t.jpg' 
+import stuff3 from '../../video/staff-03-1-250x250_t.jpg' 
+import stuff1 from '../../video/staff-01-1-250x250_t.jpg' 
+import stuff2 from '../../video/staff-02-1-250x250_t.jpg' 
+import stuff4 from '../../video/staff-04-1-250x250_t.jpg' 
 const About = () => {
   return (
     <>
@@ -42,7 +45,7 @@ const About = () => {
         </div>
       </section>
       <section>
-        <div className="ourTeams">
+        <div className="ourTeams container">
           <div className="Teams-head mb-5 ">
             <img className="w-[100px]" src={left} alt="" />
             <h1 className="text-2xl text-black">Our Team</h1>
@@ -63,7 +66,7 @@ const About = () => {
               </div>
             </div>
             <div className="teamCard">
-              <img src={stuff1} alt="" />
+              <img src={stuff2} alt="" />
               <div className="teamText">
                 <h1>Monelo Patel</h1>
                 <p>CEO</p>
@@ -76,7 +79,7 @@ const About = () => {
               </div>
             </div>
             <div className="teamCard">
-              <img src={stuff1} alt="" />
+              <img src={stuff3} alt="" />
               <div className="teamText">
                 <h1>Vilorano jeo</h1>
                 <p>Designer</p>
@@ -89,7 +92,7 @@ const About = () => {
               </div>
             </div>
             <div className="teamCard">
-              <img src={stuff1} alt="" />
+              <img src={stuff4} alt="" />
               <div className="teamText">
                 <h1>Mark Marley</h1>
                 <p>Co-CEO</p>

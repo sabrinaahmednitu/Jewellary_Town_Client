@@ -33,7 +33,7 @@
     padding-bottom: 20px;
 }
 .ourTeams{
-  max-width: 1080px;
+  max-width: 1280px;
   margin: auto;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -47,8 +47,8 @@
 }
 .teamCard {
   flex-basis: 20%;
-  min-width: 200px;
-  padding: 10px;
+  min-width: 300px;
+  padding: 15px;
   margin-bottom: 20px;
   border: 1px solid rgb(230, 230, 224);
   transition: 0.5s;
@@ -65,6 +65,8 @@
 }
 .teamText h1{
     margin-top: 8px;
+    color: black;
+    font-size: 18px
 }
 .teamText p{
     color: rgb(248, 148, 17);
