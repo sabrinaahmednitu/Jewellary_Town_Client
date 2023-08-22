@@ -1,0 +1,49 @@
+.contact-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    max-width: 1280px;
+    margin: auto;
+   
+}
+
+.contact-form{
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: black;
+}
+.contact-form input{
+    height: 40px;
+}
+.contact-form textarea{
+    height: 100px;
+}
+
+.contact-text{
+    flex-basis: 40%;
+}
+
+.contact-text p{
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.contact-text i{
+    margin-right: 15px;
+}
+
+@media screen and (max-width: 576px) {
+  .contact-main{
+     display: block;
+      padding: 20px;
+  }
+
+  .contact-form{
+   margin-bottom: 50px;
+  } 
+
+}
