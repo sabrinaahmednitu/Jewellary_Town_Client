@@ -68,6 +68,10 @@ function Jewellary() {
           Collection
         </h1>
         <Golds></Golds>
+
+        <button className="btn block text-white mx-auto mt-12 w-[335px]">
+          All Gold Collections
+        </button>
       </div>
 
       <div
@@ -88,6 +92,9 @@ function Jewellary() {
           Collection
         </h1>
         <Diamonds></Diamonds>
+        <button className="btn block text-white mx-auto mt-12 w-[335px]">
+          All Diamonds Collections
+        </button>
       </div>
       <div
         className="Container pt-12 pb-12"
@@ -107,6 +114,9 @@ function Jewellary() {
           Collection
         </h1>
         <Platinums></Platinums>
+        <button className="btn text-white block mx-auto mt-12 w-[335px]">
+          All Platinum Collections
+        </button>
       </div>
 
       {/* tabs section */}

@@ -1,34 +1,56 @@
-
-import { useEffect, useState } from "react";
-import Loading from "../../Shared/Loading/Loading";
-import Gold from "./Gold";
-
+import { useEffect, useState } from 'react';
+import Slider from 'react-slick';
+import Loading from '../../Shared/Loading/Loading';
+import Gold from './Gold';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Golds = () => {
+
+   
   const [golds, setGolds] = useState([]);
   useEffect(() => {
     fetch('http://localhost:5000/golds')
       .then((res) => res.json())
       .then((data) => setGolds(data));
   }, []);
-  
 
   if (golds.length == 0) {
     return <Loading></Loading>;
   }
 
-    const handleGolds = _id => {
-        console.log('this is id',_id);
-  }
-    return (
-      <div className="container mx-auto">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5 ">
-          {golds.slice(0, 4).map((gold) => (
-            <Gold key={gold._id} gold={gold} handleGolds={handleGolds}></Gold>
+  const handleGolds = (_id) => {
+    console.log('this is id', _id);
+  };
+
+   const settings = {
+     dots: true,
+     infinite: true,
+     slidesToShow: 4,
+     slidesToScroll: 1,
+     autoplay: true,
+      autoplaySpeed: 2000,
+      pauseOnHover: true,
+   };
+
+  return (
+    <div className="container mx-auto">
+      <div>
+        <Slider {...settings}>
+          {golds.map((gold) => (
+            <Gold
+              key={gold._id}
+              gold={gold}
+              handleGolds={handleGolds}
+              style={{
+             margin:'20px'
+           }}
+            ></Gold>
           ))}
-        </div>
+        </Slider>
       </div>
-    );
+    </div>
+  );
 };
 
 export default Golds;

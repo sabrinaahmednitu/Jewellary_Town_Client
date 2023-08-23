@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import About from '../component/About/About';
+import Cart from '../component/Cart/Cart';
 import Contact from '../component/Contact/Contact';
 import AddJewellary from '../component/Dashboard/AddJewellary/AddJewellary';
 import Dashboard from '../component/Dashboard/Dashboard';
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact></Contact>,
+      },
+      {
+        path: '/cart',
+        element: <Cart></Cart>,
       },
       {
         path: '/pearl',
@@ -80,6 +85,12 @@ export const router = createBrowserRouter([
         element: <DetailPage></DetailPage>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/golds/${params.id}`),
+      },
+      {
+        path: '/detailsPage/:id',
+        element: <DetailPage></DetailPage>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/diamonds/${params.id}`),
       },
     ],
   },
