@@ -243,3 +243,22 @@ text-align: center;
   margin-top: 20px;
   font-size: 18px;
 }
+
+
+ /*Customer review*/
+.review-main{
+  background-color: #F5F5F5;
+  
+}
+ /* .reviews , .review{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+ } */
+
+ .review h2{
+ color: rgb(255, 157, 0);
+ font-size: 20px;
+ }
+
