@@ -19,7 +19,13 @@ import icon5 from '../../video/icon5.png';
 import { Tab, Tabs } from 'react-tabs';
 import Gold from './Gold/Gold';
 import Diamond from './Diamond/Diamond';
-import ring from '../../video/22KTDIJRA18958_1.png'
+import ring from '../../video/22KTDIJRA18958_1.png';
+import left from '../../video/heading_left.png';
+import right from '../../video/heading_right.png';
+import review1 from '../../video/review1.png';
+import review2 from '../../video/review2.png';
+import review3 from '../../video/review3.png';
+
 
 function Jewellary() {
   const [toggleState, setToggleState] = useState(1);
@@ -269,6 +275,48 @@ function Jewellary() {
         </div>
       </div>
       {/* shop with confidence */}
+
+      {/*Customer review*/}
+      <section className="Review-main  pt-12 pb-12">
+        <div className="Teams-head mb-5 ">
+          <img className="w-[100px]" src={left} alt="" />
+          <h1 className="text-2xl text-black">Testimonials</h1>
+          <img className="w-[100px]" src={right} alt="" />
+        </div>
+        <div className="reviews flex">
+          <div className="review flex">
+            <img className="rounded-full bg-gray-300" src={review1} alt="" />
+            <div className="review-text">
+              <h1>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has ...
+              </h1>
+              <h2>-Mr. Reema Cyrus </h2>
+            </div>
+          </div>
+          <div className="review flex">
+            <img className="rounded-full bg-gray-300" src={review2} alt="" />
+            <div className="review-text">
+              <h1>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has ...
+              </h1>
+              <h2>-Mr. Reema Cyrus </h2>
+            </div>
+          </div>
+          <div className="review flex">
+            <img className="rounded-full bg-gray-300" src={review3} alt="" />
+            <div className="review-text">
+              <h1>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has ...
+              </h1>
+              <h2>-Mr. Reema Cyrus </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/*  Customer review */}
     </>
   );
 }
