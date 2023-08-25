@@ -15,12 +15,13 @@ const DetailPage = () => {
   const handleBooking = (event) => {
     event.preventDefault();
     const booking = {
-      id:user?._id,
+      id: user?._id,
       displayName: user?.displayName,
       email: user?.email,
       jewellaryName: allGoldsData.title,
       price: allGoldsData.price,
       phone: event.target.phone.value,
+      image: allGoldsData.image,
     };
     fetch('http://localhost:5000/booking', {
       method: "POST",
@@ -67,6 +68,12 @@ const DetailPage = () => {
             type="text"
             defaultValue={allGoldsData.price}
             placeholder="Type here"
+            className="input w-full bg-transparent"
+          />
+          <input
+            type="text"
+            defaultValue={allGoldsData.image}
+            disabled
             className="input w-full bg-transparent"
           />
           <button className=" btn detail-btn w-full">Add to Cart </button>
