@@ -43,7 +43,11 @@ const DetailPage = () => {
       {/* <div className="detail-content flex justify-center align-items-center container mx-auto pt-12 pb-10"> */}
 
       {/* detail 2 */}
-      <div className="detail-card flex justify-center align-items-center max-w-screen-xl  mx-auto basis-3/6 p-10">
+      <div className="detail-card flex justify-center align-items-center max-w-screen-xl  mx-auto basis-3/6 p-10 gap-10">
+        {/* detail-img */}
+        <div className="detail-img basis-5/12" id="Dimg">
+          <img className="w-[100%] rounded" src={allGoldsData.image}></img>
+        </div>
         {/* details-text */}
         <div className="details-text basis-3/6 mr-5 " id="Dtext">
           <h1 className="text-4xl mb-4 font-medium text-[#949494] ">
@@ -51,7 +55,7 @@ const DetailPage = () => {
           </h1>
           <div className="flex align-items-center gap-5">
             <h2 className="text-3xl font-bold  mb-5">
-              {allGoldsData.price - 1000} $
+              {allGoldsData.price - 900} $
             </h2>
             <h2 className="text-xl mb-5 font-bold text-[#949494] line-through">
               {allGoldsData.price} $
@@ -85,11 +89,6 @@ const DetailPage = () => {
             </ul>
           </div>
         </div>
-
-        {/* detail-img */}
-        <div className="detail-img basis-5/12" id="Dimg">
-          <img className="w-[100%] rounded" src={allGoldsData.image}></img>
-        </div>
       </div>
 
       {/* detail 1 */}
@@ -118,7 +117,7 @@ const DetailPage = () => {
         />
         <input
           type="text"
-          defaultValue={allGoldsData.price}
+          defaultValue={allGoldsData.price-900 + ' $'}
           placeholder="Type here"
           className="input w-full bg-transparent"
         />
