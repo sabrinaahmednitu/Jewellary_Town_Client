@@ -349,12 +349,16 @@ function Jewellary() {
       {/*  Related Article */}
       <section className=" pt-12 pb-12 container mx-auto">
         <div className="related-main max-w-screen-xl mx-auto">
-          <h1 className="text-3xl text-black mb-2">Related Article</h1>
-          <hr className="border-black" />
-          <div className="related-cards grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 justify-content-center align-items-center mt-5">
-            <div className="related-card max-w-[300px] mx-auto rounded-xl bg-black">
+          <div className="related-heading"> 
+            <h1 className="text-3xl text-black mb-2">
+              Related Article
+            </h1>
+            <hr />
+          </div>
+          <div className="related-cards grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 justify-content-center align-items-center">
+            <div className="related-card max-w-[300px] mx-auto rounded-xl border mt-10 ">
               <img
-                className="h-[200px] w-[300px] sm:w-[100%] object-cover "
+                className="h-[200px] w-[300px] sm:w-[100%] object-cover"
                 src={related3}
                 alt=""
               />
@@ -367,40 +371,46 @@ function Jewellary() {
                 </p>
               </div>
             </div>
-            <div className="related-card  max-w-[300px] mx-auto">
+            <div className="related-card  max-w-[300px] mx-auto rounded-xl border mt-10">
               <img
                 className="h-[200px] w-[300px] sm:w-[100%] object-cover"
                 src={related2}
                 alt=""
               />
-              <div>
-                <h1>Ruby on Rose Accessories and Blue Gemstones</h1>
+              <div className="p-5">
+                <h1 className="text-xl mb-3">
+                  Ruby on Rose Accessories and Blue Gemstones
+                </h1>
                 <p>
                   <small>August 16, 2018 No Comments</small>
                 </p>
               </div>
             </div>
-            <div className="related-card   max-w-[300px] mx-auto">
+            <div className="related-card   max-w-[300px] mx-auto rounded-xl border mt-10">
               <img
                 className="h-[200px] w-[300px] sm:w-[100%] object-cover"
                 src={related1}
                 alt=""
               />
-              <div>
-                <h1>Ruby on Rose Accessories and Blue Gemstones</h1>
+              <div className="p-5">
+                <h1 className="text-xl mb-3">
+                  Ruby on Rose Accessories and Blue Gemstones
+                </h1>
                 <p>
                   <small>August 16, 2018 No Comments</small>
                 </p>
               </div>
             </div>
-            <div className="related-card  max-w-[300px] mx-auto">
+            <div className="related-card  max-w-[300px] mx-auto rounded-xl border mt-10">
               <img
                 className="h-[200px] w-[300px] sm:w-[100%] object-cover"
                 src={related4}
                 alt=""
               />
-              <div>
-                <h1>Ruby on Rose Accessories and Blue Gemstones</h1>
+              <div className="p-5">
+                <h1 className="text-xl mb-3">
+                  Ruby on Rose Accessories and Blue Gemstones
+                </h1>
                 <p>
                   <small>August 16, 2018 No Comments</small>
                 </p>

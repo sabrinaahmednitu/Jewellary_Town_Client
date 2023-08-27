@@ -264,3 +264,8 @@ text-align: center;
 
   /*  Related Article */
   
+/* .related-heading h1::after{
+  content: '';
+  border-top: 1px solid red;
+  display: block;
+} */
