@@ -29,8 +29,9 @@ const Golds = () => {
      slidesToShow: 3,
      slidesToScroll: 1,
      autoplay: true,
-      autoplaySpeed: 2000,
-      pauseOnHover: true,
+     autoplaySpeed: 2000,
+     pauseOnHover: true,
+     arrows: false
    };
 
   return (

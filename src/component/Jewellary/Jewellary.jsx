@@ -28,6 +28,10 @@ import review1 from '../../video/review1.png';
 import review2 from '../../video/review2.png';
 import review3 from '../../video/review3.png';
 import Slider from 'react-slick';
+import related1 from '../../video/related1.jpg'
+import related2 from '../../video/related2.jpg'
+import related3 from '../../video/related3.jpg'
+import related4 from '../../video/related4.jpg'
 
 
 function Jewellary() {
@@ -296,7 +300,7 @@ function Jewellary() {
           <img className="w-[100px]" src={right} alt="" />
         </div>
         <div className="reviews container mx-auto">
-          <Slider {...settings} className='review-slider'>
+          <Slider {...settings} className="review-slider">
             <div className="review">
               <img className="rounded-full bg-gray-300" src={review1} alt="" />
               <div className="review-text">
@@ -341,6 +345,71 @@ function Jewellary() {
         </div>
       </section>
       {/*  Customer review */}
+
+      {/*  Related Article */}
+      <section className=" pt-12 pb-12 container mx-auto">
+        <div className="related-main max-w-screen-xl mx-auto">
+          <h1 className="text-3xl text-black mb-2">Related Article</h1>
+          <hr className="border-black" />
+          <div className="related-cards grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 justify-content-center align-items-center mt-5">
+            <div className="related-card max-w-[300px] mx-auto rounded-xl bg-black">
+              <img
+                className="h-[200px] w-[300px] sm:w-[100%] object-cover "
+                src={related3}
+                alt=""
+              />
+              <div className="p-5">
+                <h1 className="text-xl mb-3">
+                  Ruby on Rose Accessories and Blue Gemstones
+                </h1>
+                <p>
+                  <small>August 16, 2018 No Comments</small>
+                </p>
+              </div>
+            </div>
+            <div className="related-card  max-w-[300px] mx-auto">
+              <img
+                className="h-[200px] w-[300px] sm:w-[100%] object-cover"
+                src={related2}
+                alt=""
+              />
+              <div>
+                <h1>Ruby on Rose Accessories and Blue Gemstones</h1>
+                <p>
+                  <small>August 16, 2018 No Comments</small>
+                </p>
+              </div>
+            </div>
+            <div className="related-card   max-w-[300px] mx-auto">
+              <img
+                className="h-[200px] w-[300px] sm:w-[100%] object-cover"
+                src={related1}
+                alt=""
+              />
+              <div>
+                <h1>Ruby on Rose Accessories and Blue Gemstones</h1>
+                <p>
+                  <small>August 16, 2018 No Comments</small>
+                </p>
+              </div>
+            </div>
+            <div className="related-card  max-w-[300px] mx-auto">
+              <img
+                className="h-[200px] w-[300px] sm:w-[100%] object-cover"
+                src={related4}
+                alt=""
+              />
+              <div>
+                <h1>Ruby on Rose Accessories and Blue Gemstones</h1>
+                <p>
+                  <small>August 16, 2018 No Comments</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/*  Related Article */}
     </>
   );
 }
