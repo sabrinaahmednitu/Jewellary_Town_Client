@@ -1,3 +1,4 @@
+/* eslint-disable no-dupe-keys */
 import { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import Loading from '../../Shared/Loading/Loading';
@@ -7,12 +8,14 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const Golds = () => {
 
-   
+ 
   const [golds, setGolds] = useState([]);
   useEffect(() => {
     fetch('http://localhost:5000/golds')
       .then((res) => res.json())
       .then((data) => setGolds(data));
+    
+    
   }, []);
 
   if (golds.length == 0) {
@@ -23,31 +26,32 @@ const Golds = () => {
     console.log('this is id', _id);
   };
 
+    
+
    const settings = {
      dots: true,
      infinite: true,
-     slidesToShow: 3,
+     slidesToShow: 4,
      slidesToScroll: 1,
      autoplay: true,
      autoplaySpeed: 2000,
      pauseOnHover: true,
-     arrows: false
+     arrows: false,
+    
    };
 
   return (
     <div className="container mx-auto">
-      <div>
+      <div >
         <Slider {...settings}>
-          {golds.map((gold) => (
-            <Gold
-              key={gold._id}
-              gold={gold}
-              handleGolds={handleGolds}
-              style={{
-             margin:'20px'
-           }}
-            ></Gold>
-          ))}
+            {golds.map((gold) => (
+              <Gold
+                key={gold._id}
+                gold={gold}
+                handleGolds={handleGolds}
+              ></Gold>
+            ))}
+        
         </Slider>
       </div>
     </div>

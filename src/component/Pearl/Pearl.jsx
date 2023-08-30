@@ -1,8 +1,6 @@
 import './Pearl.css';
 import p1 from '../../video/p.pendent4.avif';
 import PearlCards from './PearlCards';
-import AllJewellaryItems from '../../Hooks/AllJewellaryItems';
-// import p1 from '../../video/pexels-cottonbro-9428860 (1080p).mp4';
 import new1 from '../../video/p.pendent.png';
 import new2 from '../../video/p.party.jpg';
 import new3 from '../../video/p.single.png';

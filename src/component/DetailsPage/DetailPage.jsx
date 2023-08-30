@@ -1,12 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-undef */
-import { useContext } from 'react';
+import { useContext} from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Hooks/AuthProvider';
 import './DetailPage.css';
 const DetailPage = () => {
+
   const allGoldsData = useLoaderData();
   console.log(allGoldsData);
+
 
   const { user } = useContext(AuthContext);
   console.log('user', user);
@@ -117,7 +119,7 @@ const DetailPage = () => {
         />
         <input
           type="text"
-          defaultValue={allGoldsData.price-900 + ' $'}
+          defaultValue={allGoldsData.price - 900 + ' $'}
           placeholder="Type here"
           className="input w-full bg-transparent"
         />

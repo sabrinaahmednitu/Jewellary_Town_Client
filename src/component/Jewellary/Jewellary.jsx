@@ -292,67 +292,11 @@ function Jewellary() {
       </div>
       {/* shop with confidence */}
 
-      {/*Customer review*/}
-      <section className="review-main  pt-12 pb-12">
-        <div className="Teams-head mb-5 ">
-          <img className="w-[100px]" src={left} alt="" />
-          <h1 className="text-2xl text-black">Testimonials</h1>
-          <img className="w-[100px]" src={right} alt="" />
-        </div>
-        <div className="reviews container mx-auto">
-          <Slider {...settings} className="review-slider">
-            <div className="review">
-              <img className="rounded-full bg-gray-300" src={review1} alt="" />
-              <div className="review-text">
-                <h1>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has ...
-                </h1>
-                <h2>- Mr. Reema Cyrus </h2>
-              </div>
-            </div>
-            <div className="review">
-              <img className="rounded-full bg-gray-300" src={review2} alt="" />
-              <div className="review-text">
-                <h1>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has ...
-                </h1>
-                <h2>- Stephnie MacMohan </h2>
-              </div>
-            </div>
-            <div className="review">
-              <img className="rounded-full bg-gray-300" src={review3} alt="" />
-              <div className="review-text">
-                <h1>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has ...
-                </h1>
-                <h2>- Dr. Nidhen Johen</h2>
-              </div>
-            </div>
-            <div className="review">
-              <img className="rounded-full bg-gray-300" src={review3} alt="" />
-              <div className="review-text">
-                <h1>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has ...
-                </h1>
-                <h2>- Dr. Nidhen Johen</h2>
-              </div>
-            </div>
-          </Slider>
-        </div>
-      </section>
-      {/*  Customer review */}
-
       {/*  Related Article */}
       <section className=" pt-12 pb-12 container mx-auto">
         <div className="related-main max-w-screen-xl mx-auto">
-          <div className="related-heading"> 
-            <h1 className="text-3xl text-black mb-2">
-              Related Article
-            </h1>
+          <div className="related-heading">
+            <h1 className="text-3xl text-black mb-2">Related Article</h1>
             <hr />
           </div>
           <div className="related-cards grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 justify-content-center align-items-center">
@@ -420,6 +364,60 @@ function Jewellary() {
         </div>
       </section>
       {/*  Related Article */}
+
+      {/*Customer review*/}
+      <section className="review-main  pt-12 pb-12">
+        <div className="Teams-head mb-5 ">
+          <img className="w-[100px]" src={left} alt="" />
+          <h1 className="text-2xl text-black">Testimonials</h1>
+          <img className="w-[100px]" src={right} alt="" />
+        </div>
+        <div className="reviews container mx-auto">
+          <Slider {...settings} className="review-slider">
+            <div className="review">
+              <img className="rounded-full bg-gray-300" src={review1} alt="" />
+              <div className="review-text">
+                <h1>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has ...
+                </h1>
+                <h2>- Mr. Reema Cyrus </h2>
+              </div>
+            </div>
+            <div className="review">
+              <img className="rounded-full bg-gray-300" src={review2} alt="" />
+              <div className="review-text">
+                <h1>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has ...
+                </h1>
+                <h2>- Stephnie MacMohan </h2>
+              </div>
+            </div>
+            <div className="review">
+              <img className="rounded-full bg-gray-300" src={review3} alt="" />
+              <div className="review-text">
+                <h1>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has ...
+                </h1>
+                <h2>- Dr. Nidhen Johen</h2>
+              </div>
+            </div>
+            <div className="review">
+              <img className="rounded-full bg-gray-300" src={review3} alt="" />
+              <div className="review-text">
+                <h1>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has ...
+                </h1>
+                <h2>- Dr. Nidhen Johen</h2>
+              </div>
+            </div>
+          </Slider>
+        </div>
+      </section>
+      {/*  Customer review */}
     </>
   );
 }

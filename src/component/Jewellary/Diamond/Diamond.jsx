@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 
-const Diamond = ({ diamond }) => {
-  const { image, description, price, title } = diamond;
+import { Link } from "react-router-dom";
+
+const Diamond = ({ diamond, handleGolds }) => {
+  const { image, description, price, title ,_id } = diamond;
   return (
     <div>
       <div
@@ -9,7 +11,7 @@ const Diamond = ({ diamond }) => {
         style={{
           // border: '2px solid rgb(255, 0, 85)',
           color: 'black',
-           backgroundColor: 'white',
+          backgroundColor: 'white',
           // backgroundColor: '#ced7d8',
         }}
       >
@@ -33,17 +35,19 @@ const Diamond = ({ diamond }) => {
           <p>{description.slice(0, 44)}...</p>
 
           {/* <div className="card-actions justify-center"> */}
-          <button
+          <Link
             className="btn text-white "
+            to={`/detailPage/${diamond._id}`}
+            onClick={() => handleGolds(_id)}
             style={{
               backgroundColor: 'rgb(255, 0, 85)',
               border: 'none',
               width: '60%',
-              margin:'auto'
+              margin: 'auto',
             }}
           >
             Buy Now
-          </button>
+          </Link>
           {/* </div> */}
         </div>
       </div>
