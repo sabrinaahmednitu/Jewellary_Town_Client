@@ -12,7 +12,7 @@ const Cart = () => {
          .then((data) => setCartItems(data));
      });
   return (
-    <div>
+    <div className="container mx-auto" >
       <h1 className="text-2xl">Cart</h1>
       <hr className="mb-5 w-[50%] border-black" />
       <div>

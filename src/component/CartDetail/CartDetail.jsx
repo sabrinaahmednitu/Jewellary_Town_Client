@@ -8,7 +8,7 @@ const CartDetail = ({ cartItem }) => {
     <>
       <section>
         <div className="cart-main">
-          <div className=" cart-left flex justify-content-center align-items-center gap-[30px]border ">
+          <div className="border gap-[30px] cart-left flex justify-content-center align-items-center gap-[30px]border ">
             <img
               src={image}
               className="w-[125px] h-[125px] object-cover"
