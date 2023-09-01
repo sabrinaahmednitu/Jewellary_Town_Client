@@ -77,11 +77,11 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end mx-auto ">
-          {/* <p>{user.displayName}</p> */}
+          {/* <p>{user?.displayName}</p> */}
           <div className="dropdown dropdown-end flex justify-center align-items-center">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img src={user.photoURL} />
+                <img src={user?.photoURL} />
               </div>
             </label>
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">

@@ -1,4 +1,4 @@
-.yourOrder-main{
+/* .yourOrder-main{
     background-color: rgb(215, 250, 252);
 }
 .yourOrderLeft{
@@ -10,4 +10,11 @@
    margin-top: 30px;
    margin-bottom: 30px;
    height: 130px;
+} */
+
+.cart-main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+  gap: 30px;
 }

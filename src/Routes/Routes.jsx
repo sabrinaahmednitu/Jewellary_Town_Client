@@ -16,6 +16,8 @@ import Signup from '../component/Shared/Signup/Signup';
 import Wedding from '../component/Wedding/Wedding';
 import Main from '../Layout/Main';
 
+
+
 export const router = createBrowserRouter([
   {
     path: '/',

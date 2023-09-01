@@ -11,11 +11,13 @@ const Cart = () => {
          .then((res) => res.json())
          .then((data) => setCartItems(data));
      });
+  
+ 
   return (
-    <div className="container mx-auto">
-      <h1 className="text-2xl">Cart</h1>
-      <hr className="mb-5 w-[50%] border-black" />
-      <div>
+    <div className="cart-main  container mx-auto mt-12 mb-12">
+      <div className="cart-left">
+        <h1 className="text-2xl font-bold text-black">Cart</h1>
+        <hr className="mb-5 border-black" />
         {cartItems.map((cartItem) => (
           <CartDetail
             key={cartItem._id}
@@ -24,6 +26,10 @@ const Cart = () => {
             setCartItems={setCartItems}
           ></CartDetail>
         ))}
+      </div>
+      <div className="cart-right">
+        <h1 className="text-2xl font-bold text-black">Order Summery</h1>
+        <hr className="mb-5 border-black" />
       </div>
     </div>
   );

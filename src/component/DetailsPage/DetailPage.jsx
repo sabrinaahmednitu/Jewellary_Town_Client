@@ -1,20 +1,18 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-undef */
-import { useContext} from 'react';
+import { useContext, useState} from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Hooks/AuthProvider';
 import './DetailPage.css';
 const DetailPage = () => {
+  const [cart, setCart] = useState([]);
 
   const allGoldsData = useLoaderData();
   console.log(allGoldsData);
 
-
   const { user } = useContext(AuthContext);
   console.log('user', user);
-  
 
-  
   const handleBooking = (event) => {
     event.preventDefault();
     const booking = {
@@ -27,18 +25,22 @@ const DetailPage = () => {
       image: allGoldsData.image,
     };
     fetch('http://localhost:5000/booking', {
-      method: "POST",
+      method: 'POST',
       headers: {
-        'content-type':'application/json'
+        'content-type': 'application/json',
       },
-      body:JSON.stringify(booking)
+      body: JSON.stringify(booking),
     })
-      .then(res => res.json())
-    .then(data=>console.log(data))
-       }
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  };
 
-
-
+  const handleAddToCart = (allGoldsData) => {
+    // console.log(allGoldsData);
+    // cart.push.allGoldsData;
+    const newCart = [...cart, allGoldsData];
+    setCart(newCart);
+  };
 
   return (
     <div className="pt-20 pb-20 text-black  ">
@@ -129,7 +131,12 @@ const DetailPage = () => {
           disabled
           className="input w-full bg-transparent"
         />
-        <button className=" btn detail-btn w-full">Add to Cart </button>
+        <button
+          onClick={() => handleAddToCart(allGoldsData)}
+          className=" btn detail-btn w-full"
+        >
+          Add to Cart{' '}
+        </button>
       </form>
 
       {/* </div> */}
