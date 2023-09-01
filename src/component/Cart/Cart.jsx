@@ -12,12 +12,17 @@ const Cart = () => {
          .then((data) => setCartItems(data));
      });
   return (
-    <div className="container mx-auto" >
+    <div className="container mx-auto">
       <h1 className="text-2xl">Cart</h1>
       <hr className="mb-5 w-[50%] border-black" />
       <div>
         {cartItems.map((cartItem) => (
-          <CartDetail key={cartItem._id} cartItem={cartItem}></CartDetail>
+          <CartDetail
+            key={cartItem._id}
+            cartItem={cartItem}
+            cartItems={cartItems}
+            setCartItems={setCartItems}
+          ></CartDetail>
         ))}
       </div>
     </div>
