@@ -72,7 +72,7 @@ function Jewellary() {
       {/* tabs section */}
 
       <div
-        className="Container mt-12 pt-10 pb-12"
+        className="Container  pt-10 pb-12"
         style={{
           backgroundColor: 'rgb(211, 212, 211)',
         }}

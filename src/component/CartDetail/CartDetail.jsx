@@ -25,7 +25,7 @@ const CartDetail = ({ cartItem, cartItems, setCartItems }) => {
   };
   return (
     <>
-          <div className="border gap-[30px] flex justify-content-center align-items-center gap-[30px]border ">
+          <div className="border gap-[30px] flex justify-content-center align-items-center  border ">
             <img
               src={image}
               className="w-[125px] h-[125px] object-cover"
