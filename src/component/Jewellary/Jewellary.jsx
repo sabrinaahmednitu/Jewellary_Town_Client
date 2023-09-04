@@ -32,6 +32,9 @@ import related1 from '../../video/related1.jpg'
 import related2 from '../../video/related2.jpg'
 import related3 from '../../video/related3.jpg'
 import related4 from '../../video/related4.jpg'
+import { useNavigate } from 'react-router-dom';
+
+
 
 
 function Jewellary() {
@@ -50,6 +53,10 @@ function Jewellary() {
      slidesToScroll: 1,
    };
 
+  const Navigate = useNavigate();
+  const goToGold = () => {
+    Navigate('/pearl');
+  };
   return (
     <>
       {/* video section */}
@@ -91,7 +98,7 @@ function Jewellary() {
         </h1>
         <Golds></Golds>
 
-        <button className="btn block text-white mx-auto mt-12 w-[335px]">
+        <button onClick={goToGold} className="btn block text-white mx-auto mt-12 w-[335px]">
           All Gold Collections
         </button>
       </div>
