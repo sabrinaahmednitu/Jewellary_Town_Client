@@ -1,5 +1,6 @@
 
 import { useContext, useEffect, useState } from "react";
+import CartSummery from "../../CartSummery/CartSummery";
 import { AuthContext } from "../../Hooks/AuthProvider";
 import CartDetail from "../CartDetail/CartDetail";
 import './Cart.css';
@@ -32,12 +33,9 @@ const Cart = () => {
       <div className="cart-right">
         <h1 className="text-3xl font-bold text-black mb-2">Order Summery</h1>
         <hr className="mb-5 border-black" />
-        <p className="text-black">
-          <span className="text-2xl"> Price :</span>
-          {cartItems.map((cartItem) => (
-            <h1> {cartItem.price}</h1>
-          ))}
-        </p>
+        <CartSummery
+          cartItems={cartItems}
+        ></CartSummery>
       </div>
     </div>
   );
