@@ -42,7 +42,7 @@ const Footer = () => {
             <a className="link link-hover">Jewellery Care</a>
           </div>
         </footer>
-        <footer className="footer px-10 py-4 border-t  text-base-content border-base-300">
+        <footer className=" footer px-10 py-4 border-t  text-base-content border-base-300">
           <div className="items-center grid-flow-col">
             <svg
               width="24"
@@ -86,13 +86,13 @@ const Footer = () => {
           </div>
         </footer>
         <footer className="mt-2 pb-5">
-          <div className="mx-auto max-w-xl">
-            <div className="flex text-center justify-content-center align-items-center gap-5 ">
+          <div >
+            <div className=" flex justify-center items-center gap-5">
               <a>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  width="34"
+                  height="34"
                   viewBox="0 0 24 24"
                   className="fill-current"
                 >
@@ -102,8 +102,8 @@ const Footer = () => {
               <a>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  width="34"
+                  height="34"
                   viewBox="0 0 24 24"
                   className="fill-current"
                 >
@@ -113,8 +113,8 @@ const Footer = () => {
               <a>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  width="34"
+                  height="34"
                   viewBox="0 0 24 24"
                   className="fill-current"
                 >
