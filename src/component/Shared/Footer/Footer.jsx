@@ -7,7 +7,7 @@ import pay5 from '../../../video/visa-logo-svgrepo-com-svg.png';
 
 const Footer = () => {
     return (
-      <div className='bg-base-300' >
+      <div className="bg-base-300">
         <footer className="footer p-10 text-base-content">
           <div>
             <span className="footer-title">OUR COLLECTIONS</span>
@@ -31,7 +31,7 @@ const Footer = () => {
             <a className="link link-hover">1436-4646-4235</a>
             <a className="link link-hover">Chat with us</a>
           </div>
-         
+
           <div>
             <span className="footer-title">JEWELLERY GUIDE</span>
             <a className="link link-hover">Jewellery Education</a>
@@ -60,19 +60,34 @@ const Footer = () => {
               Providing reliable service since 1992
             </p>
           </div>
-          <div className="items-center grid-flow-col">
+          {/* <div className="items-center grid-flow-col">
             <p>We accept - </p>
-            <div className="payment flex"
-            >
+            <div className="payment flex">
               <img src={pay1} alt="" />
               <img src={pay2} alt="" />
               <img src={pay3} alt="" />
               <img src={pay4} alt="" />
               <img src={pay5} alt="" />
             </div>
-          </div>
+          </div> */}
           <div className="md:place-self-center md:justify-self-end">
             <div className="grid grid-flow-col gap-4">
+              <div className="items-center grid-flow-col">
+                <p>We accept - </p>
+                <div className="payment flex">
+                  <img src={pay1} alt="" />
+                  <img src={pay2} alt="" />
+                  <img src={pay3} alt="" />
+                  <img src={pay4} alt="" />
+                  <img src={pay5} alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <footer className="mt-2 pb-5">
+          <div className="mx-auto max-w-xl">
+            <div className="flex text-center justify-content-center align-items-center gap-5 ">
               <a>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
