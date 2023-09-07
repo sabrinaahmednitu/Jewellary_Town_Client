@@ -26,7 +26,17 @@
         display: block;
        
     }
-    .cart-right{
+    .cart-main img{
+        display: none;
+    }
+        .cart-right{
  margin-top: 25px;
     }
+}
+@media screen and (max-width:768px) {
+    .cart-main{
+         grid-template-columns: 3fr 1fr;
+       
+    }
+
 }
