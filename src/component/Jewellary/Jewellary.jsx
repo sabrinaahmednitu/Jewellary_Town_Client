@@ -51,6 +51,20 @@ function Jewellary() {
      speed: 500,
      slidesToShow: 3,
      slidesToScroll: 1,
+     responsive: [
+       {
+         breakpoint: 576, // Breakpoint for screens with a width of 576px or less
+         settings: {
+           slidesToShow: 1, // Number of cards to show for screens less than 576px
+         },
+       },
+       {
+         breakpoint: 1000, // Breakpoint for screens with a width of 768 or less
+         settings: {
+           slidesToShow: 2, // Number of cards to show for screens less than 576px
+         },
+       },
+     ],
    };
 
   const Navigate = useNavigate();

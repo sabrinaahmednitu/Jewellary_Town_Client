@@ -13,7 +13,7 @@ const MyOrder = () => {
   return (
     <div>
       <h2>orders :{orders.length}</h2>
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto container mx-auto ">
         <table className="table">
           {/* head */}
           <thead>
@@ -21,6 +21,7 @@ const MyOrder = () => {
               <th>Index</th>
               <th>Email</th>
               <th>jewellary Name</th>
+              <th>Price</th>
             </tr>
           </thead>
           <tbody>
@@ -30,7 +31,6 @@ const MyOrder = () => {
                 <td>{order.email}</td>
                 <td>{order.jewellaryName}</td>
                 <td>{order.price}</td>
-                <td>{order.phone}</td>
               </tr>
             ))}
           </tbody>

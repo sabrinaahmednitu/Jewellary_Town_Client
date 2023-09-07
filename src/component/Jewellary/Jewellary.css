@@ -250,13 +250,19 @@ text-align: center;
   background-color: #F5F5F5;
   
 }
- /* .reviews , .review{
+ .review{
    display: flex;
    justify-content: center;
    align-items: center;
-   gap: 20px;
- } */
-
+ }
+.review img{
+  display: block;
+  margin: auto;
+}
+.review-text{
+  padding: 10px;
+  text-align: center;
+}
  .review h2{
  color: rgb(255, 157, 0);
  font-size: 20px;
