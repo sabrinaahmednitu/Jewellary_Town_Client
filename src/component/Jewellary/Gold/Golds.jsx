@@ -31,13 +31,26 @@ const Golds = () => {
    const settings = {
      dots: true,
      infinite: true,
-     slidesToShow: 4,
+     slidesToShow: 4, // Number of cards to show for larger screens (tablets and above)
      slidesToScroll: 1,
+     responsive: [
+       {
+         breakpoint: 576, // Breakpoint for screens with a width of 576px or less
+         settings: {
+           slidesToShow: 2, // Number of cards to show for screens less than 576px
+         },
+       },
+       {
+         breakpoint: 1000, // Breakpoint for screens with a width of 768 or less
+         settings: {
+           slidesToShow: 3, // Number of cards to show for screens less than 576px
+         },
+       },
+     ],
      autoplay: true,
      autoplaySpeed: 2000,
      pauseOnHover: true,
      arrows: false,
-    
    };
 
   return (
