@@ -18,3 +18,15 @@
     justify-content: center;
   gap: 30px;
 }
+
+
+@media screen and (max-width:576px) {
+    .cart-main{
+        padding: 10px;
+        display: block;
+       
+    }
+    .cart-right{
+ margin-top: 25px;
+    }
+}
