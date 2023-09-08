@@ -118,7 +118,7 @@ function Jewellary() {
       </div>
 
       <div
-        className="Container pt-10 pb-12"
+        className="Container pt-10 pb-12 p-5"
         style={{
           backgroundColor: 'rgb(211, 212, 211)',
         }}
@@ -140,7 +140,7 @@ function Jewellary() {
         </button>
       </div>
       <div
-        className="Container pt-12 pb-12"
+        className="Container pt-12 pb-12 p-5"
         style={{
           backgroundColor: 'rgb(211, 212, 211)',
         }}
@@ -213,7 +213,7 @@ function Jewellary() {
             </p>
           </div>
           <div className="rangeCards mt-10 mb-12">
-            <div className="rangeCard ">
+            <div className="rangeCard">
               <div className="Rtext">
                 <h1 className="text-xl">Shop Under</h1>
                 <h1 className="text-3xl">$ 10,000</h1>
