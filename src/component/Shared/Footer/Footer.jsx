@@ -86,7 +86,10 @@ const Footer = () => {
           </div>
         </footer>
         <footer className="mt-2 pb-5">
-          <div >
+          <div>
+            <h1 className='text-center mb-2 text-2xl' style={{
+              color:'pink'
+            }}> Social Networks -</h1>
             <div className=" flex justify-center items-center gap-5">
               <a>
                 <svg
