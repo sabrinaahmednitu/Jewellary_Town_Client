@@ -139,6 +139,8 @@ function Jewellary() {
           All Diamonds Collections
         </button>
       </div>
+
+
       <div
         className="Container pt-12 pb-12 p-5"
         style={{
@@ -173,11 +175,6 @@ function Jewellary() {
               className="lg:w-[260px] lg:h-[350px] md:w-[260px] md:h-[250px] sm:w-[100%] object-cover"
               alt=""
             />
-            {/* <img
-              src={bride2}
-              className="lg:w-[260px] lg:h-[350px] md:w-[260px] md:h-[250px] sm:w-[100%] object-cover"
-              alt=""
-            /> */}
             <img
               src={bride3}
               className="lg:w-[260px] lg:h-[350px] md:w-[260px] md:h-[250px] sm:w-[100%] object-cover"

@@ -9,10 +9,7 @@
   display: flex;
   gap: 20px;
 }
-/* .bloc-tabs:hover{
-   background-color: rgb(250, 7, 7);
-  color:white
-} */
+
 .tabs {
   padding: 15px;
   text-align: center;
@@ -30,14 +27,7 @@
 .tabs:hover{
 background-color: rgb(54, 51, 52);
 }
-/* .tabs:not(:last-child){
-  border-right: 1px solid rgba(0, 0, 0, 0.274);
-} */
 
-/* .active-tabs  {
-  background: white;
-  border-bottom: 1px solid transparent;
-} */
 
 button {
   border: none;
@@ -47,7 +37,6 @@ button {
   flex-grow : 1;
 }
 .content {
-  /* background: white; */
   padding: 20px;
   width: 100%;
   height: 100%;
@@ -56,12 +45,7 @@ button {
 .content h2 {
   padding: 0px 0 5px 0px;
 }
-/* .content hr {
-  width: 100px;
-  height: 2px;
-  background: #222;
-  margin-bottom: 5px;
-} */
+
 .content p {
   width: 100%;
   height: 100%;
@@ -83,28 +67,12 @@ button {
     overflow: hidden;
 }
 
-/* .video-background {
-  position: relative;
-  width: 100%;
-  height: 100vh; 
-  overflow: hidden;
-} */
-
-/* .background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-} */
 
 .video-overlay {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%; 
+  /* top: 0;
+  right: 0; */
+  width: 100%;
   height: 100%;
    /* background-color: rgba(0, 0, 0, 0.5);  */
    /* Background color with transparency */
@@ -167,7 +135,7 @@ align-items: center;
 }
 .rangeCards{
   display: grid;
- grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+ grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -186,41 +154,11 @@ align-items: center;
 .rangeCard img{
   width: 145px;
 }
-/* .rangeCards{
-  display: flex;
- flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-}
-.rangeCard{
-  background-color: rgb(240, 133, 133);
-  color: white;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 10px;
-  padding: 30px;
-  width: 400px;
-}
-.rangeCard img{
-  width: 145px;
-} */
 
-/* .rangeCards{
-  display: flex;
- flex-wrap: wrap;
- flex-basis: 35%;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-} */
 
 
 /* rangeCard */
-.certificate-main{
 
-}
 .certificates-cards{
   display: flex;
   flex-wrap: wrap;
@@ -270,8 +208,3 @@ text-align: center;
 
   /*  Related Article */
   
-/* .related-heading h1::after{
-  content: '';
-  border-top: 1px solid red;
-  display: block;
-} */

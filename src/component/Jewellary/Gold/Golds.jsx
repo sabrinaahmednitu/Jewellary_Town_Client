@@ -57,7 +57,7 @@ const Golds = () => {
     <div className="container mx-auto">
       <div >
         <Slider {...settings}>
-            {golds.map((gold) => (
+            {golds.slice(0, 5).map((gold) => (
               <Gold
                 key={gold._id}
                 gold={gold}
