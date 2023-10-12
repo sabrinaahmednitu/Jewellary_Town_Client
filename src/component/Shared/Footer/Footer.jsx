@@ -7,8 +7,8 @@ import pay5 from '../../../video/visa-logo-svgrepo-com-svg.png';
 
 const Footer = () => {
     return (
-      <div className="bg-base-300">
-        <footer className="footer p-10 text-base-content">
+      <div className="bg-base-300 ">
+        <footer className="footer p-10 text-base-content grid lg:grid-cols-4 md:grid-cols-2">
           <div>
             <span className="footer-title">OUR COLLECTIONS</span>
             <a className="link link-hover">Wedding</a>
@@ -42,7 +42,7 @@ const Footer = () => {
             <a className="link link-hover">Jewellery Care</a>
           </div>
         </footer>
-        <footer className=" footer px-10 py-4 border-t  text-base-content border-base-300">
+        <footer className=" footer px-10 py-4">
           <div className="items-center grid-flow-col">
             <svg
               width="24"
@@ -87,11 +87,8 @@ const Footer = () => {
         </footer>
         <footer className="mt-2 pb-5">
           <div>
-            <h1 className='text-center mb-2 text-2xl' style={{
-              color:'pink'
-            }}> Social Networks -</h1>
             <div className=" flex justify-center items-center gap-5">
-              <a>
+              Social Networks - <a>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="34"

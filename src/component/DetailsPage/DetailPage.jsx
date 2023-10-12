@@ -1,10 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-undef */
 import { useContext, useState} from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Hooks/AuthProvider';
 import './DetailPage.css';
 const DetailPage = () => {
+  const Navigate = useNavigate();
   const [cart, setCart] = useState([]);
 
   const allGoldsData = useLoaderData();
@@ -38,8 +39,14 @@ const DetailPage = () => {
   const handleAddToCart = (allGoldsData) => {
     // console.log(allGoldsData);
     // cart.push.allGoldsData;
-    const newCart = [...cart, allGoldsData];
-    setCart(newCart);
+    if (allGoldsData) {
+      const newCart = [...cart, allGoldsData];
+      setCart(newCart);
+    }
+    // Navigate('/cart')
+ 
+    
+
   };
 
   return (

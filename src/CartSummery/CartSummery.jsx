@@ -6,7 +6,6 @@ const CartSummery = ({ cartItems }) => {
         <span className="text-2xl"> Price :</span>
         {cartItems.map(
           (cartItem) => `${cartItem.price}
-        ${cartItem.length}
         `
         )}
       </p>
