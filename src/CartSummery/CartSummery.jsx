@@ -1,5 +1,6 @@
 
 const CartSummery = ({ cartItems }) => {
+  console.log('cartItems',cartItems);
   return (
     <div>
       <p className="text-black">

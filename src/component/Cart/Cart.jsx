@@ -6,6 +6,8 @@ import CartDetail from "../CartDetail/CartDetail";
 import './Cart.css';
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
+  const [totalPrice, setTotalPrice] = useState([]);
+  
   const { user } = useContext(AuthContext);
   useEffect(() => {
     fetch(`http://localhost:5000/booking?email=${user.email}`)
