@@ -1,10 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-undef */
 import { useContext, useState} from 'react';
-import { useLoaderData, useNavigate } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Hooks/AuthProvider';
 import './DetailPage.css';
 const DetailPage = () => {
+
   const Navigate = useNavigate();
   const [cart, setCart] = useState([]);
 
@@ -138,12 +139,14 @@ const DetailPage = () => {
           disabled
           className="input w-full bg-transparent"
         />
-        <button
-          onClick={() => handleAddToCart(allGoldsData)}
-          className=" btn detail-btn w-full"
-        >
-          Add to Cart{' '}
-        </button>
+      
+          <button
+            onClick={() => handleAddToCart(allGoldsData)}
+            className=" btn detail-btn w-full"
+          >
+         Add to Cart{' '} 
+          </button>
+       
       </form>
 
       {/* </div> */}
