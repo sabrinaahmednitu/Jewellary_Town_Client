@@ -3,6 +3,8 @@ import { useContext, useEffect, useState } from "react";
 import CartSummery from "../../CartSummery/CartSummery";
 import { AuthContext } from "../../Hooks/AuthProvider";
 import CartDetail from "../CartDetail/CartDetail";
+
+
 import './Cart.css';
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -13,7 +15,9 @@ const Cart = () => {
     fetch(`http://localhost:5000/booking?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => setCartItems(data));
-  },[]);
+  }, []);
+  
+  
 
 
   return (
@@ -31,14 +35,16 @@ const Cart = () => {
             ></CartDetail>
           ))}
         </div>
+        <div>
+         
+        </div>
       </div>
       <div className="cart-right">
         <h1 className="text-3xl font-bold text-black mb-2">Order Summery</h1>
         <hr className="mb-5 border-black" />
-        <CartSummery
-          cartItems={cartItems}
-        ></CartSummery>
+        <CartSummery cartItems={cartItems}></CartSummery>
       </div>
+  
     </div>
   );
 };

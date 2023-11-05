@@ -8,6 +8,7 @@ const DetailPage = () => {
 
   const Navigate = useNavigate();
   const [cart, setCart] = useState([]);
+  const [quantity, setQuantity] = useState([]);
 
   const allGoldsData = useLoaderData();
   console.log(allGoldsData);
@@ -73,13 +74,7 @@ const DetailPage = () => {
               {allGoldsData.price} $
             </h2>
           </div>
-          <div className="quantity">
-            <div className="Q-text">
-              <span> - </span>
-              <div>1</div>
-              <span> + </span>
-            </div>
-          </div>
+        
           <hr className="mt-5 border-black" />
           <div className="mt-5">
             <p className="mb-4 ">{allGoldsData.description}</p>

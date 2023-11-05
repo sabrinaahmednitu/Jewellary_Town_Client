@@ -17,15 +17,15 @@ body{
 
 }
 
-.Q-text{
+/* .Q-text{
     gap: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
   
-}
+} */
 
-.quantity{
+/* .quantity{
     background-color: white;
     border: 1px solid rgb(199, 196, 196);
     font-size: 25px;
@@ -33,7 +33,7 @@ body{
     cursor: pointer;
     width: 120px;
     font-weight: 600; 
-}
+} */
 
 .detail-input input{
  width: 75%;

@@ -13,6 +13,14 @@
 } */
 
 .cart-main{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;  
+}
+
+
+/* .cart-main{
     display: grid;
     grid-template-columns: 2fr 1fr;
     justify-content: center;
@@ -35,8 +43,9 @@
 }
 @media screen and (max-width:768px) {
     .cart-main{
-         grid-template-columns: 3fr 1fr;
+         padding: 10px;
+        display: block;
        
     }
 
-}
+} */

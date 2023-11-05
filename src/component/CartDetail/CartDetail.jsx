@@ -1,12 +1,20 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
+import { useState } from 'react';
 import './CartDetail.css';
 
 const CartDetail = ({ cartItem, cartItems, setCartItems }) => {
   const { _id, jewellaryName, price, email, image } = cartItem;
 
- 
+  const [quantity, setQuantity] = useState(0);
 
+  const handleIncrease = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const handleDecrease = () => {
+    setQuantity(quantity - 1);
+  };
 
   const handleDelete = (id) => {
     const proceed = window.confirm('are you sure ?');
@@ -25,31 +33,34 @@ const CartDetail = ({ cartItem, cartItems, setCartItems }) => {
   };
   return (
     <>
-          <div className="border gap-[30px] flex justify-content-center align-items-center  border ">
-            <img
-              src={image}
-              className="w-[125px] h-[125px] object-cover"
-              alt=""
-            />
-            <div className="cartItemText pt-5">
-              <h3>{jewellaryName}</h3>
-              <h2> Price : ${price}</h2>
-              <h6> {email}</h6>
-            </div>
-            <button
-              className="btn"
-              style={{
-                outline: '0',
-                border: '0',
-                color: 'white',
-                marginTop: '50px',
-              }}
-              onClick={() => handleDelete(_id)}
-            >
-              X
-            </button>
+      <div className="items-info  border">
+        <div className="product-img">
+          <img src={image} alt="" />
         </div>
-       
+
+        <div className="cartItemTex">
+          <h2>{jewellaryName}</h2>
+          <p> Price : ${price}</p>
+        </div>
+
+        <div className="quantity">
+          <div className="Q-text">
+            <button onClick={handleDecrease}>-</button>
+            <div>1</div>
+            <button onClick={handleIncrease}>+</button>
+          </div>
+        </div>
+
+        <div className="totalPrice">
+          <h2>SubTotal:</h2>
+        </div>
+
+        <div className="remove-item">
+          <button className="remove-item btn" onClick={() => handleDelete(_id)}>
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      </div>
     </>
   );
 };
