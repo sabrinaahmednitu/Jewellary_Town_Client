@@ -7,24 +7,20 @@ const CartDetail = ({ cartItem, cartItems, setCartItems }) => {
   const { _id, jewellaryName, price, image } = cartItem;
 
   const [quantity, setQuantity] = useState(1);
-  const [subTotal, setSubTotal] = useState(price);
 
   const handleIncrease = () => {
     setQuantity(quantity + 1);
     console.log(quantity + 1);
-    setSubTotal(quantity * price);
-    console.log(quantity*(price*2));
   };
 
   const handleDecrease = () => {
     if (quantity > 1) {
-      setQuantity(quantity - 1);
-      console.log(quantity - 1);
-      setSubTotal(price / quantity);
-       
+      setQuantity(quantity - 1); 
     }
     
   };
+
+  const subTotal = quantity * price;
 
   const handleDelete = (id) => {
     const proceed = window.confirm('are you sure ?');
