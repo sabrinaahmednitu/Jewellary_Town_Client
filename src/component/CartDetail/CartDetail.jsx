@@ -6,14 +6,24 @@ import './CartDetail.css';
 const CartDetail = ({ cartItem, cartItems, setCartItems }) => {
   const { _id, jewellaryName, price, image } = cartItem;
 
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
+  const [subTotal, setSubTotal] = useState(price);
 
   const handleIncrease = () => {
     setQuantity(quantity + 1);
+    console.log(quantity + 1);
+    setSubTotal(quantity * price);
+    console.log(quantity*(price*2));
   };
 
   const handleDecrease = () => {
-    setQuantity(quantity - 1);
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+      console.log(quantity - 1);
+      setSubTotal(price / quantity);
+       
+    }
+    
   };
 
   const handleDelete = (id) => {
@@ -53,7 +63,7 @@ const CartDetail = ({ cartItem, cartItems, setCartItems }) => {
           </div>
 
           <div className="totalPrice">
-            <h2>SubTotal:</h2>
+          <h2>SubTotal: { subTotal}</h2>
           </div>
 
           <div className="remove-item">
