@@ -1,5 +1,5 @@
 import {useContext} from 'react';
-import CartSummery from '../../CartSummery/CartSummery';
+import CartSummery from '../CartSummery/CartSummery';
 import CartDetail from '../CartDetail/CartDetail';
 import { CartContext } from './Cart';
 

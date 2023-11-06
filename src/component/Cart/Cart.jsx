@@ -16,6 +16,8 @@ const Cart = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   //  const [cartItems, setCartItems] = useState([]);
+
+  // ---------------fetch cart item ----------------  //
   const { user } = useContext(AuthContext);
   useEffect(() => {
     fetch(`http://localhost:5000/booking?email=${user?.email}`)
@@ -30,7 +32,7 @@ const Cart = () => {
       });
   }, [user]);
 
-  // Delete item
+  // ---------------Delete item----------------  //
   const handleDelete = (id) => {
     const proceed = window.confirm('are you sure ?');
     if (proceed) {
@@ -49,8 +51,15 @@ const Cart = () => {
     }
   };
 
+  // ---------------clear cart----------------  //
+  const clearCart=()=> {
+    return dispatch({ type: 'DELETE_CART' });
+   }
+
+
+
   return (
-    <CartContext.Provider value={{ ...state ,handleDelete}}>
+    <CartContext.Provider value={{ ...state, handleDelete, clearCart }}>
       <ContextCart></ContextCart>
     </CartContext.Provider>
   );
