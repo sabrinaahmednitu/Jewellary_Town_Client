@@ -6,7 +6,7 @@ import { CartContext } from './Cart';
 const ContextCart = () => {
     //   const [cartItems, setCartItems] = useState([]);
 
-    const {cartItems, setCartItems} = useContext(CartContext);
+    const {cartItems} = useContext(CartContext);
     
 //   const { user } = useContext(AuthContext);
 
@@ -26,8 +26,6 @@ const ContextCart = () => {
             <CartDetail
               key={cartItem._id}
               cartItem={cartItem}
-              cartItems={cartItems}
-              setCartItems={setCartItems}
             ></CartDetail>
           ))}
         </div>

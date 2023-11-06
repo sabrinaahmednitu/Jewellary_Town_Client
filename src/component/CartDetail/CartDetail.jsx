@@ -1,46 +1,13 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { CartContext } from '../Cart/Cart';
 import './CartDetail.css';
 
-const CartDetail = ({
-  cartItem,
-  cartItems,
-  setCartItems
-}) => {
+const CartDetail = ({cartItem }) => {
   const { _id, jewellaryName, price, image } = cartItem;
 
-  // const [quantity, setQuantity] = useState(1);
-
-  // const handleIncrease = () => {
-  //   setQuantity(quantity + 1);
-  //   console.log(quantity + 1);
-  // };
-
-  // const handleDecrease = () => {
-  //   if (quantity > 1) {
-  //     setQuantity(quantity - 1);
-  //   }
-
-  // };
-
-  // const subTotal = quantity * (price-900);
-
-  const handleDelete = (id) => {
-    const proceed = window.confirm('are you sure ?');
-    if (proceed) {
-      const url = `http://localhost:5000/cartItem/${id}`;
-      fetch(url, {
-        method: 'DELETE',
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-          const remaining = cartItems.filter((cartItem) => cartItem._id !== id);
-          setCartItems(remaining);
-        });
-    }
-  };
+  const { handleDelete } =useContext(CartContext)
   return (
     <div>
       <div className="items-info">
