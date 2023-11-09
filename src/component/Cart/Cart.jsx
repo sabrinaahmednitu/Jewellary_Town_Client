@@ -1,17 +1,21 @@
-
-import { createContext, useContext, useEffect, useReducer, useState} from "react";
-import { AuthContext } from "../../Hooks/AuthProvider";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useReducer,
+  useState,
+} from 'react';
+import { AuthContext } from '../../Hooks/AuthProvider';
 import './Cart.css';
-import ContextCart from "./ContextCart";
+import ContextCart from './ContextCart';
 import reducer from './reducer';
-
 
 export const CartContext = createContext();
 const initialState = {
-  cartItems:[],
+  cartItems: [],
   totalAmount: 0,
   totalItem: 0,
-}
+};
 const Cart = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -57,16 +61,97 @@ const Cart = () => {
   };
 
   // ---------------handleIncrease----------------  //
+  // const handleIncrease = (_id) => {
+  //   return dispatch({
+  //     type: 'INCREMENT',
+  //     payload: _id,
+  //   });
+  // };
+
+  // ---------------handleIncrease----------------  //
   const handleIncrease = (_id) => {
-    return dispatch({
-      type: 'INCREMENT', payload:_id
+    const updatedCart = state.cartItems.map((cartItem) => {
+      if (cartItem._id === _id) {
+        // Increase the quantity by 1
+        const updatedQuantity = cartItem.quantity + 1;
+
+        // Calculate the new total price based on the updated quantity
+        const updatedTotalPrice = updatedQuantity * cartItem.price;
+
+        // Update the cart item with the new quantity and total price
+        return {
+          ...cartItem,
+          quantity: updatedQuantity,
+          totalPrice: updatedTotalPrice,
+        };
+      }
+      return cartItem;
+    });
+
+    // Update the cart state with the updated cart items
+    dispatch({
+      type: 'INCREMENT',
+      payload: updatedCart,
     });
   };
 
   // ---------------handleDecrease----------------  //
-   const handleDecrease = (_id) => {
-     return dispatch({ type: 'DECREMENT',payload:_id });
-   };
+  // const handleDecrease = (_id) => {
+  //   return dispatch({ type: 'DECREMENT', payload: _id });
+  // };
+
+  // ---------------handleDecrease----------------  //
+  const handleDecrease = (_id) => {
+    const updatedCart = state.cartItems.map((cartItem) => {
+      if (cartItem._id === _id) {
+        // Decrease the quantity by 1, but ensure it doesn't go below 1
+        // const updatedQuantity = Math.max(cartItem.quantity - 1, 1);
+        if (cartItem.quantity > 1) {
+          const updatedQuantity = cartItem.quantity - 1;
+
+          // Calculate the new total price by subtracting the item's price
+          const updatedTotalPrice = cartItem.price * updatedQuantity;
+
+          // Update the cart item with the new quantity and total price
+          return {
+            ...cartItem,
+            quantity: updatedQuantity,
+            totalPrice: updatedTotalPrice,
+          };
+        } else {
+          // If the quantity is already 1, return the original cartItem
+          return cartItem;
+        }
+      }
+      return cartItem;
+    });
+
+    // Update the cart state with the updated cart items
+    dispatch({
+      type: 'DECREMENT',
+      payload: updatedCart,
+    });
+  };
+
+  // ---------------Total price----------------  //
+  // useEffect(() => {
+  //   dispatch({ type: 'GET_TOTAL' });
+  //   // console.log('something changed');
+  // }, [state.cartItems]);
+  // //cartItems e kichu change hole e ta dekhabe tai dependency state.cartItems
+
+
+  const calculateTotal = (cartItems) => {
+    return cartItems.reduce(
+      (total, cartItem) => total + cartItem.totalPrice,
+      0
+    );
+  };
+
+  const total = calculateTotal(state.cartItems);
+
+
+
 
   return (
     <CartContext.Provider
@@ -76,11 +161,12 @@ const Cart = () => {
         clearCart,
         handleIncrease,
         handleDecrease,
+        total
       }}
     >
       <ContextCart></ContextCart>
     </CartContext.Provider>
   );
-}
+};
 
 export default Cart;

@@ -7,7 +7,7 @@ import './CartDetail.css';
 const CartDetail = ({cartItem }) => {
   const { _id, jewellaryName, price, image , quantity } = cartItem;
 
-  const { handleDelete, handleIncrease, handleDecrease  } =
+  const { handleDelete, handleIncrease, handleDecrease } =
     useContext(CartContext);
   return (
     <div>
@@ -18,7 +18,7 @@ const CartDetail = ({cartItem }) => {
 
         <div className="cartItemTex">
           <h2>{jewellaryName}</h2>
-          <p> Price : ${price - 50}</p>
+          <p> Price : ${price}</p>
         </div>
 
         <div className="quantity">
@@ -30,7 +30,7 @@ const CartDetail = ({cartItem }) => {
         </div>
 
         <div className="totalPrice">
-          <h2>SubTotal:</h2>
+          <h2>SubTotal: {cartItem.totalPrice}</h2>
         </div>
 
         <div className="remove-item">

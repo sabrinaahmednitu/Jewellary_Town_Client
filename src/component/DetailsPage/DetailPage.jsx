@@ -69,10 +69,10 @@ const DetailPage = () => {
           </h1>
           <div className="flex align-items-center gap-5">
             <h2 className="text-3xl font-bold  mb-5">
-              {allGoldsData.price - 50} $
+              {allGoldsData.price} $
             </h2>
             <h2 className="text-xl mb-5 font-bold text-[#949494] line-through">
-              {allGoldsData.price} $
+              {allGoldsData.price + 50} $
             </h2>
           </div>
         
@@ -125,7 +125,7 @@ const DetailPage = () => {
         />
         <input
           type="text"
-          defaultValue={allGoldsData.price - 50 + ' $'}
+          defaultValue={allGoldsData.price  + ' $'}
           placeholder="Type here"
           className="input w-full bg-transparent"
         />
