@@ -24,8 +24,28 @@ const reducer = (state, action) => {
     case 'DELETE_CART':
       return {
         ...state,
-        cartItems:[],
+        cartItems: [],
       };
+
+    // ---------------handleIncrease----------------  //
+    case 'INCREMENT':
+      const updatedCart = state.cartItems.map((cartItem) => {
+        if (cartItem._id === action.payload) {
+          // If the ID matches, update the quantity of this item
+          return {
+            ...cartItem,
+            quantity: cartItem.quantity + 1,
+          };
+        }
+        // For items that don't match the ID, keep them unchanged
+        return cartItem;
+      });
+
+      return {
+        ...state,
+        cartItems: updatedCart, // Update the cart items with the updated ones
+      };
+    
     
     
   }

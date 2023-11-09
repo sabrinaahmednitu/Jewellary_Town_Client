@@ -5,12 +5,6 @@ const CartSummery = () => {
   const {clearCart, cartItems} = useContext(CartContext);
 
 
-  if (cartItems.length === 0) {
-    return (<>
-      
-    </>)
-  }
-  console.log(cartItems);
   const totalPrice = cartItems.reduce(
     (total, cartItems) => total + cartItems.price,
     0

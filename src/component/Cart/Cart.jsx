@@ -10,7 +10,7 @@ export const CartContext = createContext();
 const initialState = {
   cartItems:[],
   totalAmount: 0,
-  totalItem: 0
+  totalItem: 0,
 }
 const Cart = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -52,14 +52,33 @@ const Cart = () => {
   };
 
   // ---------------clear cart----------------  //
-  const clearCart=()=> {
+  const clearCart = () => {
     return dispatch({ type: 'DELETE_CART' });
-   }
+  };
 
+  // ---------------handleIncrease----------------  //
+  const handleIncrease = (_id) => {
+    return dispatch({
+      type: 'INCREMENT',
+      payload:_id
+    });
+  };
 
+  // ---------------handleDecrease----------------  //
+   const handleDecrease = () => {
+     return dispatch({ type: 'DECREMENT' });
+   };
 
   return (
-    <CartContext.Provider value={{ ...state, handleDelete, clearCart }}>
+    <CartContext.Provider
+      value={{
+        ...state,
+        handleDelete,
+        clearCart,
+        handleIncrease,
+        handleDecrease,
+      }}
+    >
       <ContextCart></ContextCart>
     </CartContext.Provider>
   );

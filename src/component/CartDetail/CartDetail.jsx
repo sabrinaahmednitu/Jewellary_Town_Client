@@ -5,9 +5,10 @@ import { CartContext } from '../Cart/Cart';
 import './CartDetail.css';
 
 const CartDetail = ({cartItem }) => {
-  const { _id, jewellaryName, price, image } = cartItem;
+  const { _id, jewellaryName, price, image , quantity } = cartItem;
 
-  const { handleDelete } =useContext(CartContext)
+  const { handleDelete, handleIncrease, handleDecrease  } =
+    useContext(CartContext);
   return (
     <div>
       <div className="items-info">
@@ -17,14 +18,14 @@ const CartDetail = ({cartItem }) => {
 
         <div className="cartItemTex">
           <h2>{jewellaryName}</h2>
-          <p> Price : ${price - 900}</p>
+          <p> Price : ${price - 50}</p>
         </div>
 
         <div className="quantity">
           <div className="Q-text">
-            <button >-</button>
-            <div></div>
-            <button >+</button>
+            <button onClick={() => handleDecrease(_id)}>-</button>
+            <div>{quantity}</div>
+            <button onClick={() => handleIncrease(_id)}>+</button>
           </div>
         </div>
 

@@ -8,7 +8,7 @@ const DetailPage = () => {
 
   const Navigate = useNavigate();
   const [cart, setCart] = useState([]);
-  const [quantity, setQuantity] = useState([]);
+
 
   const allGoldsData = useLoaderData();
   console.log(allGoldsData);
@@ -26,6 +26,7 @@ const DetailPage = () => {
       price: allGoldsData.price,
       phone: event.target.phone.value,
       image: allGoldsData.image,
+      quantity:allGoldsData.quantity
     };
     fetch('http://localhost:5000/booking', {
       method: 'POST',
@@ -68,7 +69,7 @@ const DetailPage = () => {
           </h1>
           <div className="flex align-items-center gap-5">
             <h2 className="text-3xl font-bold  mb-5">
-              {allGoldsData.price - 900} $
+              {allGoldsData.price - 50} $
             </h2>
             <h2 className="text-xl mb-5 font-bold text-[#949494] line-through">
               {allGoldsData.price} $
@@ -124,7 +125,7 @@ const DetailPage = () => {
         />
         <input
           type="text"
-          defaultValue={allGoldsData.price - 900 + ' $'}
+          defaultValue={allGoldsData.price - 50 + ' $'}
           placeholder="Type here"
           className="input w-full bg-transparent"
         />
@@ -133,6 +134,12 @@ const DetailPage = () => {
           defaultValue={allGoldsData.image}
           disabled
           className="input w-full bg-transparent"
+        />
+        <input
+          type="text"
+          defaultValue={allGoldsData.quantity}
+          disabled
+          className="input w-full"
         />
       
           <button
