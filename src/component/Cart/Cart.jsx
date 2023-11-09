@@ -59,14 +59,13 @@ const Cart = () => {
   // ---------------handleIncrease----------------  //
   const handleIncrease = (_id) => {
     return dispatch({
-      type: 'INCREMENT',
-      payload:_id
+      type: 'INCREMENT', payload:_id
     });
   };
 
   // ---------------handleDecrease----------------  //
-   const handleDecrease = () => {
-     return dispatch({ type: 'DECREMENT' });
+   const handleDecrease = (_id) => {
+     return dispatch({ type: 'DECREMENT',payload:_id });
    };
 
   return (
