@@ -2,20 +2,13 @@ import { useContext } from "react";
 import { CartContext } from "../Cart/Cart";
 
 const CartSummery = () => {
-  const {clearCart, cartItems , total } = useContext(CartContext);
+  const {clearCart, total } = useContext(CartContext);
 
 
-  // const totalPrice = cartItems.reduce(
-  //   (total, cartItems) => total + cartItems.price,
-  //   0
-  // );
-
-  
   return (
     <>
       <div>
         <p className="text-black">
-          {/* <span> Price : {cartItems[0].price}</span> */}
           <h1 className="text-2xl">TotalPrice : {total}</h1>
         </p>
       </div>
