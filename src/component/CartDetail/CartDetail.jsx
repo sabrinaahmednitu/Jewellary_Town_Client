@@ -30,7 +30,7 @@ const CartDetail = ({cartItem }) => {
         </div>
 
         <div className="totalPrice">
-          <h2>SubTotal: {cartItem.totalPrice}</h2>
+          <h2>SubTotal: {cartItem.totalPrice || price}</h2>
         </div>
 
         <div className="remove-item">
