@@ -151,8 +151,6 @@ const Cart = () => {
   const total = calculateTotal(state.cartItems);
 
 
-
-
   return (
     <CartContext.Provider
       value={{
@@ -161,7 +159,8 @@ const Cart = () => {
         clearCart,
         handleIncrease,
         handleDecrease,
-        total
+        total,
+
       }}
     >
       <ContextCart></ContextCart>
