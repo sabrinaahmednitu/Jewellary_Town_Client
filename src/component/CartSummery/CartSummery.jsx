@@ -2,13 +2,17 @@ import { useContext } from "react";
 import { CartContext } from "../Cart/Cart";
 
 const CartSummery = ({ cartItems }) => {
-  const { clearCart, total } = useContext(CartContext);
+  const { clearCart, total, handleIncrease } = useContext(CartContext);
+
+
   const calculateTotal = (cartItems) => {
     return cartItems.reduce(
       (total, cartItem) => total + cartItem.price,
       0
     );
   };
+
+
   const initialTotal = calculateTotal(cartItems);
   return (
     <>
