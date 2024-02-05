@@ -55,8 +55,8 @@ const About = () => {
             <div className="teamCard">
               <img src={stuff1} alt="" />
               <div className="teamText ">
-                <h1 >Nemo Enimson</h1>
-                <p >Manager</p>
+                <h1>Nemo Enimson</h1>
+                <p>Manager</p>
                 <div className="teamSocial">
                   <i className="fa-brands fa-facebook"></i>
                   <i className="fa-brands fa-square-twitter"></i>
@@ -70,6 +70,7 @@ const About = () => {
               <div className="teamText">
                 <h1>Monelo Patel</h1>
                 <p>CEO</p>
+                
                 <div className="teamSocial">
                   <i className="fa-brands fa-facebook"></i>
                   <i className="fa-brands fa-square-twitter"></i>
@@ -83,6 +84,7 @@ const About = () => {
               <div className="teamText">
                 <h1>Vilorano jeo</h1>
                 <p>Designer</p>
+   
                 <div className="teamSocial">
                   <i className="fa-brands fa-facebook"></i>
                   <i className="fa-brands fa-square-twitter"></i>
@@ -96,6 +98,7 @@ const About = () => {
               <div className="teamText">
                 <h1>Mark Marley</h1>
                 <p>Co-CEO</p>
+               
                 <div className="teamSocial">
                   <i className="fa-brands fa-facebook"></i>
                   <i className="fa-brands fa-square-twitter"></i>

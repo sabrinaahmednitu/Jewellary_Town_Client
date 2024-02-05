@@ -58,7 +58,7 @@ const Cart = () => {
     return dispatch({ type: 'DELETE_CART' });
   };
 
- // ---------------handleIncrease----------------  //
+  // ---------------handleIncrease----------------  //
   const handleIncrease = (_id) => {
     const updatedCart = state.cartItems.map((cartItem) => {
       if (cartItem._id === _id) {
@@ -80,26 +80,22 @@ const Cart = () => {
     });
   };
 
-  
-  
-
   // ---------------handleDecrease----------------  //
   const handleDecrease = (_id) => {
     const updatedCart = state.cartItems.map((cartItem) => {
       if (cartItem._id === _id) {
         if (cartItem.quantity > 1) {
           const updatedQuantity = cartItem.quantity - 1;
-          const updatedTotalPrice = cartItem.price * updatedQuantity;  
+          const updatedTotalPrice = cartItem.price * updatedQuantity;
           return {
             ...cartItem,
             quantity: updatedQuantity,
             totalPrice: updatedTotalPrice,
           };
-        }
-         else {
+        } else {
           // If the quantity is already 1, return the original cartItem
-           return cartItem;
-         }
+          return cartItem;
+        }
       }
       return cartItem;
     });

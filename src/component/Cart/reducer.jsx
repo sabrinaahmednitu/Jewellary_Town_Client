@@ -6,6 +6,7 @@ const reducer = (state, action) => {
         ...state,
         cartItems: action.payload, //its for new data when the state changed
         // cartItems: action.payload সেটমেন্টটি অপরিবর্তনীয় ডেটা স্টেট আপডেট করার জন্য ব্যবহৃত হয়
+       
       };
 
     // ---------------Delete item----------------  //
@@ -31,6 +32,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         cartItems: action.payload,
+      
       };
 
     // ---------------handleDecrease DECREMENT----------------  //
@@ -39,6 +41,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         cartItems: action.payload,
+      
       };
   }
 
