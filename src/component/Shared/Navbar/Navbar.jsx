@@ -69,7 +69,9 @@ const Navbar = () => {
               {navItem}
             </ul>
           </div>
-          <a className="normal-case text-xl">Jewellary Town</a>
+          <Link to="/">
+            <a className="normal-case text-xl">Jewellary Town</a>
+          </Link>
         </div>
 
         <div className="navbar-center hidden lg:flex">
