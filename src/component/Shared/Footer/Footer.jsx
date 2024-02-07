@@ -74,8 +74,8 @@ const Footer = () => {
             <div className="grid grid-flow-col gap-4">
               <div className="items-center grid-flow-col">
                 <div className="payment flex">
-                  <img src={pay1} alt="" />
-                  <img src={pay2} alt="" />
+                  {/* <img src={pay1} alt="" />
+                  <img src={pay2} alt="" /> */}
                   <img src={pay3} alt="" />
                   <img src={pay4} alt="" />
                 </div>
