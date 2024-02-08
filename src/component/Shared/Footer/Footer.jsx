@@ -76,8 +76,8 @@ const Footer = () => {
                 <div className="payment flex">
                   {/* <img src={pay1} alt="" />
                   <img src={pay2} alt="" /> */}
-                  <img src={pay3} alt="" />
-                  <img src={pay4} alt="" />
+                  {/* <img src={pay3} alt="" />
+                  <img src={pay4} alt="" /> */}
                 </div>
               </div>
             </div>
