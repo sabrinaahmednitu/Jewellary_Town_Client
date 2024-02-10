@@ -1,74 +1,95 @@
 
+
 [
   {
     "title": "Bridal Neclace",
     "image": "https://i.ibb.co/pKjqZfc/JG-1910-00286.jpg",
     "description": "We are providing latest gorgeous and simple necklace gold design for all types of jewellery loves of Bangladesh in our store.",
     "price": 200,
-    "quantity":1
+    "quantity":1,
+    "review": 4,
+    "category": "gold"
   },
   {
     "title": "Antique Gold Lkshmi Choker",
     "image": "https://i.ibb.co/RhpTNb5/antique-gold-lkshmi-choker-600x553.jpg",
     "description": "We are providing latest gorgeous and simple necklace gold design for all types of jewellery loves of Bangladesh in our store.",
     "price": 300,
-     "quantity":1
+     "quantity":1,
+     "review": 3,
+    "category": "gold"
   },
   {
     "title": "Bridal Neclace",
     "image": "https://i.ibb.co/s3pyQvz/istockphoto-1488371329-612x612.jpg",
     "description": "We are providing latest gorgeous and simple necklace gold design for all types of jewellery loves of Bangladesh in our store.",
     "price": 150,
-     "quantity":1
+     "quantity":1,
+     "review": 5,
+    "category": "gold"
   },
   {
     "title": "Bridal Neclace",
     "image": "https://i.ibb.co/K9pCbkL/JGS-2005-02536.jpg",
     "description": "We are providing latest gorgeous and simple necklace gold design for all types of jewellery loves of Bangladesh in our store.",
     "price": 250,
-     "quantity":1
+     "quantity":1,
+     "review": 4,
+    "category": "gold"
   },
   {
     "title": "Mathapati",
     "image": "https://i.ibb.co/DwfrhjZ/240-F-280689449-yxx0-Qm-Uh-Hfxhe90x50vszn-ORx2dl-GGx4.jpg",
     "description": "We are providing latest gorgeous and simple Mathapati gold design for all types of jewellery loves of Bangladesh in our store.",
     "price": 120,
-     "quantity":1
+     "quantity":1,
+     "review": 4,
+    "category": "gold"
   },
   {
     "title": "single Neclace",
     "image": "https://i.ibb.co/VMkL0vy/JGS-2002-01207.webp",
     "description": "We are providing latest gorgeous and simple necklace gold design for all types of jewellery loves of Bangladesh in our store.",
     "price": 160,
-     "quantity":1
+     "quantity":1,
+     "review": 5,
+    "category": "gold"
   },
   {
     "title": "Bridal Necklace",
     "image": "https://i.ibb.co/3Rwj6qF/images-4.jpg",
     "description": "We are providing latest gorgeous and simple necklace gold design for all types of jewellery loves of Bangladesh in our store.",
     "price": 130,
-     "quantity":1
+     "quantity":1,
+     "review": 4,
+    "category": "gold"
   },
   {
     "title": "Tickly",
     "image": "https://i.ibb.co/BZLQWsw/JGS-2204-06056.webp",
     "description": "We are providing latest gorgeous and simple necklace gold design for all types of jewellery loves of Bangladesh in our store.",
     "price": 210,
-     "quantity":1
+     "quantity":1,
+     "review": 4,
+    "category": "gold"
   },
   {
     "title": "Bridal Necklace",
     "image": "https://i.ibb.co/s3TQkGV/c5d2f7d3c3d166247acc672dc09aefa1.jpg",
     "description": "We are providing latest gorgeous and simple necklace gold design for all types of jewellery loves of Bangladesh in our store.",
     "price": 180,
-     "quantity":1
+     "quantity":1,
+     "review": 5,
+    "category": "gold"
   },
   {
     "title": "Bridal Neclace",
     "image": "https://i.ibb.co/jZhJDHK/240-F-262745094-L6-M4-LIa-XMLM6-H6c-LZid-Ag-Sm-Ro8-Lhkchv.jpg",
     "description": "We are providing latest gorgeous and simple necklace gold design for all types of jewellery loves of Bangladesh in our store.",
     "price": 200,
-     "quantity":1
+     "quantity":1,
+     "review": 5,
+    "category": "gold"
   }
 
 ]
@@ -78,61 +99,81 @@
     "title": "Bridal Diamond Neclace",
     "image": "https://i.ibb.co/VHpYGYD/istockphoto-1126858679-170667a.webp",
     "description": "We are providing latest gorgeous and simple necklace diamond design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 1509.99
+    "price": 159,
+    "review": 3,
+    "category": "diamond"
   },
   {
     "title": "Bridal Diamond Neclace",
     "image": "https://i.ibb.co/GtfkWQb/istockphoto-459298305-170667a.webp",
     "description": "We are providing latest gorgeous and simple necklace diamond design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 2904.99
+    "price": 204,
+     "review": 4,
+    "category": "diamond"
   },
   {
     "title": "Bridal Diamond Neclace",
     "image": "https://i.ibb.co/dKf94c3/istockphoto-493610261-170667a.webp",
     "description": "We are providing latest gorgeous and simple necklace diamond design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 1729
+    "price": 179,
+     "review": 2,
+    "category": "diamond"
   },
   {
     "title": "Bridal Diamond Neclace",
     "image": "https://i.ibb.co/khdJLMJ/istockphoto-163908628-612x612.jpg",
     "description": "We are providing latest gorgeous and simple necklace diamond design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 2924
+    "price": 224,
+     "review": 3,
+    "category": "diamond"
   },
   {
     "title": "Bridal Diamond Necklace",
     "image": "https://i.ibb.co/gg94k7V/73229609-1576561732486508-2081002811297890304-n.jpg",
     "description": "We are providing latest gorgeous and simple and classy Diamond set design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 2999
+    "price": 299,
+     "review": 4,
+    "category": "diamond"
   },
   {
     "title": "Diamond Pendent Set",
     "image": "https://i.ibb.co/ZdhF8B5/diam4.jpg",
     "description": "We are providing latest gorgeous and simple necklace diamond design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 3499
+    "price": 499,
+     "review": 5,
+    "category": "diamond"
   },
   {
     "title": "Bridal diamond Necklace",
     "image": "https://i.ibb.co/F4ZV9YJ/76635068-1604359753040039-3049546828790890496-n.jpg",
     "description": "We are providing latest gorgeous and simple Ear Ring design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 3529
+    "price": 329,
+     "review": 4,
+    "category": "diamond"
   },
   {
     "title": "Diamond Bridal Necklace",
     "image": "https://i.ibb.co/HGXyY4B/images-6.jpg",
     "description": "We are providing latest gorgeous and simple Diamond necklace  design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 2199
+    "price": 299,
+     "review": 3,
+    "category": "diamond"
   },
   {
     "title": "Diamond Pendent Set",
     "image": "https://i.ibb.co/5jKm29x/diam1.jpg",
     "description": "We are providing latest gorgeous and simple diamond pendent set design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 34.99
+    "price": 134,
+     "review": 2,
+    "category": "diamond"
   },
   {
     "title": "Single Diamond Ear Ring",
     "image": "https://i.ibb.co/Sds6pks/diam3.jpg",
     "description": "We are providing latest gorgeous and simple diamond ear ring design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 34.99
+    "price": 199,
+     "review": 4,
+    "category": "diamond"
   }
 ]
 
@@ -141,61 +182,81 @@
     "title": "Platinum Ring",
     "image": "https://i.ibb.co/NtG1wmY/pexels-photo-8891959.jpg",
     "description": "We are providing latest gorgeous and simple necklace Platinum design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 1729
+    "price": 129,
+     "review": 5,
+    "category": "platinum"
   },
   {
     "title": "Platinum Pendent",
     "image": "https://i.ibb.co/CHG5KB2/pexels-the-glorious-studio-12680629.jpg",
     "description": "We are providing latest gorgeous and simple necklace Platinum design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 2924
+    "price": 224,
+     "review": 4,
+    "category": "platinum"
   },
   {
     "title": "Platinum Necklace",
     "image": "https://i.ibb.co/NnpgR4m/alina-pendant-set-platinum-necklace-sets-blingvine-686536-768x768.webp",
     "description": "We are providing latest gorgeous and simple Platinum necklace  design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 2199
+    "price": 223,
+     "review": 3,
+    "category": "platinum"
   },
   {
     "title": "Platinum Pearl Necklace",
     "image": "https://i.ibb.co/N1GgbBb/alina-pendant-set-platinum-necklace-sets-blingvine-209599-750x.webp",
     "description": "We are providing latest gorgeous and simple Ear Ring design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 3529
+    "price": 352,
+     "review": 4,
+    "category": "platinum"
   },
   {
     "title": "Platinum Jewellary set",
     "image": "https://i.ibb.co/HDYYtZg/pexels-the-glorious-studio-12197267.jpg",
     "description": "We are providing latest gorgeous and simple and classy Platinum set design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 2999
+    "price": 299,
+     "review": 4,
+    "category": "platinum"
   },
   {
     "title": "Platinum Bangle",
     "image": "https://i.ibb.co/xYy7jM9/pexels-pixabay-266621.jpg",
     "description": "We are providing latest gorgeous and simple necklace Platinum design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 3499
+    "price": 349,
+     "review": 5,
+    "category": "platinum"
   },
   {
     "title": "Platinum Pendent Set",
     "image": "https://i.ibb.co/4MwWsXn/category-neckwear-mob-jpeg.webp",
     "description": "We are providing latest gorgeous and simple Platinum pendent set design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 1347.99
+    "price": 137,
+     "review": 3,
+    "category": "platinum"
   },
   {
     "title": "Platinum Diamond Ring",
     "image": "https://i.ibb.co/KyQ4H1V/pexels-photo-4618533.webp",
     "description": "We are providing latest gorgeous and simple platinum necklace  design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 1509.99
+    "price": 150,
+     "review": 5,
+    "category": "platinum"
   },
   {
     "title": "Platinum Pendent Set",
     "image": "https://i.ibb.co/586j0CX/pexels-photo-8891952.jpg",
     "description": "We are providing latest gorgeous and simple necklace Platinum design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 2904.99
+    "price": 268,
+     "review": 3,
+    "category": "platinum"
   },
   {
     "title": "Single platinum set",
     "image": "https://i.ibb.co/NnpgR4m/alina-pendant-set-platinum-necklace-sets-blingvine-686536-768x768.webp",
     "description": "We are providing latest gorgeous and simple Platinum ear ring design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 2342.99
+    "price": 342,
+     "review": 4,
+    "category": "platinum"
   }
 ]
 
@@ -204,61 +265,81 @@
     "title": "Pearl Wedding set",
     "image": "https://i.ibb.co/mzgvZwD/p-wedding.jpg",
     "description": "We are providing latest gorgeous and simple pearl necklace design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 1209
+    "price": 120,
+     "review": 4,
+    "category": "pearl"
   },
   {
     "title": "Royel Bridal Pearl set",
     "image": "https://i.ibb.co/f83W7s2/pearl-bridal-set2.webp",
     "description": "We are providing latest gorgeous and simple pearl necklace design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 2924
+    "price": 292,
+      "review": 3,
+    "category": "pearl"
   },
   {
     "title": " Pearl Necklace",
     "image": "https://i.ibb.co/s2Tjhz5/pexels-alexey-demidov-10950893.jpg",
     "description": "We are providing latest gorgeous and simple pearl necklace design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 2199
+    "price": 257,
+      "review": 5,
+    "category": "pearl"
   },
   {
     "title": " Pearl Wedding set",
     "image": "https://i.ibb.co/QnhmNw7/pearl-wedding3.webp",
     "description": "We are providing latest gorgeous and simple necklace Platinum design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 4939
+    "price": 493,
+      "review": 4,
+    "category": "pearl"
   },
 
   {
     "title": "Pearl braclet",
     "image": "https://i.ibb.co/zmX5496/pexels-seda-15236437.jpg",
     "description": "We are providing latest gorgeous and simple and classy Platinum set design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 2999
+    "price": 233,
+      "review": 2,
+    "category": "pearl"
   },
   {
     "title": "Pearl necklace ",
     "image": "https://i.ibb.co/4RW2VMc/pexels-cottonbro-studio-9421389.jpg",
     "description": "We are providing latest gorgeous and simple pearl necklace design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 1047.99
+    "price": 104,
+      "review": 4,
+    "category": "pearl"
   },
   {
     "title": " Pearl Necklace",
     "image": "https://i.ibb.co/Vqvc1vG/pexels-maria-11678215.jpg",
     "description": "We are providing latest gorgeous and simple Pearl Necklace design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 1529
+    "price": 152,
+      "review": 3,
+    "category": "pearl"
   },
   {
     "title": "Pearl Ear Ring",
     "image": "https://i.ibb.co/T4hft60/pexels-superlens-photography-13595452.jpg",
     "description": "We are providing latest gorgeous and simple pearl necklace  design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 1509
+    "price": 150,
+      "review": 2,
+    "category": "pearl"
   },
   {
     "title": "Pearl Pendent Set",
     "image": "https://i.ibb.co/GPbYnyn/p-simple2.jpg",
     "description": "We are providing latest gorgeous and simple necklace Pearl design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 2204
+    "price": 220,
+      "review": 5,
+    "category": "pearl"
   },
   {
     "title": "Pearl set",
     "image": "https://i.ibb.co/5LPXTMw/pearl-party.webp",
     "description": "We are providing latest gorgeous and simple Pearl necklace ring design for all types of jewellery loves of Bangladesh in our store.",
-    "price": 2423
+    "price": 242,
+      "review": 4,
+    "category": "pearl"
   }
 ]

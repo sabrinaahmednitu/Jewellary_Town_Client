@@ -1,10 +1,12 @@
 /* eslint-disable no-dupe-keys */
 import { useEffect, useState } from 'react';
-import Slider from 'react-slick';
 import Loading from '../../Shared/Loading/Loading';
 import Gold from './Gold';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+import { FreeMode, Pagination } from 'swiper/modules';
 
 const Golds = () => {
 
@@ -27,46 +29,45 @@ const Golds = () => {
   };
 
     
-
-   const settings = {
-     dots: true,
-     infinite: true,
-     slidesToShow: 4, // Number of cards to show for larger screens (tablets and above)
-     slidesToScroll: 1,
-     responsive: [
-       {
-         breakpoint: 576, // Breakpoint for screens with a width of 576px or less
-         settings: {
-           slidesToShow: 1, // Number of cards to show for screens less than 576px
-         },
-       },
-       {
-         breakpoint: 1000, // Breakpoint for screens with a width of 768 or less
-         settings: {
-           slidesToShow: 3, // Number of cards to show for screens less than 576px
-         },
-       },
-     ],
-     autoplay: true,
-     autoplaySpeed: 2000,
-     pauseOnHover: true,
-     arrows: false,
-   };
-
   return (
     <div className="container mx-auto">
-      <div >
-        <Slider {...settings}>
-            {golds.slice(0, 5).map((gold) => (
-              <Gold
-                key={gold._id}
-                gold={gold}
-                handleGolds={handleGolds}
-              ></Gold>
-            ))}
-        
-        </Slider>
-      </div>
+      <section>
+        <Swiper
+          slidesPerView={2}
+          freeMode={true}
+          breakpoints={{
+            576: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            992: {
+              slidesPerView: 4,
+            },
+            1200: {
+              slidesPerView: 4,
+            },
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[FreeMode, Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <div className='flex justify-center'>
+              {golds.slice(0, 5).map((gold) => (
+                <Gold
+                  key={gold._id}
+                  gold={gold}
+                  handleGolds={handleGolds}
+                ></Gold>
+              ))}
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </section>
     </div>
   );
 };

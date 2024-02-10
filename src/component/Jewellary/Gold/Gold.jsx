@@ -2,6 +2,7 @@
 
 import { Link } from "react-router-dom";
 
+
 const Gold = ({ gold, handleGolds }) => {
   const { title, image, description, price, _id } = gold;
 
@@ -12,7 +13,7 @@ const Gold = ({ gold, handleGolds }) => {
         style={{
           color: 'black',
           backgroundColor: 'white',
-          margin:'10px'
+          margin: '10px',
         }}
       >
         <figure>
@@ -49,7 +50,7 @@ const Gold = ({ gold, handleGolds }) => {
               backgroundColor: 'rgb(255, 0, 85)',
               border: '0',
               width: '60%',
-              margin:'auto'
+              margin: 'auto',
             }}
           >
             Details
