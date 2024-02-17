@@ -31,7 +31,7 @@ const Navbar = () => {
         <Link to="/contact">Contact Us</Link>
       </li>
       {user ? (
-        <button onClick={logout} className=" btn bg-pink-700 font-bold text-white ">
+        <button onClick={logout} className=" btn bg-pink-600 font-bold text-white ">
           SignOut
         </button>
       ) : (
