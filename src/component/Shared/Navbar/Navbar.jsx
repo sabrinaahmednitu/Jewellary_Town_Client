@@ -31,12 +31,17 @@ const Navbar = () => {
         <Link to="/contact">Contact Us</Link>
       </li>
       {user ? (
-        <button onClick={logout} className=" btn bg-pink-600 font-bold text-white ">
+        <button
+          onClick={logout}
+          className=" btn bg-pink-600 font-bold text-white "
+        >
           SignOut
         </button>
       ) : (
         <Link to="/login" className="flex justify-center align-items-center">
-          <button className="btn-info pl-[10px] pr-[10px] rounded ">Login</button>
+          <button className="bg-sky-400 ml-[10px] mr-[10px] rounded-lg w-[105px] text-white py-3 ">
+            Login
+          </button>
         </Link>
       )}
     </>
