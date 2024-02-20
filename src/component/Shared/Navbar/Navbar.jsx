@@ -33,7 +33,7 @@ const Navbar = () => {
       {user ? (
         <button
           onClick={logout}
-          className=" btn bg-pink-600 font-bold text-white "
+          className="bg-pink-600 font-bold text-white ml-[10px] mr-[10px] px-7 py-3 rounded-lg   "
         >
           SignOut
         </button>
