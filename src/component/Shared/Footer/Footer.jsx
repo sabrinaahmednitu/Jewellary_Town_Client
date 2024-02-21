@@ -78,13 +78,13 @@ const Footer = () => {
             <div className=" flex justify-center items-center gap-5">
               Social Networks -{' '}
               <a>
-                <i class="fa-brands fa-twitter"></i>
+                <i className="fa-brands fa-twitter text-3xl"></i>
               </a>
               <a>
-                <i class="fa-brands fa-youtube"></i>
+                <i className="fa-brands fa-youtube text-3xl"></i>
               </a>
               <a>
-                <i class="fa-brands fa-facebook-f"></i>
+                <i className="fa-brands fa-facebook-f text-3xl"></i>
               </a>
             </div>
           </div>
