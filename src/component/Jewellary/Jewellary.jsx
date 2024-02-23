@@ -205,8 +205,8 @@ function Jewellary() {
       <div className="ShopByRange">
         <div className="ShopByRangeMain container mx-auto pt-12 pb-10 max-w-7xl">
           <div className="rangeText text-center text-black">
-            <h1 className="text-3xl mb-2">Shop by Range</h1>
-            <p>
+            <h1 className="text-3xl mb-2 font-semibold">Shop by Range</h1>
+            <p className="text-xl">
               Discover our exclusive jewellery in versatile designs that fits
               every budget with poise and glamour.
             </p>
