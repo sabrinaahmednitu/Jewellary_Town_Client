@@ -112,7 +112,10 @@ function Jewellary() {
         </h1>
         <Golds></Golds>
 
-        <button onClick={goToGold} className="btn block text-white mx-auto mt-12 w-[335px]">
+        <button
+          onClick={goToGold}
+          className="btn block text-white mx-auto mt-12 w-[335px]"
+        >
           All Gold Collections
         </button>
       </div>
@@ -139,7 +142,6 @@ function Jewellary() {
           All Diamonds Collections
         </button>
       </div>
-
 
       <div
         className="Container pt-12 pb-12 p-5"
@@ -201,7 +203,7 @@ function Jewellary() {
 
       {/* shop by range */}
       <div className="ShopByRange">
-        <div className="ShopByRangeMain container mx-auto pt-12 pb-10">
+        <div className="ShopByRangeMain container mx-auto pt-12 pb-10 max-w-7xl">
           <div className="rangeText text-center text-black">
             <h1 className="text-3xl mb-2">Shop by Range</h1>
             <p>
