@@ -150,17 +150,19 @@ align-items: center;
   align-items: center;
   gap: 15px;
   padding: 10px; 
+   background-color: rgb(235, 88, 132); 
+    color: white;
+    border-radius: 10px;
 }
 .rangeCard img{
   width: 145px;
 }
 
 .rangeCard:hover{
-  /* background-color: rgb(236, 32, 93); */
-  /* background-color: rgb(235, 88, 132); */
-  /* color: white; */
  transform: translateY(-10px);
   transition: .4s;
+  background-color: white;
+   color: black; 
 }
 
 /* rangeCard */
