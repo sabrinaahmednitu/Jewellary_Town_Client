@@ -148,7 +148,7 @@ align-items: center;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   padding: 10px; 
 }
 .rangeCard img{
@@ -157,8 +157,10 @@ align-items: center;
 
 .rangeCard:hover{
   /* background-color: rgb(236, 32, 93); */
-  background-color: rgb(235, 88, 132);
-  color: white;
+  /* background-color: rgb(235, 88, 132); */
+  /* color: white; */
+ transform: translateY(-10px);
+  transition: .4s;
 }
 
 /* rangeCard */
