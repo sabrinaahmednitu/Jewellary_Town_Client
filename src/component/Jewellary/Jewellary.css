@@ -155,7 +155,11 @@ align-items: center;
   width: 145px;
 }
 
-
+.rangeCard:hover{
+  /* background-color: rgb(236, 32, 93); */
+  background-color: rgb(235, 88, 132);
+  color: white;
+}
 
 /* rangeCard */
 
