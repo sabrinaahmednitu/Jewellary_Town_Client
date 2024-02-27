@@ -99,12 +99,12 @@ const About = () => {
                 <h1>Mark Marley</h1>
                 <p>Co-CEO</p>
                
-                <div className="teamSocial">
+                {/* <div className="teamSocial">
                   <i className="fa-brands fa-facebook"></i>
                   <i className="fa-brands fa-square-twitter"></i>
                   <i className="fa-brands fa-google-plus"></i>
                   <i className="fa-brands fa-linkedin"></i>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
