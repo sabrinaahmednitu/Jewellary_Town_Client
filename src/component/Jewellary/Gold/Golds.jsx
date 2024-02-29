@@ -9,15 +9,11 @@ import 'swiper/css/pagination';
 import { FreeMode, Pagination } from 'swiper/modules';
 
 const Golds = () => {
-
- 
   const [golds, setGolds] = useState([]);
   useEffect(() => {
     fetch('http://localhost:5000/golds')
       .then((res) => res.json())
       .then((data) => setGolds(data));
-    
-    
   }, []);
 
   if (golds.length == 0) {
@@ -28,46 +24,14 @@ const Golds = () => {
     console.log('this is id', _id);
   };
 
-    
   return (
     <div className="container mx-auto">
-      <section>
-        <Swiper
-          slidesPerView={2}
-          freeMode={true}
-          breakpoints={{
-            576: {
-              slidesPerView: 2,
-            },
-            768: {
-              slidesPerView: 3,
-            },
-            992: {
-              slidesPerView: 4,
-            },
-            1200: {
-              slidesPerView: 4,
-            },
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[FreeMode, Pagination]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <div className='flex justify-center'>
-              {golds.slice(0, 5).map((gold) => (
-                <Gold
-                  key={gold._id}
-                  gold={gold}
-                  handleGolds={handleGolds}
-                ></Gold>
-              ))}
-            </div>
-          </SwiperSlide>
-        </Swiper>
-      </section>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        {golds.map((gold) => (
+        // {golds.slice(0, 4).map((gold) => (
+          <Gold key={gold._id} gold={gold} handleGolds={handleGolds}></Gold>
+        ))}
+      </div>
     </div>
   );
 };
